@@ -82,6 +82,7 @@ img[alt="cart"] {
     width: 1440px;
     height: 60px;
     border-bottom: 2px solid black;
+    margin: 0 auto;
 }
 
 .header-category>div {
