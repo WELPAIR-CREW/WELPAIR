@@ -7,7 +7,7 @@
 header {
     position: relative;
     display: flex;
-    width: 100%;
+    width: 1440px;
     height: 100px;
     top: 0%;
     left: 50%;
@@ -24,23 +24,29 @@ header {
     transform: translateX(-50%);
 }
 
-.search-bar {
+.icons {
     display: inline-flex;
-    margin: 16px;
+    align-items: end;
+    margin-right: 80px;
+    margin-bottom: 20px;
+}
+
+.icons>* {
+    height: 32px;
+    margin-left: 10px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
 }
 
 .search-box {
-    width: 80%;
+    width: 120px;
     height: 25px;
     border-radius: 20px;
     border: 2px solid black;
     padding: 0px 10px 0px 10px;
-}
-
-.my-info {
-    margin-bottom: 16px;
-    margin-right: 30px;
-    left: 10%
 }
 
 .my-info>a:hover {
@@ -52,26 +58,35 @@ header {
     text-decoration-line: none;
     font-style: normal;
     font-weight: 700;
-    font-size: 22pt;
+    font-size: 16pt;
     color: black;
 }
 
 img[alt="search"] {
-    align-self: center;
     margin-left: 10px;
+}
+
+img[alt="cart"] {
+    width: 20px;
+    height: 20px;
+}
+
+.cart {
+    display: flex;
+    align-items: center;
 }
 
 .header-category {
     position: relative;
     display: flex;
-    width: 100%;
+    width: 1440px;
     height: 60px;
     border-bottom: 2px solid black;
 }
 
 .header-category>div {
     display: flex;
-    width: 90%;
+    width: 1280px;
     margin: 0 auto;
     align-items: center;
     justify-content: space-around;
