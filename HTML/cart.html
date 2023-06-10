@@ -3,34 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <!-- script -->
-    <link rel="stylesheet" href="../resources.css/common.css">
+    <link rel="stylesheet" href="../CSS/cart.css">
+    <link rel="stylesheet" href="../CSS/header.css">
     <title>cart</title>
 </head>
-<body>
     <!-- 헤더 영역 -->
-    <div class="header">
-        <!-- 헤드라인 -->
-        <h1 align="center">WELPAIR</h1>
-        
-        <!-- 검색어 영역 -->
-        <!-- 마이페이지 영역 -->
-        <!-- 장바구니 영역 -->
+    <header>
+        <img src="../img/title.png" class="title">
+        <div class="icons">
+            <div class="search-bar">
+                <input type="text" class="search-box" placeholder="검색어">
+                <img src="../img/search-icon.png" alt="search">
+            </div>
+            <div class="my-info">
+                <a href="#">MY</a>
+            </div>
+            <div class="cart">
+                <img src="../img/cart.png" alt="cart">
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="header-category">
+            <div>
+                <span>주문 관리</span>
+                <span>TOP</span>
+                <span>DRESS</span>
+                <span>BOTTOM</span>
+                <span>SHOES</span>
+                <span>BAG</span>
+                <span>CAT</span>
+                <span>CATE</span>
+            </div>
+        </div>
+    </nav>
+    <!-- 헤더 종료 -->
 
+<body class="cart_body">
+    <!-- 장바구니 시작 -->
+    <div id="container">
+        <div id="wrap" class="wrap box_all"> 
+            <div class="title_cart_header">  <!-- 타이틀바디 -->
+                <div id="title_cart" >장바구니</div>
+                <div id="border_cart"></div>
+            </div>
+            <ul class="cart_option">
+                <li class="select_all">
+                    <span class="input_select">
+                        <input type="checkbox" id="all_select">
+                        <label for="item_all">전체선택</label>
+                    </span>
+                </li>
+                <li>
+                    <button class="btn_del"><span>선택삭제</span></button>
+                </li>
+            </ul>
+
+            <ul class="cart_option_group">
+                <li id="cart_option1">Total : </li>
+                <li id="cart_option2">상품정보</li>
+                <li id="cart_option3">수량(변경)</li>
+                <li id="cart_option4">금액</li>
+                <li id="cart_option5">배송비</li>
+                <li id="cart_option6">총 금액</li>
+            </ul>
+            
+            
+        </div>
     </div>
-    <!-- 메뉴 내비 영역 -->
-    <div class="menu-area">
-        <div class="nav-area">
-            <ul>
-                <li><a href="">MENU1</a></li>
-                <li><a href="">MENU2</a></li>
-                <li><a href="">MENU3</a></li>
-                <li><a href="">MENU4</a></li>
-                <li><a href="">MENU5</a></li>
-                <li><a href="">MENU6</a></li>
-                <li><a href="">MENU7</a></li>
-                <li><a href="">MENU8</a></li>
-            </ul> 
-        </div> <!-- nav-area end -->
-    </div> <!-- menu-area end -->
+
 </body>
 </html>
