@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <!-- script -->
-    <link rel="stylesheet" href="../CSS/cart.css">
+    <link rel="stylesheet" href="../CSS/inventory.css">
     <link rel="stylesheet" href="../CSS/header.css">
     <title>입출고내역</title>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
@@ -64,16 +64,44 @@
 
 
     <div id="container">
-        <div id="wrap" class="    wrap box_all"> 
-            <div class="title_cart_header">  <!-- 타이틀바디 -->
-                <div id="title_cart" >입출고 내역</div>
-                <div id="border_cart"></div>
+        <div id="wrap" class="wrap box_all"> 
+            <div class="title_inven_header">  <!-- 타이틀바디 -->
+                <span id="title_inven" >입출고 내역</span>
+                <span id="border_inven"></span>
             </div>
 
+        
+        
+        <form name="">
+            <div class="inven_search">
+                <ul class="inven_menu">
+                    <li>
+                        <span class="inven_menu_t">상품코드</span>
+                        <span class="inven_menu_t">상품명</span>
+                        <span class="inven_menu_t">카테고리</span>
+                    </li>
+                    <li>
+                        <span class="inven_menu_t">등록구분</span>
+                        <span class="inven_menu_t">일자</span>
+                        <span class="inven_menu_t">비고</span>
+                    </li>
+                    <li>
+                        <span class="inven_menu_t">수량</span>
+
+                        <button class="btn_basic">재고등록</button>
+                        <button class="btn_basic">재고검색</button>
+                    </li>
+                </ul>
 
 
+
+            </div>
+        </form>
 
         </div>
+
+
+
     </div>
 
 </body>
