@@ -5,7 +5,7 @@
     <!-- script -->
     <link rel="stylesheet" href="../CSS/inventory.css">
     <link rel="stylesheet" href="../CSS/header.css">
-    <title>재고관리</title>
+    <title>입출고내역</title>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 </head>
     <!-- 헤더 영역 -->
@@ -42,36 +42,25 @@
     <!-- 헤더 종료 -->
 
 <body class="inven_body">
-    <!-- 왼쪽 메뉴 베너 -->
-    <nav class="Invennav">
-        <div id="snb" class="inven">
-            <span><strong>재고관리</strong></span>
-            <ul id="inven" class="nb_dep1">
-                <li>
-                    <a href="/HTML/inventory-register.html" class="">
-                        <span>입출고등록</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/HTML/inventory-search.html" class="">
-                        <span>입출고내역</span>
-                    </a>
-                </li>
 
-            </ul>  
+    <!-- 왼쪽 메뉴 베너 -->
+	<nav class="lnbNav">
+		<div id="snb" class="lnb">
+        	<ul id="lnb" class="lnb_dep1">
+		        <li><a href="/HTML/inventory.html" class="lnb_title"><span><strong>재고관리</strong></span></a></li>
+                <li><a href="/HTML/inventory-register.html" class="menuLnb"><span>입출고등록</span></a></li>
+                <li><a href="/HTML/inventory-search.html" class="menuLnb"><span>입출고내역</span></a></li>
+	        </ul>
         </div>
     </nav>
 
-
-
-
-    <!-- 재고 메인 -->
-    <div id="container">
-        <div id="wrap" class="wrap box_all"> 
-            <div class="title_cart_header">  <!-- 타이틀바디 -->
-                <div id="title_cart" >재고 현황</div>
-                <div id="border_cart"></div>
-            </div>
+            
+	<!-- 컨텐츠 영역 -->
+    <div id="content" class="contentsArticle">
+        <div class="title_inven_header">  <!-- 타이틀바디 -->
+            <span id="title_inven">재고 현황</span>
+            <span id="border_inven"></span>
+        </div>
 
             <li class="inven_main">
                 <span id="inven-mainlist">총 재고수량</span>
@@ -81,7 +70,7 @@
                 <span id="inven-mainlist">위험재고 상품수</span>
                 <span>30</span>
             </li>
-            <br><br><br><br><br><br>
+
             위험재고 상품 리스트
         
 

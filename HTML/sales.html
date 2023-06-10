@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <!-- script -->
-    <link rel="stylesheet" href="../CSS/cart.css">
+    <link rel="stylesheet" href="../CSS/inventory.css">
     <link rel="stylesheet" href="../CSS/header.css">
-    <title>cart</title>
+    <title>입출고내역</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 </head>
     <!-- 헤더 영역 -->
     <header>
@@ -23,6 +24,7 @@
             </div>
         </div>
     </header>
+
     <nav>
         <div class="header-category">
             <div>
@@ -39,17 +41,30 @@
     </nav>
     <!-- 헤더 종료 -->
 
-<body class="cart_body">
-    <!-- 매출 현황 시작 -->
-    <div id="container">
-        <div id="wrap" class="wrap box_all"> 
-            <div class="title_cart_header">  <!-- 타이틀바디 -->
-                <div id="title_cart" >매출 현황</div>
-                <div id="border_cart"></div>
-            </div>
-매출현황 그래프 입력
+<body class="inven_body">
+
+    <!-- 왼쪽 메뉴 베너 -->
+	<nav class="lnbNav">
+		<div id="snb" class="lnb">
+        	<ul id="lnb" class="lnb_dep1">
+		        <li><a href="/HTML/inventory.html" class="lnb_title"><span><strong>매출관리</strong></span></a></li>
+	        </ul>
         </div>
-    </div>
+    </nav>
+
+            
+	<!-- 컨텐츠 영역 -->
+    <div id="content" class="contentsArticle">
+        <div class="title_inven_header">  <!-- 타이틀바디 -->
+            <span id="title_inven">매출 현황</span>
+            <span id="border_inven"></span>
+        </div>
+
+        매출 그래프
+		</div>
+	</div>
+	
+
 
 </body>
 </html>
