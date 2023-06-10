@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+.title-cart {
+
+	/* 위치 설정 */
+	position: absolute;
+	width: 1196px;
+	height: 54px;
+	left: 122px;
+	top: 251px;
+	/* 텍스트 스타일 */
+	text-align: left;
+	font-size: 26px;
+	color: #000000;
+	font-weight: bold;
+}
+
+.border-cart {
+	/* 보더라인 */
+	height: 2px;
+	position: absolute;
+	left: 0%;
+	right: 0%;
+	top: 295px ;
+	bottom: 0%;
+
+	background: #333333;
+	border-radius: 9px;
+}
+
