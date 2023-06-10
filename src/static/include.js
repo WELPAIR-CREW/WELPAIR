@@ -1,13 +1,26 @@
 function includeHTML() {
     document.querySelectorAll('.include').forEach(el => {
         const target = el.dataset.includeHtml;
+
         if (target) {
             let xhttp = new XMLHttpRequest();
-
+            
             xhttp.onreadystatechange = function() {
-                if (this.readyState === XMLHttpRequest.DONE) {
-                    this.status === 200 ? (el.innerHTML = this.responseText) : null;
-                    this.status === 404 ? (el.innerHTML = 'response text not fount') : null;
+                if (this.readyState !== XMLHttpRequest.DONE) {
+                    if (this.status === 200) {
+
+                        let frag = document.createDocumentFragment();
+                        let range = document.createRange();
+                        el.innerHTML = this.responseText;
+                        range.selectNodeContents(el);
+                        frag.appendChild(range.extractContents());
+                        el.replaceWith(frag);
+                        
+                    } else if (this.status === 404) {
+
+                        console.log('Page not found');
+                    }
+                        
                 }
             }
 
