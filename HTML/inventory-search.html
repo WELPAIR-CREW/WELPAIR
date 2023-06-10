@@ -42,67 +42,40 @@
     <!-- 헤더 종료 -->
 
 <body class="inven_body">
-    <!-- 왼쪽 메뉴 베너 -->
-    <nav class="Invennav">
-        <div id="snb" class="inven">
-            <span><strong>재고관리</strong></span>
-            <ul id="inven" class="nb_dep1">
-                <li>
-                    <a href="/HTML/inventory-register.html" class="">
-                        <span>입출고등록</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/HTML/inventory-search.html" class="">
-                        <span>입출고내역</span>
-                    </a>
-                </li>
 
-            </ul>  
+    <!-- 왼쪽 메뉴 베너 -->
+	<nav class="lnbNav">
+		<div id="snb" class="lnb">
+        	<ul id="lnb" class="lnb_dep1">
+		        <li><a href="/HTML/inventory.html" class="lnb_title"><span><strong>재고관리</strong></span></a></li>
+                <li><a href="/HTML/inventory-register.html" class="menuLnb"><span>입출고등록</span></a></li>
+                <li><a href="/HTML/inventory-search.html" class="menuLnb"><span>입출고내역</span></a></li>
+	        </ul>
         </div>
     </nav>
 
-
-    <div id="container">
-        <div id="wrap" class="wrap box_all"> 
-            <div class="title_inven_header">  <!-- 타이틀바디 -->
-                <span id="title_inven" >입출고 내역</span>
-                <span id="border_inven"></span>
-            </div>
-
-        
-        
-        <form name="">
-            <div class="inven_search">
-                <ul class="inven_menu">
-                    <li>
-                        <span class="inven_menu_t">상품코드</span>
-                        <span class="inven_menu_t">상품명</span>
-                        <span class="inven_menu_t">카테고리</span>
-                    </li>
-                    <li>
-                        <span class="inven_menu_t">등록구분</span>
-                        <span class="inven_menu_t">일자</span>
-                        <span class="inven_menu_t">비고</span>
-                    </li>
-                    <li>
-                        <span class="inven_menu_t">수량</span>
-
-                        <button class="btn_basic">재고등록</button>
-                        <button class="btn_basic">재고검색</button>
-                    </li>
-                </ul>
-
-
-
-            </div>
-        </form>
-
+            
+	<!-- 컨텐츠 영역 -->
+    <div id="content" class="contentsArticle">
+        <div class="title_inven_header">  <!-- 타이틀바디 -->
+            <span id="title_inven">입출고 내역</span>
+            <span id="border_inven"></span>
         </div>
+			
+			<div class="content_wrap">
+                
+
+                    <input type="text" maxlength="15" name="">
+                    <a class="btn_basic">검색</a> 
+
+ 
 
 
+			</div>
+		</div>
+	</div>
+	
 
-    </div>
 
 </body>
 </html>
