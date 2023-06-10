@@ -4,23 +4,22 @@ function includeHTML() {
 
         if (target) {
             let xhttp = new XMLHttpRequest();
-            
-            xhttp.onreadystatechange = function() {
-                if (this.readyState !== XMLHttpRequest.DONE) {
-                    if (this.status === 200) {
 
-                        let frag = document.createDocumentFragment();
-                        let range = document.createRange();
-                        el.innerHTML = this.responseText;
-                        range.selectNodeContents(el);
-                        frag.appendChild(range.extractContents());
-                        el.replaceWith(frag);
-                        
-                    } else if (this.status === 404) {
+            xhttp.onreadystatechange = function () {
+                if (this.readyState !== XMLHttpRequest.DONE) return;
+                
+                if (this.status === 200) {
 
-                        console.log('Page not found');
-                    }
-                        
+                    let frag = document.createDocumentFragment();
+                    let range = document.createRange();
+                    el.innerHTML = this.responseText;
+                    range.selectNodeContents(el);
+                    frag.appendChild(range.extractContents());
+                    el.replaceWith(frag);
+
+                } else if (this.status === 404) {
+
+                    console.log('Page not found');
                 }
             }
 
