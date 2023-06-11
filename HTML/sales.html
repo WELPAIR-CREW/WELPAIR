@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!-- script -->
+    <link rel="stylesheet" href="../CSS/sales.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <title>매출관리</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+    <!-- 헤더 영역 -->
+    <header>
+        <img src="../img/title.png" class="title">
+        <div class="icons">
+            <div class="search-bar">
+                <input type="text" class="search-box" placeholder="검색어">
+                <img src="../img/search-icon.png" alt="search">
+            </div>
+            <div class="my-info">
+                <a href="#">MY</a>
+            </div>
+            <div class="cart">
+                <img src="../img/cart.png" alt="cart">
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="header-category">
+            <div>
+                <span>주문 관리</span>
+                <span>카테고리 관리</span>
+                <span>상품 관리</span>
+                <span>재고 관리</span>
+                <span>회원 관리</span>
+                <span>매출 관리</span>
+                <span>배송 관리</span>
+                <span>고객 센터</span>
+            </div>
+        </div>
+    </nav>
+    <!-- 헤더 종료 -->
+
+<body class="sales_body">
+
+    <!-- 왼쪽 메뉴 베너 -->
+	<nav class="lnbNav">
+		<div id="snb" class="lnb">
+        	<ul id="lnb" class="lnb_dep1">
+		        <li><a href="/HTML/sales.html" class="lnb_title"><span><strong>매출관리</strong></span></a></li>
+	        </ul>
+        </div>
+    </nav>
+
+            
+	<!-- 컨텐츠 영역 -->
+    <div id="content" class="contentsArticle">
+        <div class="title_sales_header">  <!-- 타이틀바디 -->
+            <span id="title_sales">매출현황</span>
+            <span id="border_sales"></span>
+        </div>
+
+        <form class="content_wrap" action="" method="get">
+            <canvas id="salesChart">
+
+
+            </canvas>
+
+
+            
+        </form>
+    
+            </div>
+        </div>
+
+        <script>
+            // Get the canvas element
+            var ctx = document.getElementById('salesChart').getContext('2d');
+        
+            // Define the data for the chart
+            var data = {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                label: 'sales',
+                data: [12, 19, 3, 5, 2, 3],
+                backgroundColor: ['rgba(255, 206, 86, 0.2)'],
+                borderColor: ['rgba(255, 206, 86, 1)'],
+                borderWidth: 1
+                }]
+            };
+
+            // Create the chart
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                data: data,
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {beginAtZero: true}
+                        }
+                }
+            });
+        </script>
+	</body>
+</html>

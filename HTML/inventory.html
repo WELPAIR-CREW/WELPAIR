@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!-- script -->
+    <link rel="stylesheet" href="../CSS/inventory.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <title>입출고내역</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+</head>
+    <!-- 헤더 영역 -->
+    <header>
+        <img src="../img/title.png" class="title">
+        <div class="icons">
+            <div class="search-bar">
+                <input type="text" class="search-box" placeholder="검색어">
+                <img src="../img/search-icon.png" alt="search">
+            </div>
+            <div class="my-info">
+                <a href="#">MY</a>
+            </div>
+            <div class="cart">
+                <img src="../img/cart.png" alt="cart">
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="header-category">
+            <div>
+                <span>주문 관리</span>
+                <span>카테고리 관리</span>
+                <span>상품 관리</span>
+                <span>재고 관리</span>
+                <span>회원 관리</span>
+                <span>매출 관리</span>
+                <span>배송 관리</span>
+                <span>고객 센터</span>
+            </div>
+        </div>
+    </nav>
+    <!-- 헤더 종료 -->
+
+<body class="inven_body">
+
+    <!-- 왼쪽 메뉴 베너 -->
+	<nav class="lnbNav">
+		<div id="snb" class="lnb">
+        	<ul id="lnb" class="lnb_dep1">
+		        <li><a href="/HTML/inventory.html" class="lnb_title"><span><strong>재고관리</strong></span></a></li>
+                <li><a href="/HTML/inventory-register.html" class="menuLnb"><span>입출고등록</span></a></li>
+                <li><a href="/HTML/inventory-search.html" class="menuLnb"><span>입출고내역</span></a></li>
+	        </ul>
+        </div>
+    </nav>
+
+            
+	<!-- 컨텐츠 영역 -->
+    <div id="content" class="contentsArticle">
+        <div class="title_inven_header">  <!-- 타이틀바디 -->
+            <span id="title_inven">재고 현황</span>
+            <span id="border_inven"></span>
+        </div>
+
+        <!-- DB수식 넣기 -->
+            <li class="inven_main">
+                <span id="inven-mainlist"><strong>총 재고수량</strong></span>
+                <span>10000</span>
+                <span id="inven-mainlist"><strong>총 가용수량</strong></span>
+                <span>90000</span>
+                <span id="inven-mainlist"><strong>위험재고 상품수</strong></span>
+                <span>30</span>
+            </li>
+
+            
+            <form>
+                <label class="inven_mainList">위험재고 상품 리스트</label>
+                <table class="inven_search_result">
+                    <tr class="row1">
+                        <th>상품코드</th>
+                        <th>상품명</th>
+                        <th>카테고리</th>
+                        <th>총 재고수량</th>
+                        <th>총 가용수량</th>
+                    </tr>
+                    <tr class="row2">
+                        <td>상품코드</td>
+                        <td>상품명</td>
+                        <td>카테고리</td>
+                        <td>총 재고수량</td>
+                        <td>총 가용수량</td>
+                    </tr>
+                </form>
+
+
+
+
+        </div>
+    </div>
+
+</body>
+</html>
