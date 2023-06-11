@@ -45,6 +45,7 @@ li {
 	padding: 0;
 	display: block;
 }
+
 .title_inven_header{
 	position: relative;
 	height: 54px;
@@ -67,30 +68,56 @@ li {
 
 
 
-.content_wrap{
-	margin: 20px 20px 20px 20px;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-	grid-template-rows: 25px 25px 25px;
-	row-gap: 20px;
-	column-gap: 10px;
-	
+.inven_main{
+	display: flex;
+	justify-content: space-between;
+	list-style-type: none;
+	padding: 0;
+	margin: 10px 30px 50px 30px;
+	flex-basis: 33%;
+	font-size: 20px;
+	text-align: center;
+}
+
+.inven_mainList{
+	margin: 10px;
+	font-size: 20px;
+	font-weight: bold;
+
+}
+
+
+.content_wrap {
+    margin: 20px;
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 25px 25px;
+    row-gap: 20px;
+    column-gap: 10px;
+}
+
+.content_wrap .inven_op1{
+	width: 100px;
 }
 
 .inven_search_result{
-	margin: 80px 20px 20px 20px;
+	margin: 5px 20px 20px 20px;
 	position: relative;
 	width: 960px;
+
 	text-align: center;
 	border: 1px;
 }
 
-.inven_search_result .row1{
-	height: 40px;
-	font-weight: bold;
+.inven_search_result .row1 {
 	background-color: #F8F7F7;
+	height: 40px;	
 }
 
+.inven_search_result .row2 {
+	height: 35px;	
+}
 
 .btn_basic{
 	position:relative;
@@ -99,8 +126,20 @@ li {
 	background-color: #333333;
 	color: white;
 	border: #333333;
-	border-radius: 8%;
+	border-radius: 8px;
 	font-size: 12px;
 	text-align: center;
+	justify-self: end;
+	grid-column: 3 / span ;
 }
 
+.btn_group {
+    grid-column: 8;
+    display: flex;
+    justify-content: flex-end;
+	margin-right: 30px;
+}
+
+.btn_group input {
+    margin-left: 10px;
+}
