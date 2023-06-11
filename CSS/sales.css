@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+li {
+	list-style-type: none;
+}
+
+.sales_body{
+	position:relative;
+	width:1280px;
+	margin:0 auto;
+/
+}
+
+/* left Menu */
+
+/*leftMenu*/
+.lnbNav {
+	width:130px;
+	height: 488px;
+	float:left;
+	left: 50px;
+	top: 50px;
+	padding: 30px;
+	text-align: right;
+	background: #F8F7F7;
+	border-radius: 6px;}
+.lnbNav .lnb .lnb_title {font-size:20px; color:#1d1d1d;}
+.lnbNav .lnb .lnb_dep1 > li > a {display:block; position:relative; padding:16px; font-size:16px}
+.lnbNav .lnb .lnb_dep1 > li:hover,
+.lnbNav .lnb .lnb_dep1 > li > a:hover,
+.lnbNav .lnb .lnb_dep1 > li > a:focus,
+.lnbNav .lnb .lnb_dep1 > li.active > a {background:#007bc3; border-color:#007bc3; color:#fff}
+
+
+
+
+/* contents */
+#content {
+	position: relative;
+	width: 1000px;
+    float: right;
+	height: 100%;
+	background: white;
+	margin: 0 auto;
+	padding: 0;
+	display: block;
+}
+
+.title_sales_header{
+	position: relative;
+	height: 54px;
+	overflow: visible;
+	min-width: 1000px;
+	display: inline-block;
+	margin-top: 91px;
+	border-bottom: 4px solid black;
+	
+}
+#title_sales {
+	/* 위치 설정 */
+	top: 91px;
+	/* 텍스트 스타일 */
+	text-align: left;
+	font-size: 26px;
+	color: #000000;
+	font-weight: bold;
+}
+
