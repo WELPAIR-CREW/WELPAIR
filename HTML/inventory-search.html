@@ -62,16 +62,119 @@
             <span id="border_inven"></span>
         </div>
 			
-			<div class="content_wrap">
-                
+			<form class="content_wrap">
+                <label>상품코드</label><input type="inven_code" maxlength="15" name="">
+                <label>상품명</label><input type="inven_name" maxlength="15" name="">
+                <label>카테고리</label><select id="category">
+                    <option value="">선택</option>
+                    <option value="카테고리1">카테고리1</option>
+                    <option value="카테고리2">카테고리2</option>
+                    <option value="카테고리3">카테고리3</option>
+                    <option value="카테고리4">카테고리4</option>
+                </select>
+                <label>등록구분</label>
+                    <select id="reg_option">
+                    <option value="카테고리1">입고</option>
+                    <option value="카테고리2">출고</option>
+                    <option value="카테고리3">반품입고</option>
+                    <option value="카테고리4">기타</option>
+                    </select>
+                <label>일자</label>
+                <input type="date" name="dateIn">                   
+                <label>비고</label><input type="text" maxlength="15" name="">
+                <label>수량</label><input type="number" name="amount" min="0" max="100" step="1" value="0">
+                <button class="btn_basic" type="register">등록</button> 
+                <button class="btn_basic" type="search">검색</button>
+			</form>
 
-                    <input type="text" maxlength="15" name="">
-                    <a class="btn_basic">검색</a> 
+            <table class="inven_search_result">
+                <tr class="row1">
+                    <th><input type="checkbox" name="inven_select"></th>
+                    <th>상품코드</th>
+                    <th>상품명</th>
+                    <th>카테고리</th>
+                    <th>총 재고수량</th>
+                    <th>총 가용수량</th>
+                    <th>입고일자</th>
+                    <th>등록일자</th>
+                </tr>
+                <tr>
+                    <th><input type="checkbox" name="inven_select"></th>
+                    <th>상품코드</th>
+                    <th>상품명</th>
+                    <th>카테고리</th>
+                    <th>총 재고수량</th>
+                    <th>총 가용수량</th>
+                    <th>입고일자</th>
+                    <th>등록일자</th>
+                </tr>
+                <tr>
+                    <th><input type="checkbox" name="inven_select"></th>
+                    <th>상품코드</th>
+                    <th>상품명</th>
+                    <th>카테고리</th>
+                    <th>총 재고수량</th>
+                    <th>총 가용수량</th>
+                    <th>입고일자</th>
+                    <th>등록일자</th>
+                </tr>
+                <tr>
+                    <th><input type="checkbox" name="inven_select"></th>
+                    <th>상품코드</th>
+                    <th>상품명</th>
+                    <th>카테고리</th>
+                    <th>총 재고수량</th>
+                    <th>총 가용수량</th>
+                    <th>입고일자</th>
+                    <th>등록일자</th>
+                </tr>
+                <tr>
+                    <th><input type="checkbox" name="inven_select"></th>
+                    <th>상품코드</th>
+                    <th>상품명</th>
+                    <th>카테고리</th>
+                    <th>총 재고수량</th>
+                    <th>총 가용수량</th>
+                    <th>입고일자</th>
+                    <th>등록일자</th>
+                </tr>
+                <tr>
+                    <th><input type="checkbox" name="inven_select"></th>
+                    <th>상품코드</th>
+                    <th>상품명</th>
+                    <th>카테고리</th>
+                    <th>총 재고수량</th>
+                    <th>총 가용수량</th>
+                    <th>입고일자</th>
+                    <th>등록일자</th>
+                </tr>
+                <tr>
+                    <th><input type="checkbox" name="inven_select"></th>
+                    <th>상품코드</th>
+                    <th>상품명</th>
+                    <th>카테고리</th>
+                    <th>총 재고수량</th>
+                    <th>총 가용수량</th>
+                    <th>입고일자</th>
+                    <th>등록일자</th>
+                </tr>
+                <tr>
+                    <th><input type="checkbox" name="inven_select"></th>
+                    <th>상품코드</th>
+                    <th>상품명</th>
+                    <th>카테고리</th>
+                    <th>총 재고수량</th>
+                    <th>총 가용수량</th>
+                    <th>입고일자</th>
+                    <th>등록일자</th>
+                </tr>
 
- 
+            <script>
+                $('input[type=inven_code]').val('상품코드 입력');
+                $('input[type=inven_name]').val('상품명 입력');
 
 
-			</div>
+            </script>
 		</div>
 	</div>
 	
