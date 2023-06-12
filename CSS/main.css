@@ -8,12 +8,6 @@ section {
     margin-top: 50px;
 }
 
-button {
-    width: 80px;
-    height: 33px;
-    border-radius: 6px;
-}
-
 input {
     border: 1px solid black;
 }
@@ -55,7 +49,7 @@ input {
     padding-right: 26px;
 }
 
-.section-nav > .section-nav-category:not(:first-child) {
+.section-nav>.section-nav-category:not(:first-child) {
     margin-top: 36px;
 }
 
@@ -83,6 +77,23 @@ input {
     font-size: 16px;
 }
 
+.section-selectbox .button {
+    width: 80px;
+    height: 33px;
+    border-radius: 6px;
+    margin-left: auto;
+    background-color: #333333;
+    color: white;
+}
+
+.section-selectbox .button:hover {
+    background-color: #e2e2e2;
+    color: #333333;
+}
+
+.section-selectbox .second-button {
+    margin-left: 20px
+}
 
 .section-selectbox-input {
     box-sizing: border-box;
@@ -95,18 +106,8 @@ input {
 
 .area1 {
     display: flex;
-    margin-top:40px;
+    margin-top: 40px;
     align-items: center;
-}
-
-.area1 button {
-    margin-left: auto;
-    background-color: #333333;
-    color: white;
-}
-
-.area1 button:last-child {
-    margin-left: 20px;
 }
 
 .area2 {
@@ -114,14 +115,8 @@ input {
     margin-top: 17px;
 }
 
-.area2 button {
-    margin-left: auto;
-    background-color: #333333;
-    color: white;
-}
-
 .section-selectbox-span {
-    display: flex;  
+    display: flex;
     width: 220px;
     height: 33px;
     justify-content: space-between;
@@ -143,18 +138,25 @@ input {
     margin-left: 40px;
     width: 900px;
     height: 396px;
-    border:1px solid #D9D9D9;
+    border: 1px solid #D9D9D9;
     border-collapse: collapse;
+    text-align: center;
 }
 
 .section-product-table th {
     background-color: #e2e2e2;
-    border:1px solid #D9D9D9;
 }
 
-.section-product-table td {
-    border:1px solid #D9D9D9;
-    text-align: center;
+.section-product-table 
+th,td {
+    border: 1px solid #D9D9D9;
+}
+
+.section-product-table input[type='checkbox'] {
+    width: 22px;
+    height: 22px;
+    border: 1px solid #757575;
+    vertical-align: middle;
 }
 
 .paging {
