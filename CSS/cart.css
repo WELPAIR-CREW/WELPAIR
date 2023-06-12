@@ -1,12 +1,8 @@
 @charset "UTF-8";
 
-*{
-	font-family: 'Malgun Gothic';
-}
-
+/* 전체 장바구니 페이지 공통 */
 #cart_container {
 	width: 1196px;
-	position: relative;
 	/* transform: translateX(-50%); */
     /* align-items: end; */
     /* justify-content: flex-end; */
@@ -15,16 +11,19 @@
 	
 }
 	
+/* li 공통  */
 li {
 	list-style-type: none;
 }
 
+/* input check박스 공통 */
 input[type=checkbox]{
 	width: 23px;
 	height: 23px;
 }
 
-.wrap {
+/* 장바구니 상품부분 박스 */
+.prd_box {
 	/* position: absolute; */
 
 	background: white;
@@ -34,6 +33,7 @@ input[type=checkbox]{
 	
 }
 
+/* 장바구니 헤더 */
 .title_cart_header{
 	position: relative;
 	height: 54px;
@@ -41,9 +41,8 @@ input[type=checkbox]{
 	margin-top: 91px;
 	border-bottom: 4px solid black;
 	/* left: 122px; */
-	
 }
-
+/* 장바구니 타이틀 부분 */
 #title_cart {
 	/* 위치 설정 */
 	top: 91px;
@@ -54,7 +53,7 @@ input[type=checkbox]{
 	font-weight: bold;
 }
 
-/* 전체선택, 선택삭제 구역 */
+/* 전체선택, 선택삭제 체크박스 구역 */
 .cart_option {
 	/* margin: 30px 0px 0px 140px; */
 	position: relative;
@@ -71,7 +70,7 @@ input[type=checkbox]{
 
 	/* 선택삭제 버튼 */
 	.btn_del {
-		margin-left: 55px;
+		margin-left: 30px;
 		background-color: rgba(0, 0, 0, 0);
 		text-align: center;
 		border: 0 none;
@@ -208,7 +207,9 @@ input[type=checkbox]{
 	}
 	/* 수량변경 버튼 */
 	.prd_util div > button {
-		margin-left: 8px;
+		width: 26px;
+		margin-left: 5px;
+		border: none;
 	}
 	.price_area {
 		/* display: flex; */
@@ -223,7 +224,7 @@ input[type=checkbox]{
 		/* position: inherit; */
 		width: 154px;
 		height: 46px;
-		margin-right: 20px;
+		margin: 0PX 20px 0px 10px;
 		/* font-weight: bold; */
 		justify-content: space-around;
 	}
@@ -244,7 +245,41 @@ input[type=checkbox]{
 		/* left: 38px; */
 		width: 154px;
 		height: 46px;
-		margin-right: 20px;
+		margin-right: 30px;
 		justify-content: space-around;	font-weight: bold;
 	}
 
+/* 예상결제정보 구역 */
+.pay_box {
+	position: relative;
+	top: 60px;
+	height: 191px;
+}
+
+
+	/* 예상결제정보 헤더 */
+	.exptpay_heade{
+		height: 54px;
+		width: 1196px;
+		/* 위치 설정 */
+		top: 91px;
+		/* 텍스트 스타일 */
+		text-align: left;
+		/* margin-top: 91px; */
+		border-bottom: 4px solid black;
+		/* left: 122px;  */
+	}
+
+	/* 예상결제정보  타이틀 부분 */
+	#title_exptpay {
+
+		font-size: 26px;
+		color: #000000;
+		font-weight: bold;
+	}
+
+	/* 예상결제정보 구역  */
+	.pay_box {
+		width: 1196px;
+		height: 200px;
+	}
