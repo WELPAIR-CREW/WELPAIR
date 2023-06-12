@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관리자-회원등록1</title>
+    <link rel="stylesheet" href="../../CSS/header.css">
+    <link rel="stylesheet" href="../../CSS/main.css">
+    <link rel="stylesheet" href="../../CSS/footer.css">
+    <link rel="stylesheet" href="../../CSS/admin-member.css">
+    <script src="../../src/static/include.js"></script>
+</head>
+
+<!-- main.css 공통 적용을 위한 구조와 속성으로 재작성ing -->
+
+<body>
+    <div data-include-html="./header_admin.html" class="include"></div>
+    <section> <!--section 하위요소로 div(내비), div(컨텐트) -->
+
+        <div class="navs"> 
+            <div class="nav-firstmenu"><s>회원관리</s></div>
+            <div class="nav-menu"><a href="../HTML/admin-member-view.html">회원조회</a></div>
+            <div class="nav-menu"><b>회원등록</b></div>
+            <div class="nav-menu"><a href="../HTML/admin-member-permission.html">가입승인</a></div>
+            <div class="nav-menu"><a href="../HTML/admin-member-givePoint.html">복지포인트지급</a></div>
+            <div class="nav-menu"><a href="../HTML/admin-member-pointHistory1">복지포인트지급이력</a></div>
+        </div>
+
+        <div class="section-content"> 
+            <!-- div컨텐트 하위 요소: 1)타이틀, 2)필터, 3)테이블, 4)검색, 5)페이징 -->
+            <div class="section-title">회원등록</div>
+
+            <!-- 2)필터, 집계 등 -->
+            <div class="section-filter">
+                <button class="button-circle">전체</button>
+                <button class="button-circle">최근한달</button>
+                <img src="../../img/calendar.png" alt="캘린더">
+                <input type="date" id="start-date" name="date">
+                <label>~</label>
+                <input type="date" id="end-date" name="date">
+            </div>
+
+            <!-- 3)테이블 -->
+            <table class="member-regist">
+                <thead>
+                    <tr>
+                        <th>입사일</th>
+                        <th>사번</th>
+                        <th>이름</th>
+                        <th>이메일</th>
+                        <th>연락처</th>
+                        <th>부서</th>
+                        <th>직급</th>
+                        <th>상태</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2023.07.01</td>
+                        <td>P231010</td>
+                        <td>홍길동</td>
+                        <td>hong123@hielectronics.com</td>
+                        <td>010-1234-5678</td>
+                        <td>영업</td>
+                        <td>사원</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>완료</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- 4)검색 -->
+            <div class="search-list">
+                <input type="text" class="search-input">
+                <button class="button-circle">검색</button>
+            </div>
+
+            <!-- 5)페이징 -->
+            <div class="paging">
+                <span>&lt;</span>
+                <span style="color: #4D4D4D;">1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+                <span>&gt;</span>
+            </div>
+        </div>
+    </section>
+
+    <div data-include-html="./footer.html" class="include"></div>
+
+</body>
+
+</html>
