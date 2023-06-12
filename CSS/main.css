@@ -105,6 +105,10 @@ input {
     color: white;
 }
 
+.area1 button:last-child {
+    margin-left: 20px;
+}
+
 .area2 {
     display: flex;
     margin-top: 17px;
