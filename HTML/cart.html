@@ -78,7 +78,6 @@
                                 </label>
                                 <!-- 상품제목 및 바로가기 링크 -->
                                 <a href="http://127.0.0.1/HTML/index.html">
-
                                     <!-- 상품썸네일 구역 -->
                                     <div class="cart_thumb_box">
                                         <!-- 상품썸네일 이미지-->
@@ -87,7 +86,6 @@
                                     <!-- 상품이름 작성구역  -->
                                     <div class="prd_name">가나다라마바사아자차카타파하가나다라마바아차자차<br>
                                     </div>
-
                                 </a>
                                 <!-- 상품 수량변경 옵션구역 -->
                                 <div class="prd_util">
@@ -106,7 +104,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <!-- 상품 금액 구역 -->
                             <div class="price_area">
                                 <!-- 상품금액 -->
@@ -128,30 +125,45 @@
                                     </div>
                                 </div>
                             <!-- 상품금액 닫기 -->    
-                            </div>
-                            
+                            </div>                           
                         <!-- 상품 info 박스 종료 -->
-                        </div>
-                    
+                        </div>                   
                         <!-- 상품 1개 종료 -->
                     </li>
-
                 </ul>
             <!-- 카트상품 리스트 닫기 -->
             </div>
-
         <!-- 카트상품 컨테이너 닫기 -->
         </div>
 
-
         <!-- 예상결제정보 컨테이너 시작 -->
-        <div id="exptpay_container" class="pay_box">
-            
+        <div id="exptpay_container">
             <!-- 예상결제정보 헤더 -->
-            <div class="exptpay_header">
-                <!-- 예상결제정보 타이틀 -->
-                <div id="title_exptpay">예상 결제정보</div>
-            </div>
+            <div class="exptpay_header">예상 결제정보</div>
+            <!-- 예상결제정보 인포 -->
+            <div class="exptpay_box">
+                
+                <!-- 금액박스 -->
+                <div class="exptpay_pricebox">
+                    <!-- 금액옵션 -->
+                    <div class="exptpay_price_option">
+                        <div>선택상품 합계</div>
+                        <div id="del_option">배송비 합계</div>
+                        <div>총 금액합계</div>
+                    </div>
+        
+                    <!-- 출력금액 -->
+                    <div class="exptpay_price">
+                        <div class="exptpay_price1">9,999,999원</div>
+                        <div id="exptpay_del">0원</div>
+                        <div class="exptpay_price3">99,999,999원</div>
+                    </div>
+                </div>
+                <!-- 버튼박스 -->
+                <div class="bnt_order">
+                    <button type="submit" class="goto_order"><span>선택상품<br>주문하기</span></button>
+                </div>
+            </div>            
 
         <!-- 예상결제정보 컨테이너 닫기 -->
         </div>
