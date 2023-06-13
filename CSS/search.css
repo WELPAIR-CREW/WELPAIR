@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+*{
+	font-family: 'Malgun Gothic';
+}
+
+#cart_container {
+	width: 1196px;
+	position: relative;
+	/* transform: translateX(-50%); */
+    /* align-items: end; */
+    /* justify-content: flex-end; */
+	/* width: 1280px; */
+	margin: auto;
+	
+}
+	
+li {
+	list-style-type: none;
+}
+
+
+.title_cart_header{
+	position: relative;
+	height: 54px;
+	width: 1196px;
+	margin-top: 91px;
+	border-bottom: 4px solid black;
+	/* left: 122px; */
+	
+}
+
+#title_cart {
+	/* 위치 설정 */
+	top: 91px;
+	/* 텍스트 스타일 */
+	text-align: left;
+	font-size: 26px;
+	color: #000000;
+	font-weight: bold;
+}

@@ -3,6 +3,7 @@
 /* 전체 장바구니 페이지 공통 */
 #cart_container {
 	width: 1196px;
+	
 	margin: auto;
 	
 }
@@ -10,6 +11,10 @@
 /* li 공통  */
 li {
 	list-style-type: none;
+}
+
+li[id^=cart_basic] {
+	margin-bottom: 100px;
 }
 
 /* input check박스 공통 */
