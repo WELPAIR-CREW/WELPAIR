@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관리자-회원등록2</title>
+    <link rel="stylesheet" href="../../CSS/header.css">
+    <link rel="stylesheet" href="../../CSS/main.css">
+    <link rel="stylesheet" href="../../CSS/footer.css">
+    <link rel="stylesheet" href="../../CSS/admin-member.css">
+    <script src="../../src/static/include.js"></script>
+</head>
+
+<!-- main.css 공통 적용을 위한 구조와 속성대로 작성 -->
+
+<body>
+    <div data-include-html="./header_admin.html" class="include"></div>
+    
+    <section> 
+    <!--section 하위요소로 div(내비), div(컨텐트) -->
+    <div class="navs"> 
+        <div class="nav-firstmenu"><s>회원관리</s></div>
+        <div class="nav-menu"><a href="../HTML/admin-member-view.html">회원조회</a></div>
+        <div class="nav-menu"><b>회원등록</b></div>
+        <div class="nav-menu"><a href="../HTML/admin-member-permission.html">가입승인</a></div>
+        <div class="nav-menu"><a href="../HTML/admin-member-givePoint.html">복지포인트지급</a></div>
+        <div class="nav-menu"><a href="../HTML/admin-member-pointHistory1">복지포인트지급이력</a></div>
+    </div>
+
+        <div class="section-content"> 
+            <!-- div컨텐트 하위 요소: 1)타이틀, 2)필터, 3)테이블, 4)검색, 5)페이징 -->
+            <div class="section-title">회원등록</div>
+
+            <!-- 자동으로 값이 들어오며 비활성화되는 값도 일단 구별없이 작성-->
+            <div class="input-form">
+                <div class="input-id">
+                    <label for="id">아이디</label>
+                <input type="text">
+                </div>
+                <div class="input-password1">
+                    <label for="id">비밀번호 설정</label>
+                    <input type="text">
+                </div>
+                <div class="input-password2">
+                    <label for="id">비밀번호 확인</label>
+                    <input type="text">
+                </div>
+                <div class="input-name">
+                    <label for="id">이름</label>
+                    <input type="text">
+                </div>
+                <div class="input-email">
+                    <label for="id">이메일</label>
+                    <input type="text">
+                </div>
+                <div class="input-phone">
+                    <label for="id">연락처</label>
+                    <input type="text">
+                </div>
+                <div class="input-dept">
+                    <label for="id">부서</label>
+                    <input type="text">
+                </div>
+                <div class="input-job">
+                    <label for="id">직급</label>
+                    <input type="text">
+                </div>
+            </div>
+
+            <div class="button-wideSquare">
+                <button>입력취소</button>
+                <button>회원등록</button>
+            </div>
+
+        </div>
+    </section>
+
+    <div data-include-html="./footer.html" class="include"></div>
+
+</body>
+
+</html>
