@@ -3,7 +3,6 @@
 /* 전체 장바구니 페이지 공통 */
 #cart_container {
 	width: 1196px;
-	
 	margin: auto;
 	
 }
@@ -12,6 +11,7 @@
 li {
 	list-style-type: none;
 }
+
 
 li[id^=cart_basic] {
 	margin-bottom: 100px;
@@ -26,14 +26,14 @@ input[type=checkbox]{
 /* 장바구니 상품부분 박스 */
 .prd_box {
 	background: white;
-	margin-bottom: 100px;
+	/* margin-bottom: 50px; */
 	
 }
 
 /* 장바구니 헤더 */
 .title_cart_header{
 	height: 54px;
-	width: 1196px;
+	width: 1170px;;
 	margin-top: 91px;
 	border-bottom: 4px solid black;
 }
@@ -49,7 +49,7 @@ input[type=checkbox]{
 
 /* 전체선택, 선택삭제 체크박스 구역 */
 .cart_option {
-	margin-top: 30px;
+	margin: 30px 0px;
 	list-style-type: none;
 	font-size: 16px
 }
@@ -70,9 +70,9 @@ input[type=checkbox]{
 
 /* 상품 옵션 카테고리 박스 */
 .cart_option_box { 
-	width: 1178px;
+	width: 1150px;
 	height: 23px;
-	margin-top: 30px;
+	margin: 20px 0px;
 }
 
 	.cart_option_ul {
@@ -97,13 +97,23 @@ input[type=checkbox]{
 
 /* 상품 목록 박스 */
 .order_cart_list { 
-	margin-top: 60px;
-	width: 1165px;
-	height: 100px;
+    overflow: scroll;
+    /* IE scroll 숨김 */
+	width: 1210px;
+	max-height: 740px;
+	
 }
 
+/* 내부스크롤바 안보이게 하기 */
+.order_cart_list::-webkit-scrollbar { 
+    display: none;
+    width: 0 !important;
+}
+
+
+
 	/* 상품 info 박스 수평정렬 */
-	li[id=cart_basic_case-1] div {
+	li[id^=cart_basic_case-] div {
 		display: inline-flex;
 		/* 수직, 수평 정렬 */
 		align-items: center;
@@ -112,18 +122,19 @@ input[type=checkbox]{
 
 	/* cart info 박스  */
 	.cart_info_box {
-		width: 1196px;
-		height: 54px;
+		width: 1150px;
+		height: 70px;
 	}
 
 	/* 썸네일+상품이름+수량 info 구역 */
 	.cart_order_prd {
+		margin-top: 50px;
 		width: 650px;
 		height: 96px;
 	}
 
 	/* 품목 체크박스 */
-	#cart_select{
+	.cart_select{
 		width: 23px;
 		height: 23px;
 	}
@@ -155,7 +166,7 @@ input[type=checkbox]{
 		text-align: center;
 	}
 	.prd_util_wrap {
-		margin: 0px 30px;
+		margin: 0px 20px;
 	}
 
 	/* 수량박스 */
@@ -192,18 +203,20 @@ input[type=checkbox]{
 	.cart_order_total_price {
 		width: 154px;
 		height: 46px;
-		margin-right: 30px;
+		margin-right: 20px;
 		justify-content: space-around;	font-weight: bold;
 	}
 
 /* 예상결제정보 구역 */
 #exptpay_container {
+	margin-top: 50px;
 	height: 197px;
 }
 		/* 예상결제정보 헤더 */
 		.exptpay_header{
 			font-size: 25px;
 			font-weight: bold;
+			width: 1170px;
 			height: 54px;
 			/* 텍스트 스타일 */
 			text-align: left;
