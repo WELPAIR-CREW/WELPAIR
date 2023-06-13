@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <!-- script -->
     <link rel="stylesheet" href="../CSS/inventory.css">
     <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
     <title>입출고등록</title>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="../src/static/include.js"></script>
 </head>
-    <!-- 헤더 영역 -->
-    <div data-include-html="./header_admin.html" class="include"></div>
-    
-    <!-- 헤더 종료 -->
+<!-- 헤더 영역 -->
+
+<!-- 헤더 종료 -->
 
 <body class="inven_body">
+    <div data-include-html="./header_admin.html" class="include"></div>
 
     <!-- 왼쪽 메뉴 베너 -->
-	<nav class="lnbNav">
-		<div id="snb" class="lnb">
-        	<ul id="lnb" class="lnb_dep1">
-		        <li><a href="/HTML/inventory.html" class="lnb_title"><span><strong>재고관리</strong></span></a></li>
+    <nav class="lnbNav">
+        <div id="snb" class="lnb">
+            <ul id="lnb" class="lnb_dep1">
+                <li><a href="/HTML/inventory.html" class="lnb_title"><span><strong>재고관리</strong></span></a></li>
                 <li><a href="/HTML/inventory-register.html" class="menuLnb"><span>입출고등록</span></a></li>
                 <li><a href="/HTML/inventory-search.html" class="menuLnb"><span>입출고내역</span></a></li>
-	        </ul>
+            </ul>
         </div>
     </nav>
 
-            
-	<!-- 컨텐츠 영역 -->
+
+    <!-- 컨텐츠 영역 -->
     <div id="content" class="contentsArticle">
-        <div class="title_inven_header">  <!-- 타이틀바디 -->
+        <div class="title_inven_header"> <!-- 타이틀바디 -->
             <span id="title_inven">입출고 등록</span>
             <span id="border_inven"></span>
         </div>
@@ -42,51 +45,56 @@
                 <option value="">선택</option>
                 <option value="카테고리1">카테고리1</option>
                 <option value="카테고리2">카테고리2</option>
-                <option value="카테고리3">카테고리3</option>
+                <op value="카테고리3">카테고리3</op tion>
                 <option value="카테고리4">카테고리4</option>
             </select>
             <label>등록구분</label>
-                <select id="reg_option" class="inven_op1">
+            <select id="reg_option" class="inven_op1">
                 <option value="카테고리1">입고</option>
                 <option value="카테고리2">출고</option>
                 <option value="카테고리3">반품입고</option>
                 <option value="카테고리4">기타</option>
-                </select>
+            </select>
             <label>기간</label>
-            <input type="date" name="dateIn" placeholder="시작일" class="inven_op1">                   
+            <input type="date" name="dateIn" placeholder="시작일" class="inven_op1">
             <input type="date" name="dateout" placeholder="종료일" class="inven_op1">
-            <br>                   
+            <br>
             <label>비고</label><input class="inven_op1" type="inven_text" maxlength="15" name="" placeholder="비고 입력">
             <label>수량</label><input class="inven_op1" type="number" name="amount" min="0" max="100" step="1" value="0">
+
         </form>
         <div class="btn_group">
             <input class="btn_basic" type="reset" value="다시입력" onclick="resetTable()">
-            <input class="btn_basic" type="submit" value="등록"> 
+            <input class="btn_basic" type="submit" value="등록">
         </div>
+
+
         <form>
-        <table class="inven_search_result">
-            <tr class="row1">
-                <th><input type="checkbox" name="inven_select"></th>
-                <th>상품코드</th>
-                <th>상품명</th>
-                <th>카테고리</th>
-                <th>총 재고수량</th>
-                <th>총 가용수량</th>
-                <th>입고일자</th>
-                <th>등록일자</th>
-                <th>수량</th>
-            </tr>
-            <tr class="row2">
-                <th><input type="checkbox" name="inven_select"></th>
-                <td>상품코드</td>
-                <td>상품명</td>
-                <td>카테고리</td>
-                <td>총 재고수량</td>
-                <td>총 가용수량</td>
-                <td>입고일자</td>
-                <td>등록일자</td>
-                <td><input type="number" name="amount" min="0" max="100" step="1" value="0"></td>
-            </tr>
+            <table class="inven_search_result">
+                <tr class="row1">
+                    <th><input type="checkbox" name="inven_select"></th>
+                    <th>상품코드</th>
+                    <th>상품명</th>
+                    <th>카테고리</th>
+                    <th>총 재고수량</th>
+                    <th>총 가용수량</th>
+                    <th>입고일자</th>
+                    <th>등록일자</th>
+                    <th>수량</th>
+                </tr>
+                <tr class="row2">
+                    <th><input type="checkbox" name="inven_select"></th>
+                    <td>상품코드</td>
+                    <td>상품명</td>
+                    <td>카테고리</td>
+                    <td>총 재고수량</td>
+                    <td>총 가용수량</td>
+                    <td>입고일자</td>
+                    <td>등록일자</td>
+                    <td><input type="number" name="amount" min="0" max="100" step="1" value="0"></td>
+                </tr>
+            </table>
+
         </form>
 
         <script>
@@ -101,10 +109,12 @@
             }
         </script>
 
-		</div>
-	</div>
-	
+    </div>
+
+    <!-- footer -->
+    <div data-include-html="./footer.html" class="include"></div>
 
 
 </body>
+
 </html>
