@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입출고등록</title>
+    <link rel="stylesheet" href="/CSS/header.css">
+    <link rel="stylesheet" href="/CSS/main.css">
+    <link rel="stylesheet" href="/CSS/footer.css">
+    <link rel="stylesheet" href="/CSS/inventory.css">
+    <script src="/src/static/include.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+    <div data-include-html="./header_admin.html" class="include"></div>
+
+    <!-- 왼쪽 메뉴 베너 --> 
+    <section>
+        <div class="section-nav">
+            <div class="section-nav-category">재고관리</div>
+            <div class="section-nav-category">입출고등록</div>
+            <div class="section-nav-category">입출고내역</div>
+        </div>
+
+        <!-- 컨텐츠 영역 시작 -->
+        <div class="section-content">
+            <div class="section-title">입출고등록</div>
+
+            <!-- 입출고등록 대상 상품 검색 -->
+            <div class="section-selectbox">
+                <!-- 첫번째 라인 -->
+                <div class="section-selectbox area1">
+                    <span class="section-selectbox-span">상품코드
+                        <input type="text" class="section-selectbox-input product-code" placeholder="상품코드입력">
+                    </span>
+                    <span class="section-selectbox-span">상품명
+                        <input type="text" class="section-selectbox-input product-name" placeholder="상품명입력">
+                    </span>
+                    <span class="section-selectbox-span">카테고리
+                        <input type="text" class="section-selectbox-input product-code" placeholder="상품코드입력">
+                    </span>
+                    <span class="section-selectbox-span">등록구분
+                        <input type="text" class="section-selectbox-input product-name" placeholder="상품명입력">
+                    </span>
+                </div>
+
+                <!-- 두번째 라인 -->
+                <div class="section-selectbox area2">
+                    <span class="section-selectbox-span">기간
+                        <select name="large" id="select-large" class="section-selectbox-select">
+                        </select>
+                        <select name="medium" id="select-medium" class="section-selectbox-select">
+                        </select>
+                    </span>
+
+
+
+
+                    <span class="section-selectbox-span">비고
+                        <input type="text" class="section-selectbox-input product-comen" placeholder="비고입력">
+                    </span>
+                    
+                    <button class="button first-button">다시입력</button>
+                    <button class="button first-button">등록</button>
+                </div>
+            </div>
+
+            
+            <!-- 입출고등록 테이블 -->
+            <table class="section-inven-table">
+                <tr>
+                    <th><input type="checkbox"></th>
+                    <th>상품코드</th>
+                    <th>상품명</th>
+                    <th>카테고리</th>
+                    <th>등록구분</th>
+                    <th>총 재고수량</th>
+                    <th>총 가용수량</th>
+                    <th>입고일자</th>
+                    <th>등록일자</th>
+                    <th>수량</th>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>상품코드</td>
+                    <td>상품명</td>
+                    <td>카테고리</td>
+                    <td>등록구분</td>
+                    <td>총 재고수량</td>
+                    <td>총 가용수량</td>
+                    <td>입고일자</td>
+                    <td>등록일자</td>
+                    <td><input type="number" name="amount" min="0" max="100" step="1" value="0"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>상품코드</td>
+                    <td>상품명</td>
+                    <td>카테고리</td>
+                    <td>등록구분</td>
+                    <td>총 재고수량</td>
+                    <td>총 가용수량</td>
+                    <td>입고일자</td>
+                    <td>등록일자</td>
+                    <td><input type="number" name="amount" min="0" max="100" step="1" value="0"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>상품코드</td>
+                    <td>상품명</td>
+                    <td>카테고리</td>
+                    <td>등록구분</td>
+                    <td>총 재고수량</td>
+                    <td>총 가용수량</td>
+                    <td>입고일자</td>
+                    <td>등록일자</td>
+                    <td><input type="number" name="amount" min="0" max="100" step="1" value="0"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>상품코드</td>
+                    <td>상품명</td>
+                    <td>카테고리</td>
+                    <td>등록구분</td>
+                    <td>총 재고수량</td>
+                    <td>총 가용수량</td>
+                    <td>입고일자</td>
+                    <td>등록일자</td>
+                    <td><input type="number" name="amount" min="0" max="100" step="1" value="0"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>상품코드</td>
+                    <td>상품명</td>
+                    <td>카테고리</td>
+                    <td>등록구분</td>
+                    <td>총 재고수량</td>
+                    <td>총 가용수량</td>
+                    <td>입고일자</td>
+                    <td>등록일자</td>
+                    <td><input type="number" name="amount" min="0" max="100" step="1" value="0"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>상품코드</td>
+                    <td>상품명</td>
+                    <td>카테고리</td>
+                    <td>등록구분</td>
+                    <td>총 재고수량</td>
+                    <td>총 가용수량</td>
+                    <td>입고일자</td>
+                    <td>등록일자</td>
+                    <td><input type="number" name="amount" min="0" max="100" step="1" value="0"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>상품코드</td>
+                    <td>상품명</td>
+                    <td>카테고리</td>
+                    <td>등록구분</td>
+                    <td>총 재고수량</td>
+                    <td>총 가용수량</td>
+                    <td>입고일자</td>
+                    <td>등록일자</td>
+                    <td><input type="number" name="amount" min="0" max="100" step="1" value="0"></td>
+                </tr>
+
+            </table>
+
+
+
+        </div>   
+    </section>
+
+    <!-- footer -->
+    <div data-include-html="./footer.html" class="include"></div>
+
+    <script>
+        // 등록 수량
+        function resetTable() {
+            var form = document.getElementById('inventory-form');
+            form.reset();
+            var table = document.querySelector('.inven_search_result');
+            var inputFields = table.querySelectorAll('input[type="number"]');
+            inputFields.forEach(function (input) {
+                input.value = input.getAttribute('value');
+            });
+        }
+    </script>
+</body>
+</html>
