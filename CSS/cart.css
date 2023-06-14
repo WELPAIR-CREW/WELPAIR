@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+/* 랑크 흔적 보라색 없애기 */
+a { text-decoration: none; color: black; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:focus { text-decoration: none; }
+a:hover, a:active { text-decoration: none; }
+
 /* 전체 장바구니 페이지 공통 */
 #cart_container {
 	width: 1196px;
@@ -32,8 +39,7 @@ input[type=checkbox]{
 
 /* 장바구니 헤더 */
 .title_cart_header{
-	height: 54px;
-	width: 1170px;;
+	height: 54px;	width: 1170px;;
 	margin-top: 91px;
 	border-bottom: 4px solid black;
 }
