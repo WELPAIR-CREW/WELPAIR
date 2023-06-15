@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+/* 랑크 흔적 보라색 없애기 */
+a { text-decoration: none; color: black; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:focus { text-decoration: none; }
+a:hover, a:active { text-decoration: none; }
+
+.payment_container{
+	width: 1196px;
+
+}
+.order_prd_area {
+
+    height: 350px;
+}
+
+.orderer_area {
+
+    height: 185px;
+}
+
+.recipient_area {
+
+    height: 510px;
+}
+
+.pay_area {
+
+    height: 460px;
+}
+
+div[class^="title"] {
+    font-size: 26px;
+    font-weight: bold;
+}
+
