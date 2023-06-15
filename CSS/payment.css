@@ -7,5 +7,32 @@ a:hover { text-decoration: none; }
 a:focus { text-decoration: none; }
 a:hover, a:active { text-decoration: none; }
 
+.payment_container{
+	width: 1196px;
 
+}
+.order_prd_area {
+
+    height: 350px;
+}
+
+.orderer_area {
+
+    height: 185px;
+}
+
+.recipient_area {
+
+    height: 510px;
+}
+
+.pay_area {
+
+    height: 460px;
+}
+
+div[class^="title"] {
+    font-size: 26px;
+    font-weight: bold;
+}
 
