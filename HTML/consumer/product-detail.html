@@ -7,6 +7,7 @@
     <title>상품 상세</title>
     <link rel="stylesheet" href="../../CSS/header.css">
     <link rel="stylesheet" href="../../CSS/main.css">
+    <link rel="stylesheet" href="../../CSS/product-detail.css">
     <link rel="stylesheet" href="../../CSS/footer.css">
     <script src="../../src/static/include.js"></script>
 </head>
@@ -32,7 +33,17 @@
         <article class="product-detail-area2">
             <div class="product-detail-info">
                 <div class="product-name">상품명</div>
-                <div class="product-price">20,000</div>
+                <div class="product-price">
+                    <span>??%</span>
+                    <div class="product-detail-price"><del class="origin-price">20,000원</del><div class="sale-price">15,000원</div></div>
+                </div>
+            </div>
+            <div class="product-option">
+                <select name="options">
+                    <option value="">옵션 선택</option>
+                    <option value="option1">옵션</option>
+                    <option value="option2">옵션</option>
+                </select>
             </div>
             <div class="product-detail-pay">
 
