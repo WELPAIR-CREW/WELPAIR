@@ -24,10 +24,10 @@
                 <a href="/HTML/admin/admin_inventory.html">재고관리></a>
             </div>
             <div class="section-nav-category">
-                <a href="/HTML/admin/admin_inventory_register.html">입출고등록</a>
+                <a href="/HTML/admin/admin_inventory_register.html"><b>입출고등록</b></a>
             </div>
             <div class="section-nav-category">
-                <a href="/HTML/admin/admin_inventory_search.html"><b>입출고내역</b></a>
+                <a href="/HTML/admin/admin_inventory_search.html">입출고내역</a>
             </div>
         </div>
 
@@ -36,41 +36,34 @@
             <div class="section-title">입출고등록</div>
 
             <!-- 입출고등록 대상 상품 검색 -->
-            <div class="section-selectbox">
+            <div class="section-regSearch">
                 <!-- 첫번째 라인 -->
-                <div class="section-selectbox area1">
-                    <span class="section-selectbox-span">상품코드
-                        <input type="text" class="section-selectbox-input product-code" placeholder="상품코드입력">
+                <div class="section-regSearch area1">
+                    <span class="section-regSearch-span">상품코드
+                        <input type="text" class="section-regSearch-input product-code" placeholder="상품코드입력">
                     </span>
-                    <span class="section-selectbox-span">상품명
-                        <input type="text" class="section-selectbox-input product-name" placeholder="상품명입력">
+                    <span class="section-regSearch-span">상품명
+                        <input type="text" class="section-regSearch-input product-name" placeholder="상품명입력">
                     </span>
-                    <span class="section-selectbox-span">카테고리
-                        <input type="text" class="section-selectbox-input product-code" placeholder="상품코드입력">
+                    <span class="section-regSearch-span">카테고리
+                        <input type="text" class="section-regSearch-input product-code" placeholder="상품코드입력">
                     </span>
-                    <span class="section-selectbox-span">등록구분
-                        <input type="text" class="section-selectbox-input product-name" placeholder="상품명입력">
+                    <span class="section-regSearch-span">등록구분
+                        <input type="text" class="section-regSearch-input product-name" placeholder="상품명입력">
                     </span>
                 </div>
 
                 <!-- 두번째 라인 -->
-                <div class="section-selectbox area2">
-                    <span class="section-selectbox-span">기간
-                        <select name="large" id="select-large" class="section-selectbox-select">
-                        </select>
-                        <select name="medium" id="select-medium" class="section-selectbox-select">
-                        </select>
+                <div class="section-regSearch area2">
+                    <span class="section-datebox-span">입고일자
+                        <input type="date" name="invenRegDate" class="section-regSearch-date">
                     </span>
-
-
-
 
                     <span class="section-selectbox-span">비고
                         <input type="text" class="section-selectbox-input product-comen" placeholder="비고입력">
                     </span>
-                    
-                    <button class="button first-button">다시입력</button>
-                    <button class="button first-button">등록</button>
+                    <input class="btn_basic" type="reset" value="다시입력" onclick="resetTable()">
+                    <input class="btn_basic" type="submit" value="등록">
                 </div>
             </div>
 
@@ -83,10 +76,7 @@
                     <th>상품명</th>
                     <th>카테고리</th>
                     <th>등록구분</th>
-                    <th>총 재고수량</th>
-                    <th>총 가용수량</th>
                     <th>입고일자</th>
-                    <th>등록일자</th>
                     <th>수량</th>
                 </tr>
                 <tr>
@@ -95,10 +85,7 @@
                     <td>상품명</td>
                     <td>카테고리</td>
                     <td>등록구분</td>
-                    <td>총 재고수량</td>
-                    <td>총 가용수량</td>
                     <td>입고일자</td>
-                    <td>등록일자</td>
                     <td><input type="number" name="amount" min="0" max="100" step="1" value="0"></td>
                 </tr>
                 <tr>
@@ -107,10 +94,7 @@
                     <td>상품명</td>
                     <td>카테고리</td>
                     <td>등록구분</td>
-                    <td>총 재고수량</td>
-                    <td>총 가용수량</td>
                     <td>입고일자</td>
-                    <td>등록일자</td>
                     <td><input type="number" name="amount" min="0" max="100" step="1" value="0"></td>
                 </tr>
                 <tr>
@@ -119,10 +103,7 @@
                     <td>상품명</td>
                     <td>카테고리</td>
                     <td>등록구분</td>
-                    <td>총 재고수량</td>
-                    <td>총 가용수량</td>
                     <td>입고일자</td>
-                    <td>등록일자</td>
                     <td><input type="number" name="amount" min="0" max="100" step="1" value="0"></td>
                 </tr>
                 <tr>
@@ -131,10 +112,7 @@
                     <td>상품명</td>
                     <td>카테고리</td>
                     <td>등록구분</td>
-                    <td>총 재고수량</td>
-                    <td>총 가용수량</td>
                     <td>입고일자</td>
-                    <td>등록일자</td>
                     <td><input type="number" name="amount" min="0" max="100" step="1" value="0"></td>
                 </tr>
                 <tr>
@@ -143,10 +121,7 @@
                     <td>상품명</td>
                     <td>카테고리</td>
                     <td>등록구분</td>
-                    <td>총 재고수량</td>
-                    <td>총 가용수량</td>
                     <td>입고일자</td>
-                    <td>등록일자</td>
                     <td><input type="number" name="amount" min="0" max="100" step="1" value="0"></td>
                 </tr>
                 <tr>
@@ -155,10 +130,7 @@
                     <td>상품명</td>
                     <td>카테고리</td>
                     <td>등록구분</td>
-                    <td>총 재고수량</td>
-                    <td>총 가용수량</td>
                     <td>입고일자</td>
-                    <td>등록일자</td>
                     <td><input type="number" name="amount" min="0" max="100" step="1" value="0"></td>
                 </tr>
                 <tr>
@@ -167,15 +139,48 @@
                     <td>상품명</td>
                     <td>카테고리</td>
                     <td>등록구분</td>
-                    <td>총 재고수량</td>
-                    <td>총 가용수량</td>
                     <td>입고일자</td>
-                    <td>등록일자</td>
                     <td><input type="number" name="amount" min="0" max="100" step="1" value="0"></td>
                 </tr>
-
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>상품코드</td>
+                    <td>상품명</td>
+                    <td>카테고리</td>
+                    <td>등록구분</td>
+                    <td>입고일자</td>
+                    <td><input type="number" name="amount" min="0" max="100" step="1" value="0"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>상품코드</td>
+                    <td>상품명</td>
+                    <td>카테고리</td>
+                    <td>등록구분</td>
+                    <td>입고일자</td>
+                    <td><input type="number" name="amount" min="0" max="100" step="1" value="0"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>상품코드</td>
+                    <td>상품명</td>
+                    <td>카테고리</td>
+                    <td>등록구분</td>
+                    <td>입고일자</td>
+                    <td><input type="number" name="amount" min="0" max="100" step="1" value="0"></td>
+                </tr>
             </table>
 
+            <!-- 페이징 -->
+            <div class="paging">
+                <span>&lt;</span>
+                <span style="color: #4D4D4D;">1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+                <span>&gt;</span>
+            </div>
 
 
         </div>   

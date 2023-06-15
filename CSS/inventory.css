@@ -4,7 +4,7 @@ section {
     display: flex;
     width: 1280px;
     height: 656px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     margin-top: 50px;
 }
 
@@ -47,6 +47,185 @@ input {border: 1px solid black;}
     border-bottom: 4px solid black;
 }
 
+
+/* 검색 영역- 등록 */
+
+
+.section-regSearch {
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    display: grid;
+    text-align: center;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 25px 25px 25px; */
+    row-gap: 20px;
+    column-gap: 10px;
+}
+
+.section-regSearch-input {
+    box-sizing: border-box;
+    width: 130px;
+    height: 33px;
+    border-radius: 6px;
+    font-size: 16px;
+    padding: 0px 16px;
+}
+
+.area1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 25px 25px 25px;
+    margin-top: 40px;
+    align-items: center;
+}
+.area2 {
+    display: grid;
+    margin-top: 17px;
+    /* grid-template-columns: 1fr 1fr; */
+}
+
+.area2-left{
+    display: flex;
+    grid-column: 1;
+}
+.area2-right{
+    grid-column: 2;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.section-regSearch-span {
+    display:grid;
+    width: 200px;
+    height: 33px;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10px;
+    grid-column: span 4;
+}
+
+
+.section-regSearch-date{
+    width: 90px;
+    height: 30px;
+    align-items: center;
+    /* justify-content: space-betwehen; */
+    /* margin-left: 10px; */
+}
+
+.section-regSearch-input,
+.section-regSearch-date {
+    width: auto;
+}
+
+.section-regSearch-option-span{
+    /* width: 220px; */
+    height: 33px;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10px;
+    margin-left: 30px;
+}
+
+/* 검색 영역 - 내역 */
+
+
+.section-historySearch {
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    /* display: grid; */
+    text-align: center;
+    /* grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: auto;
+    row-gap: 20px;
+    column-gap: 10px; */
+}
+
+.area1 {
+    display: flex;
+    margin-top: 40px;
+    align-items: center;
+    /* grid-column: span 9; */
+    justify-content: space-between;
+    
+    
+}
+.area2 {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    /* grid-column: span 9; */
+    justify-content: space-between;
+}
+
+.section-historySearch-span {
+    display:flex;
+    align-items: center;
+    width: 200px;
+    height: 33px;
+    white-space: nowrap;
+    margin-left: 10px;
+    /* grid-column: span 4; */
+
+}
+
+
+.section-datebox-span{
+    margin-right: 10px;
+    grid-column: span 4;
+}
+
+
+.section-historySearch-input {
+    box-sizing: border-box;
+    width: 120px;
+    height: 33px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 100;
+    padding: 0px 10px;
+    margin-left: 10px;
+    
+}
+
+.section-historySearch-option-span{
+    box-sizing: border-box;
+    width: 120px;
+    height: 33px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 100;
+    padding: 0px 10px;
+    margin-left: 10px;
+}
+
+.area2-left{
+    display: contents;
+    justify-content: space-between;
+    /* grid-column: 1; */
+}
+.area2-right{
+    /* grid-column: 2; */
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+
+.section-historySearch-date{
+    width: 100px;
+    height: 30px;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+
 .section-inven-table {
     margin-top: 30px;
     margin-left: 40px;
@@ -66,13 +245,17 @@ td {
 }
 
 
-.paging {
-    display: flex;
-    margin-top: 30px;
-    justify-content: center;
-    font-size: 16px;
-    color: #A9A9A9;
+.btn_basic {
+    width: 80px;
+    height: 33px;
+    border-radius: 6px;
+    margin-left: 10px;
+    background-color: #333333;
+    color: white;
+    float: right;
 }
+
+
 
 .paging span:not(:first-child) {
     margin-left: 20px;
@@ -135,7 +318,9 @@ td {
 
 .paging {
     display: flex;
+    position: relative;
     margin-top: 30px;
+    margin-bottom: 30px;
     justify-content: center;
     font-size: 16px;
     color: #A9A9A9;
