@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -18,27 +18,64 @@
 <div data-include-html="../consumer/header.html" class="include"></div>
 
 <body>
+    <!-- 결제페이지 컨테이너 -->
     <div class="payment_container">
 
+        <!-- 주문상품 구역 -->
         <div class="order_prd_area">
+            <!-- 소제목 -->
             <div class="title_order_prd">주문상품</div>
-
+            
+            <div class="order_prd_contentsbox">
+                <ul class="order_prd_ul">
+                    <!-- thymeleaf... 셀렉아이템 갯수 변수사용  -->
+                    <li th:text="total: ${variable}" class="order_prd_li_1"></li>
+                    <li class="order_prd_li_2">상품정보</li>
+                    <li class="order_prd_li_3">수량(변경)</li>
+                    <li class="order_prd_li_3">금액</li>
+                    <li class="order_prd_li_3">배송비</li>
+                    <li class="order_prd_li_3">총 금액</li>
+                </ul>
+            </div>
 
         </div>
 
+        <!-- 주문자정보 구역 -->
         <div class="orderer_area">
+            <!-- 소제목 -->
+            
             <div class="title_orderer">주문자 정보</div>
+            <div class="orderer_info_contentsbox">
+                <table>
+                    <tr>
+                        <td><div class="labelbox_name">이름</div></td>
+                        <td><input type="text" class="inputbox_name" name="ordererName" value="이름을 입력하세요."></td>
+                    </tr>
+                    <tr>
+                        <td><div class="labelbox">휴대폰 번호</div></td>
+                        <td><input type="text" class="inputbox" name="ordererPhone" value="휴대폰 번호를 입력하세요.(숫자만 입력)"></td>
+                    </tr>
 
+                </table>
+                
+
+            </div>
 
 
         </div>
 
+        <!-- 수령자정보 구역 -->
         <div class="recipient_area">
+            <!-- 소제목 -->
+
             <div class="title_recipient">수령자 정보</div>
 
         </div>
 
+        <!-- 결제수단 구역 -->
         <div class="pay_area">
+            <!-- 소제목 -->
+
             <div class="title_pay">결제수단</div>
 
 
