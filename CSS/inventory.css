@@ -48,44 +48,155 @@ input {border: 1px solid black;}
 }
 
 
-/* 검색 영역- 등록 */
 
+/* 재고관리 메인- 재고현황*/
+.section-invenMain{
+	display: flex;
+	justify-content: space-between;
+	list-style-type: none;
+	padding: 0;
+	margin: 30px 50px 200px 50px;
+	flex-basis: 33%;
+	font-size: 20px;
+	text-align: center;
+    align-items: center;
+}
 
-.section-regSearch {
-    margin-left: 20px;
+.section-invenMain-list{
+	margin: 10px;
+	font-size: 20px;
+	font-weight: bold;
+
+}
+
+.section-invenMain-search{
+    display:flex;
+    margin: 30px;
     font-weight: bold;
     font-size: 16px;
-    display: grid;
     text-align: center;
-    /* grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 25px 25px 25px; */
-    row-gap: 20px;
-    column-gap: 10px;
 }
+
+.section-invenMain-search-btn {
+    display:flex;
+    align-items: center;
+    width: 200px;
+    height: 33px;
+    margin-left: 10px;
+}
+
+.section-invenMain-search-table {
+	margin: 5px 20px 20px 20px;
+	position: relative;
+	width: 960px;
+    height: 66px;
+    margin-top: 30px;
+    margin-left: 40px;
+    border: 1px solid #D9D9D9;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.section-invenMain-search-table th {
+	background-color: #e2e2e2;
+	height: 33px;
+	border: 1px solid #D9D9D9;
+}
+
+.section-invenMain-search-table input[type='checkbox'] {
+    width: 22px;
+    height: 30px;
+    border: 1px solid #757575;
+    vertical-align: middle;
+}
+
+
+
+
+
+
+/* 검색 영역- 등록 */
+
+.section-regSearch {
+    margin: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+.section-regSearch-line1 {
+    display: flex;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+
+.section-regSearch-line2  {
+    display: flex;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.section-regSearch-span {
+    width: 300px;
+    height: 33px;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
 
 .section-regSearch-input {
     box-sizing: border-box;
-    width: 130px;
+    width: 180px;
     height: 33px;
     border-radius: 6px;
     font-size: 16px;
     padding: 0px 16px;
 }
 
-.area1 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 25px 25px 25px;
-    margin-top: 40px;
-    align-items: center;
+.option{
+    width: 80px;
+
 }
-.area2 {
-    display: grid;
-    margin-top: 17px;
-    /* grid-template-columns: 1fr 1fr; */
+/* .section-regSearch-btn{
+
+} */
+
+.date{
+    box-sizing: border-box;
+    width: 150px;
+    height: 33px;
+    border-radius: 6px;
+    font-size: 16px;
+    padding: 0px 16px;
 }
 
-.area2-left{
+.amount{
+    width: 80px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .area2-left{
     display: flex;
     grid-column: 1;
 }
@@ -93,18 +204,10 @@ input {border: 1px solid black;}
     grid-column: 2;
     display: flex;
     justify-content: flex-end;
-}
+} */
 
 
-.section-regSearch-span {
-    display:grid;
-    width: 200px;
-    height: 33px;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 10px;
-    grid-column: span 4;
-}
+
 
 
 .section-regSearch-date{
@@ -115,10 +218,6 @@ input {border: 1px solid black;}
     /* margin-left: 10px; */
 }
 
-.section-regSearch-input,
-.section-regSearch-date {
-    width: auto;
-}
 
 .section-regSearch-option-span{
     /* width: 220px; */
@@ -128,6 +227,20 @@ input {border: 1px solid black;}
     margin-right: 10px;
     margin-left: 30px;
 }
+
+.section-regSearchResult-table{
+    display: table;
+    margin-top: 30px;
+    margin-left: 40px;
+    border: 1px solid #D9D9D9;
+    border-collapse: collapse;
+    text-align: center;
+
+}
+
+
+
+
 
 /* 검색 영역 - 내역 */
 
@@ -274,47 +387,6 @@ td {
     font-weight: bold;
 }
 
-.inven_main{
-	display: flex;
-	justify-content: space-between;
-	list-style-type: none;
-	padding: 0;
-	margin: 10px 30px 50px 30px;
-	flex-basis: 33%;
-	font-size: 20px;
-	text-align: center;
-}
-
-.inven_mainList{
-	margin: 10px;
-	font-size: 20px;
-	font-weight: bold;
-
-}
-
-.section-inven-table {
-	margin: 5px 20px 20px 20px;
-	position: relative;
-	width: 960px;
-    margin-top: 30px;
-    margin-left: 40px;
-    border: 1px solid #D9D9D9;
-    border-collapse: collapse;
-    text-align: center;
-}
-
-.section-inven-table th {
-	background-color: #e2e2e2;
-	height: 30px;
-	border: 1px solid #D9D9D9;
-}
-
-.section-inven-table input[type='checkbox'] {
-    width: 22px;
-    height: 22px;
-    border: 1px solid #757575;
-    vertical-align: middle;
-}
 
 .paging {
     display: flex;

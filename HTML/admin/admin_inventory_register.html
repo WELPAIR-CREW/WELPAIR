@@ -21,7 +21,7 @@
     <section>
         <div class="section-nav">
             <div class="section-nav-category">
-                <a href="/HTML/admin/admin_inventory.html">재고관리></a>
+                <a href="/HTML/admin/admin_inventory.html">재고관리</a>
             </div>
             <div class="section-nav-category">
                 <a href="/HTML/admin/admin_inventory_register.html"><b>입출고등록</b></a>
@@ -38,38 +38,62 @@
             <!-- 입출고등록 대상 상품 검색 -->
             <div class="section-regSearch">
                 <!-- 첫번째 라인 -->
-                <div class="section-regSearch area1">
+                <div class="section-regSearch-line1">
+                    <div>
                     <span class="section-regSearch-span">상품코드
-                        <input type="text" class="section-regSearch-input product-code" placeholder="상품코드입력">
+                        <input type="text" class="section-regSearch-input" placeholder="상품코드입력">
                     </span>
                     <span class="section-regSearch-span">상품명
-                        <input type="text" class="section-regSearch-input product-name" placeholder="상품명입력">
+                        <input type="text" class="section-regSearch-input" placeholder="상품명입력">
                     </span>
                     <span class="section-regSearch-span">카테고리
-                        <input type="text" class="section-regSearch-input product-code" placeholder="상품코드입력">
+                        <select id="category" class="section-regSearch-input option">
+                            <option value="">선택</option>
+                            <option value="카테고리1">TV</option>
+                            <option value="카테고리2">냉장고</option>
+                            <option value="카테고리3">에어컨</option>
+                            <option value="카테고리4">인덕션</option>
+                        </select>
                     </span>
-                    <span class="section-regSearch-span">등록구분
-                        <input type="text" class="section-regSearch-input product-name" placeholder="상품명입력">
-                    </span>
+                    </div>
+                    <div>
+                        <!-- <div class="section-regSearch-btn"> -->
+                            <button class="btn_basic" onclick="searchregSearch()">검색</button>
+                        <!-- </div> -->
+                    </div>
                 </div>
-
+                
                 <!-- 두번째 라인 -->
-                <div class="section-regSearch area2">
-                    <span class="section-datebox-span">입고일자
-                        <input type="date" name="invenRegDate" class="section-regSearch-date">
+                <div class="section-regSearch-line2">
+                    <span class="section-regSearch-span">등록구분
+                        <select id="invenRegOption" class="section-regSearch-input option">
+                            <option value="">선택</option>
+                            <option value="invenIn">입고</option>
+                            <option value="invenOut">출고</option>
+                        </select>
+                    </span>
+                    <span class="section-regSearch-span">입고일자
+                        <input type="date" name="invenRegInDate" class="section-regSearch-input date">
                     </span>
 
-                    <span class="section-selectbox-span">비고
-                        <input type="text" class="section-selectbox-input product-comen" placeholder="비고입력">
+                    <span class="section-regSearch-span">비고
+                        <input type="text" class="section-regSearch-input" placeholder="비고입력">
                     </span>
+                    <div class="section-regSearch-span">수량
+                        <input class="section-regSearch-input amount" type="number" name="amount" min="0" max="100" step="1" value="0">
+                    </div>
+                </div>
+                <div>
                     <input class="btn_basic" type="reset" value="다시입력" onclick="resetTable()">
+                    <input class="btn_basic" type="submit" value="일괄반영" onclick="insertAllOption()">
                     <input class="btn_basic" type="submit" value="등록">
                 </div>
             </div>
 
+
             
-            <!-- 입출고등록 테이블 -->
-            <table class="section-inven-table">
+            <!-- 입출고등록용 검색 테이블 -->
+            <table class="section-regSearchResult-table">
                 <tr>
                     <th><input type="checkbox"></th>
                     <th>상품코드</th>
@@ -88,87 +112,7 @@
                     <td>입고일자</td>
                     <td><input type="number" name="amount" min="0" max="100" step="1" value="0"></td>
                 </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>상품코드</td>
-                    <td>상품명</td>
-                    <td>카테고리</td>
-                    <td>등록구분</td>
-                    <td>입고일자</td>
-                    <td><input type="number" name="amount" min="0" max="100" step="1" value="0"></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>상품코드</td>
-                    <td>상품명</td>
-                    <td>카테고리</td>
-                    <td>등록구분</td>
-                    <td>입고일자</td>
-                    <td><input type="number" name="amount" min="0" max="100" step="1" value="0"></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>상품코드</td>
-                    <td>상품명</td>
-                    <td>카테고리</td>
-                    <td>등록구분</td>
-                    <td>입고일자</td>
-                    <td><input type="number" name="amount" min="0" max="100" step="1" value="0"></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>상품코드</td>
-                    <td>상품명</td>
-                    <td>카테고리</td>
-                    <td>등록구분</td>
-                    <td>입고일자</td>
-                    <td><input type="number" name="amount" min="0" max="100" step="1" value="0"></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>상품코드</td>
-                    <td>상품명</td>
-                    <td>카테고리</td>
-                    <td>등록구분</td>
-                    <td>입고일자</td>
-                    <td><input type="number" name="amount" min="0" max="100" step="1" value="0"></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>상품코드</td>
-                    <td>상품명</td>
-                    <td>카테고리</td>
-                    <td>등록구분</td>
-                    <td>입고일자</td>
-                    <td><input type="number" name="amount" min="0" max="100" step="1" value="0"></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>상품코드</td>
-                    <td>상품명</td>
-                    <td>카테고리</td>
-                    <td>등록구분</td>
-                    <td>입고일자</td>
-                    <td><input type="number" name="amount" min="0" max="100" step="1" value="0"></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>상품코드</td>
-                    <td>상품명</td>
-                    <td>카테고리</td>
-                    <td>등록구분</td>
-                    <td>입고일자</td>
-                    <td><input type="number" name="amount" min="0" max="100" step="1" value="0"></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>상품코드</td>
-                    <td>상품명</td>
-                    <td>카테고리</td>
-                    <td>등록구분</td>
-                    <td>입고일자</td>
-                    <td><input type="number" name="amount" min="0" max="100" step="1" value="0"></td>
-                </tr>
+
             </table>
 
             <!-- 페이징 -->
@@ -190,7 +134,7 @@
     <div data-include-html="./footer.html" class="include"></div>
 
     <script>
-        // 등록 수량
+        // 리셋 버튼
         function resetTable() {
             var form = document.getElementById('inventory-form');
             form.reset();
@@ -200,6 +144,10 @@
                 input.value = input.getAttribute('value');
             });
         }
+
+
+
+
     </script>
 </body>
 </html>
