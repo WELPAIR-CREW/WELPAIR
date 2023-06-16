@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -51,7 +51,7 @@
             <!-- 카트상품 옵션카테고리 -->
             <div class="cart_option_box">
                 <ul class="cart_option_ul">
-                    <li id="cart_option1">Total : </li>
+                    <li th:text="total: ${variable}"id="cart_option1">Total :</li>
                     <li id="cart_option2">상품정보</li>
                     <li id="cart_option3">수량(변경)</li>
                     <li id="cart_option4">금액</li>
