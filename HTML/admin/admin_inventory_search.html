@@ -36,200 +36,165 @@
             <div class="section-title">입출고내역</div>
 
             <!-- 입출고등록 대상 상품 검색 -->
-            <div class="section-historySearch">
-                <!-- 첫번째 라인 -->
-                <div class="section-historySearch area1">
-                    <span class="section-historySearch-span">상품코드
-                        <input type="text" class="section-historySearch-input product-code" placeholder="상품코드입력">
-                    </span>
-                    <span class="section-historySearch-span">상품명
-                        <input type="text" class="section-historySearch-input product-name" placeholder="상품명입력">
-                    </span>
-                    <span class="section-datebox-span in">입고일
-                        <input type="date" name="dateIn" placeholder="시작일" class="section-historySearch-date">
-                        
-                        <input type="date" name="dateout" placeholder="종료일" class="section-historySearch-date">
-                    </span>
-                    
-                    <span class="section-datebox-span re">등록일
-                        <input type="date" name="dateIn" placeholder="시작일" class="section-historySearch-date">
-                        
-                        <input type="date" name="dateout" placeholder="종료일" class="section-historySearch-date">
-                    </span>
-                </div>
-
-                <!-- 두번째 라인 -->
-                <div class="section-historySearch area2">
-
-                    <div class="section-historySearch area2-left">
+            <form>
+                <div class="section-historySearch">
+                    <!-- 첫번째 라인 -->
+                    <div class="section-historySearch-line1">
+                        <span class="section-historySearch-span">상품코드
+                            <input type="text" class="section-historySearch-input" placeholder="상품코드입력">
+                        </span>
+                        <span class="section-historySearch-span">상품명
+                            <input type="text" class="section-historySearch-input" placeholder="상품명입력">
+                        </span>
                         <span class="section-historySearch-span">비고
                             <input type="text" class="section-historySearch-input product-comen" placeholder="비고입력">
                         </span>
-                        <span class="section-historySearch-span">카테고리
-                            <select id="category" class="section-historySearch-option-span">
-                                <option value="">선택</option>
-                                <option value="카테고리1">카테고리1</option>
-                                <option value="카테고리2">카테고리2</option>
-                                <option value="카테고리3">카테고리3</option>
-                                <option value="카테고리4">카테고리4</option>
-                            </select>
-                        </span>
+
                         <span class="section-historySearch-span">등록구분
-                            <select id="reg_option" class="section-historySearch-option-span">
+                            <select id="reg_option" class="section-historySearch-input option1">
                                 <option value="">선택</option>
-                                <option value="카테고1">입고</option>
-                                <option value="카테고리2">출고</option>
-                                <option value="카테고리3">교환반품입고</option>
-                                <option value="카테고리4">교환출고</option>
+                                <option value="입고">입고</option>
+                                <option value="출고">출고</option>
                             </select>
                         </span>
-                        <div class="section-historySearch-span">수량
-                            <input class="section-historySearch-input" type="number" name="amount" min="0" max="100" step="1" value="0">
+                    </div>
+
+                    <!-- 두번째 라인 -->
+                    <div class="section-historySearch-line2">
+                        <div>
+                            <span class="section-historySearch-span">입고일
+                                <input type="date" name="invenRegInDate" placeholder="시작일" class="section-historySearch-input date">
+                                <span>~</span>
+                                <input type="date" name="invenRegOutDate" placeholder="종료일" class="section-historySearch-input date">
+                            </span>
+                            
+                            <span class="section-historySearch-span">등록일
+                                <input type="date" name="dateIn" placeholder="시작일" class="section-historySearch-input date">
+                                <span>~</span>
+                                <input type="date" name="dateout" placeholder="종료일" class="section-historySearch-input date">
+                            </span>
+                        </div>
+                        <div>
+                            <input class="btn_basic" type="reset" value="다시입력" onclick="resetTable()">
+                            <input class="btn_basic" type="submit" value="검색">
                         </div>
                     </div>
-                    <div class="section-historySearch area2-right">
-                        <input class="btn_basic" type="reset" value="다시입력" onclick="resetTable()">
-                        <input class="btn_basic" type="submit" value="등록">
-                    </div>
                 </div>
-            </div>
+            </form>
 
-
-            <!-- 입출고등록 테이블 -->
-            <table class="section-inven-table">
+            <!-- 입출고검색 결과용 테이블 -->
+            <table class="section-historySearchResult-table">
                 <tr>
-                    <th><input type="checkbox"></th>
                     <th>상품코드</th>
                     <th>상품명</th>
-                    <th>카테고리</th>
                     <th>등록구분</th>
-                    <th>총 재고수량</th>
-                    <th>총 가용수량</th>
                     <th>입고일자</th>
                     <th>등록일자</th>
-                    <th>수량</th>
+                    <th>등록수량</th>
+                    <th>총 재고수량</th>
                     <th>비고</th>
                 </tr>
                 <tr>
-                    <td><input type="checkbox"></td>
                     <td>상품코드</td>
-                    <td>상품명</td>
-                    <td>카테고리</td>
-                    <td>등록구분</td>
-                    <td>총 재고수량</td>
-                    <td>총 가용수량</td>
-                    <td>입고일자</td>
-                    <td>등록일자</td>
-                    <td><input type="number" name="amount" min="0" max="100" step="1" value="0"></td>
-                    <td>비고</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox"></td>
                     <td>상품코드</td>
-                    <td>상품명</td>
-                    <td>카테고리</td>
-                    <td>등록구분</td>
-                    <td>총 재고수량</td>
-                    <td>총 가용수량</td>
-                    <td>입고일자</td>
-                    <td>등록일자</td>
-                    <td><input type="number" name="amount" min="0" max="100" step="1" value="0"></td>
-                    <td>비고</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox"></td>
                     <td>상품코드</td>
-                    <td>상품명</td>
-                    <td>카테고리</td>
-                    <td>등록구분</td>
-                    <td>총 재고수량</td>
-                    <td>총 가용수량</td>
-                    <td>입고일자</td>
-                    <td>등록일자</td>
-                    <td><input type="number" name="amount" min="0" max="100" step="1" value="0"></td>
-                    <td>비고</td>
-                </tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox"></td>
                     <td>상품코드</td>
-                    <td>상품명</td>
-                    <td>카테고리</td>
-                    <td>등록구분</td>
-                    <td>총 재고수량</td>
-                    <td>총 가용수량</td>
-                    <td>입고일자</td>
-                    <td>등록일자</td>
-                    <td><input type="number" name="amount" min="0" max="100" step="1" value="0"></td>
-                    <td>비고</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox"></td>
                     <td>상품코드</td>
-                    <td>상품명</td>
-                    <td>카테고리</td>
-                    <td>등록구분</td>
-                    <td>총 재고수량</td>
-                    <td>총 가용수량</td>
-                    <td>입고일자</td>
-                    <td>등록일자</td>
-                    <td><input type="number" name="amount" min="0" max="100" step="1" value="0"></td>
-                    <td>비고</td>
-                </tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox"></td>
                     <td>상품코드</td>
-                    <td>상품명</td>
-                    <td>카테고리</td>
-                    <td>등록구분</td>
-                    <td>총 재고수량</td>
-                    <td>총 가용수량</td>
-                    <td>입고일자</td>
-                    <td>등록일자</td>
-                    <td><input type="number" name="amount" min="0" max="100" step="1" value="0"></td>
-                    <td>비고</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox"></td>
                     <td>상품코드</td>
-                    <td>상품명</td>
-                    <td>카테고리</td>
-                    <td>등록구분</td>
-                    <td>총 재고수량</td>
-                    <td>총 가용수량</td>
-                    <td>입고일자</td>
-                    <td>등록일자</td>
-                    <td><input type="number" name="amount" min="0" max="100" step="1" value="0"></td>
-                    <td>비고</td>
-                </tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox"></td>
                     <td>상품코드</td>
-                    <td>상품명</td>
-                    <td>카테고리</td>
-                    <td>등록구분</td>
-                    <td>총 재고수량</td>
-                    <td>총 가용수량</td>
-                    <td>입고일자</td>
-                    <td>등록일자</td>
-                    <td><input type="number" name="amount" min="0" max="100" step="1" value="0"></td>
-                    <td>비고</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox"></td>
                     <td>상품코드</td>
-                    <td>상품명</td>
-                    <td>카테고리</td>
-                    <td>등록구분</td>
-                    <td>총 재고수량</td>
-                    <td>총 가용수량</td>
-                    <td>입고일자</td>
-                    <td>등록일자</td>
-                    <td><input type="number" name="amount" min="0" max="100" step="1" value="0"></td>
-                    <td>비고</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
+                <tr>
+                    <td>상품코드</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
 
             </table>
             <!-- 페이징 -->
@@ -248,6 +213,9 @@
     <!-- footer -->
     <div data-include-html="./footer.html" class="include"></div>
     <script>
+
+
+
     </script>
 </body>
 </html>

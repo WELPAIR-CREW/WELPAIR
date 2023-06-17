@@ -38,35 +38,34 @@
             <div class="section-title">입출고등록</div>
 
             <!-- 입출고등록 대상 상품 검색 -->
+            
             <div class="section-regSearch">
                 <!-- 첫번째 라인 -->
                 <div class="section-regSearch-line1">
                     <div>
-                    <span class="section-regSearch-span">상품코드
-                        <input type="text" class="section-regSearch-input" placeholder="상품코드입력">
-                    </span>
-                    <span class="section-regSearch-span">상품명
-                        <input type="text" class="section-regSearch-input" placeholder="상품명입력">
-                    </span>
-                    <span class="section-regSearch-span">카테고리
-                        <select id="category" class="section-regSearch-input option1">
-                            <option value="">선택</option>
-                            <option value="카테고리1">TV</option>
-                            <option value="카테고리2">냉장고</option>
-                            <option value="카테고리3">에어컨</option>
-                            <option value="카테고리4">인덕션</option>
-                        </select>
-                    </span>
+                        <span class="section-regSearch-span">상품코드
+                            <input type="text" class="section-regSearch-input" placeholder="상품코드입력">
+                        </span>
+                        <span class="section-regSearch-span">상품명
+                            <input type="text" class="section-regSearch-input" placeholder="상품명입력">
+                        </span>
+                        <span class="section-regSearch-span">카테고리
+                            <select id="category" class="section-regSearch-input option1">
+                                <option value="">선택</option>
+                                <option value="카테고리1">TV</option>
+                                <option value="카테고리2">냉장고</option>
+                                <option value="카테고리3">에어컨</option>
+                                <option value="카테고리4">인덕션</option>
+                            </select>
+                        </span>
                     </div>
                     <div>
-                        <!-- <div class="section-regSearch-btn"> -->
                             <button class="btn_basic" onclick="searchregSearch()">검색</button>
-                        <!-- </div> -->
                     </div>
                 </div>
-                
+                    
                 <!-- 두번째 라인 -->
-                <form>
+                <form id="inventory-form">
                     <div class="section-regSearch-line2">
                         <div>
                             <span class="section-regSearch-span">등록구분
@@ -94,136 +93,140 @@
                     </div>
                 </form>
             </div>
-
-            <!-- 입출고등록용 검색 테이블 -->
-            <table class="section-regSearchResult-table">
-                <tr>
-                    <th class="column1"><input type="checkbox"></th>
-                    <th>상품코드</th>
-                    <th>상품명</th>
-                    <th>카테고리</th>
-                    <th>등록구분</th>
-                    <th>입고일자</th>
-                    <th>비고</th>
-                    <th class="column8">수량</th>
-                </tr>
-                <tr>
-                    <td class="column1"><input type="checkbox"></td>
-                    <td>상품코드</td>
-                    <td>상품명</td>
-                    <td>카테고리</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td class="column8"><input type="number" name="amount" min="0" max="100" step="1"></td>
-                </tr>
-                <tr>
-                    <td class="column1"><input type="checkbox"></td>
-                    <td>상품코드</td>
-                    <td>상품명</td>
-                    <td>카테고리</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td class="column8"><input type="number" name="amount" min="0" max="100" step="1"></td>
-                </tr>
-                <tr>
-                    <td class="column1"><input type="checkbox"></td>
-                    <td>상품코드</td>
-                    <td>상품명</td>
-                    <td>카테고리</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td class="column8"><input type="number" name="amount" min="0" max="100" step="1"></td>
-                </tr>
-                <tr>
-                    <td class="column1"><input type="checkbox"></td>
-                    <td>상품코드</td>
-                    <td>상품명</td>
-                    <td>카테고리</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td class="column8"><input type="number" name="amount" min="0" max="100" step="1"></td>
-                </tr>
-                <tr>
-                    <td class="column1"><input type="checkbox"></td>
-                    <td>상품코드</td>
-                    <td>상품명</td>
-                    <td>카테고리</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td class="column8"><input type="number" name="amount" min="0" max="100" step="1"></td>
-                </tr>
-                <tr>
-                    <td class="column1"><input type="checkbox"></td>
-                    <td>상품코드</td>
-                    <td>상품명</td>
-                    <td>카테고리</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td class="column8"><input type="number" name="amount" min="0" max="100" step="1"></td>
-                </tr>
-                <tr>
-                    <td class="column1"><input type="checkbox"></td>
-                    <td>상품코드</td>
-                    <td>상품명</td>
-                    <td>카테고리</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td class="column8"><input type="number" name="amount" min="0" max="100" step="1"></td>
-                </tr>
-                <tr>
-                    <td class="column1"><input type="checkbox"></td>
-                    <td>상품코드</td>
-                    <td>상품명</td>
-                    <td>카테고리</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td class="column8"><input type="number" name="amount" min="0" max="100" step="1"></td>
-                </tr>
-                <tr>
-                    <td class="column1"><input type="checkbox"></td>
-                    <td>상품코드</td>
-                    <td>상품명</td>
-                    <td>카테고리</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td class="column8"><input type="number" name="amount" min="0" max="100" step="1"></td>
-                </tr>
-                <tr>
-                    <td class="column1"><input type="checkbox"></td>
-                    <td>상품코드</td>
-                    <td>상품명</td>
-                    <td>카테고리</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td class="column8"><input type="number" name="amount" min="0" max="100" step="1"></td>
-                </tr>
-                <tr>
-                    <td class="column1"><input type="checkbox"></td>
-                    <td>상품코드</td>
-                    <td>상품명</td>
-                    <td>카테고리</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td class="column8"><input type="number" name="amount" min="0" step="1"></td>
-                </tr>
-            </table>
-            <div class="section-regSearch">
-                <div class="section-regSearch-btn">
-                    <input class="btn_basic2" type="submit" value="등록">
+                    <!-- 입출고등록용 검색 테이블 -->
+            
+                <table class="section-regSearchResult-table">
+                    <tr>
+                        <th class="column1"><input type="checkbox"></th>
+                        <th>상품코드</th>
+                        <th>상품명</th>
+                        <th>카테고리</th>
+                        <th>등록구분</th>
+                        <th>입고일자</th>
+                        <th>비고</th>
+                        <th class="column8">수량</th>
+                    </tr>
+                    <tr>
+                        <td class="column1"><input type="checkbox"></td>
+                        <td>상품코드</td>
+                        <td>상품명</td>
+                        <td>카테고리</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="column8"><input type="number" name="amount" min="0" max="100" step="1"></td>
+                    </tr>
+                    <tr>
+                        <td class="column1"><input type="checkbox"></td>
+                        <td>상품코드</td> 
+                        <td>상품명</td>
+                        <td>카테고리</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="column8"><input type="number" name="amount" min="0" max="100" step="1"></td>
+                    </tr>
+                    <tr>
+                        <td class="column1"><input type="checkbox"></td>
+                        <td>상품코드</td>
+                        <td>상품명</td>
+                        <td>카테고리</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="column8"><input type="number" name="amount" min="0" max="100" step="1"></td>
+                    </tr>
+                    <tr>
+                        <td class="column1"><input type="checkbox"></td>
+                        <td>상품코드</td>
+                        <td>상품명</td>
+                        <td>카테고리</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="column8"><input type="number" name="amount" min="0" max="100" step="1"></td>
+                    </tr>
+                    <tr>
+                        <td class="column1"><input type="checkbox"></td>
+                        <td>상품코드</td>
+                        <td>상품명</td>
+                        <td>카테고리</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="column8"><input type="number" name="amount" min="0" max="100" step="1"></td>
+                    </tr>
+                    <tr>
+                        <td class="column1"><input type="checkbox"></td>
+                        <td>상품코드</td>
+                        <td>상품명</td>
+                        <td>카테고리</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="column8"><input type="number" name="amount" min="0" max="100" step="1"></td>
+                    </tr>
+                    <tr>
+                        <td class="column1"><input type="checkbox"></td>
+                        <td>상품코드</td>
+                        <td>상품명</td>
+                        <td>카테고리</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="column8"><input type="number" name="amount" min="0" max="100" step="1"></td>
+                    </tr>
+                    <tr>
+                        <td class="column1"><input type="checkbox"></td>
+                        <td>상품코드</td>
+                        <td>상품명</td>
+                        <td>카테고리</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="column8"><input type="number" name="amount" min="0" max="100" step="1"></td>
+                    </tr>
+                    <tr>
+                        <td class="column1"><input type="checkbox"></td>
+                        <td>상품코드</td>
+                        <td>상품명</td>
+                        <td>카테고리</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="column8"><input type="number" name="amount" min="0" max="100" step="1"></td>
+                    </tr>
+                    <tr>
+                        <td class="column1"><input type="checkbox"></td>
+                        <td>상품코드</td>
+                        <td>상품명</td>
+                        <td>카테고리</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="column8"><input type="number" name="amount" min="0" max="100" step="1"></td>
+                    </tr>
+                    <tr>
+                        <td class="column1"><input type="checkbox"></td>
+                        <td>상품코드</td>
+                        <td>상품명</td>
+                        <td>카테고리</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="column8"><input type="number" name="amount" min="0" step="1"></td>
+                    </tr>
+                </table>
+                <div class="section-regSearch">
+                    <div class="section-regSearch-btn">
+                        <input class="btn_basic2" type="submit" value="등록">
+                    </div>
                 </div>
 
-            </div>
+
+
+
+
 
             <!-- 페이징 -->
             <div class="paging">
@@ -241,63 +244,81 @@
     <!-- footer -->
     <div data-include-html="./footer.html" class="include"></div>
 
-    <script>
 
+    <!-- 스크립트 시작-->
+    <script>
+        $(document).ready(function() {
+    // Handle re-enter button click event
+    $('input[type="reset"]').click(function(e) {
+        e.preventDefault(); // Prevent the form from being submitted
+
+        // Reset the values in section-regSearch-line2
+        $('#inventory-form')[0].reset();
+
+        // Reset the table rows except for the header row
+        $('.section-regSearchResult-table tr:not(:first)').each(function() {
+            // Find the input fields in each row and reset their values
+            $(this).find('input[type="number"]').val('');
+
+            // Reset the quantity column in the table
+            var quantityCell = $(this).find('td.column8');
+            var quantityInput = quantityCell.find('input[type="number"]');
+            quantityInput.val('');
+            quantityCell.text('');
+            quantityCell.append(quantityInput);
+
+            // Reset the registration classification, receipt date, and remarks columns in the table
+            var registrationCell = $(this).find('td:nth-child(5)');
+            var receiptCell = $(this).find('td:nth-child(6)');
+            var remarksCell = $(this).find('td:nth-child(7)');
+
+            registrationCell.text('');
+            receiptCell.text('');
+            remarksCell.text('');
+            });
+        });
+    });
 
 
     // 리셋 버튼
-    function resetTable() {
-        var form = document.getElementById('inventory-form');
-        var table = document.getElementById('section-regSearchResult-table');
-        form.reset();
-        var table = document.querySelector('.inven_search_result');
-        var inputFields = table.querySelectorAll('input[type="number"]');
-        inputFields.forEach(function (input) {
-            input.value = input.getAttribute('value');
-        });
-    }
+    // function resetTable() {
+    //     var form = document.getElementById("inventory-form");
+    //     form.reset();
+
+    //     var inputFields = table.querySelectorAll('input[type="number"]');
+    //     inputFields.forEach(function (input) {
+    //         input.value = input.getAttribute('value');
+    //     });
+    // };
 
 
     /* 일괄버튼 */
 
     $(document).ready(function() {
         $('form').on('submit', function(event) {
-            event.preventDefault(); // Prevent the form from submitting normally
+            event.preventDefault();
             
-            // Get the values from the input fields
             const regOption = $('#invenRegOption1').val();
             const inDate = $('#invenRegInDate').val();
             const remarks = $('.section-regSearch-input.option').val();
             const quantity = $('.section-regSearch-input.amount').val();
             
-            // Get the table rows except for the header row
             const tableRows = $('.section-regSearchResult-table tbody tr:not(:first)');
             
-            // Update the corresponding cells in each row with the entered values
             tableRows.each(function(index) {
             const row = $(this);
             const cells = row.find('td');
             
-            // Update the specific cells with the entered values
             cells.eq(4).text(regOption);
             cells.eq(5).text(inDate);
             cells.eq(6).text(remarks);
             cells.eq(7).find('input').val(quantity);
             });
             
-            // Perform an AJAX request to save the updated values on the server
             $.ajax({
-                url: 'your-server-url', // Replace with the actual URL to handle the server-side update
-                type: 'POST', // Use the appropriate HTTP method (POST, GET, etc.)
-                data: $('form').serialize(), // Serialize the form data to send to the server
-                success: function(response) {
-                    // Handle the server response if needed
-                    console.log(response);
-                },
-                error: function(error) {
-                    // Handle any errors that occurred during the AJAX request
-                    console.error(error);
-                }
+                url: 'your-server-url',
+                type: 'POST',
+                data: $('form').serialize(), 
             });
         });
     });
