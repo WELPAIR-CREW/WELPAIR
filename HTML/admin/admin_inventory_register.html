@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="/CSS/footer.css">
     <link rel="stylesheet" href="/CSS/inventory.css">
     <script src="/src/static/include.js"></script>
+    <script src="/src/inven/invenRegist.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 </head>
 
@@ -47,7 +49,7 @@
                         <input type="text" class="section-regSearch-input" placeholder="상품명입력">
                     </span>
                     <span class="section-regSearch-span">카테고리
-                        <select id="category" class="section-regSearch-input option">
+                        <select id="category" class="section-regSearch-input option1">
                             <option value="">선택</option>
                             <option value="카테고리1">TV</option>
                             <option value="카테고리2">냉장고</option>
@@ -64,56 +66,164 @@
                 </div>
                 
                 <!-- 두번째 라인 -->
-                <div class="section-regSearch-line2">
-                    <span class="section-regSearch-span">등록구분
-                        <select id="invenRegOption" class="section-regSearch-input option">
-                            <option value="">선택</option>
-                            <option value="invenIn">입고</option>
-                            <option value="invenOut">출고</option>
-                        </select>
-                    </span>
-                    <span class="section-regSearch-span">입고일자
-                        <input type="date" name="invenRegInDate" class="section-regSearch-input date">
-                    </span>
+                <form>
+                    <div class="section-regSearch-line2">
+                        <div>
+                            <span class="section-regSearch-span">등록구분
+                                <select id="invenRegOption1" class="section-regSearch-input option2">
+                                    <option value="">선택</option>
+                                    <option name="invenIn" value="입고">입고</option>
+                                    <option name="invenOut" value="출고">출고</option>
+                                </select>
+                            </span>
+                            <span id="invenRegOption2" class="section-regSearch-span">입고일자
+                                <input type="date" name="invenRegInDate" class="section-regSearch-input date" id="invenRegInDate">
+                            </span>
 
-                    <span class="section-regSearch-span">비고
-                        <input type="text" class="section-regSearch-input" placeholder="비고입력">
-                    </span>
-                    <div class="section-regSearch-span">수량
-                        <input class="section-regSearch-input amount" type="number" name="amount" min="0" max="100" step="1" value="0">
+                            <span class="section-regSearch-span">비고
+                                <input type="text" class="section-regSearch-input option" placeholder="비고입력">
+                            </span>
+                            <span class="section-regSearch-span">수량
+                                <input class="section-regSearch-input amount" type="number" name="amount" min="0" max="100" step="1" value="0">
+                            </span>
+                        </div>   
+                        <div>
+                            <input class="btn_basic" type="reset" value="다시입력" onclick="resetTable()">
+                            <input class="btn_basic" type="submit" value="일괄반영" onclick="insertAllOption()">
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <input class="btn_basic" type="reset" value="다시입력" onclick="resetTable()">
-                    <input class="btn_basic" type="submit" value="일괄반영" onclick="insertAllOption()">
-                    <input class="btn_basic" type="submit" value="등록">
-                </div>
+                </form>
             </div>
 
-
-            
             <!-- 입출고등록용 검색 테이블 -->
             <table class="section-regSearchResult-table">
                 <tr>
-                    <th><input type="checkbox"></th>
+                    <th class="column1"><input type="checkbox"></th>
                     <th>상품코드</th>
                     <th>상품명</th>
                     <th>카테고리</th>
                     <th>등록구분</th>
                     <th>입고일자</th>
-                    <th>수량</th>
+                    <th>비고</th>
+                    <th class="column8">수량</th>
                 </tr>
                 <tr>
-                    <td><input type="checkbox"></td>
+                    <td class="column1"><input type="checkbox"></td>
                     <td>상품코드</td>
                     <td>상품명</td>
                     <td>카테고리</td>
-                    <td>등록구분</td>
-                    <td>입고일자</td>
-                    <td><input type="number" name="amount" min="0" max="100" step="1" value="0"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="column8"><input type="number" name="amount" min="0" max="100" step="1"></td>
                 </tr>
-
+                <tr>
+                    <td class="column1"><input type="checkbox"></td>
+                    <td>상품코드</td>
+                    <td>상품명</td>
+                    <td>카테고리</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="column8"><input type="number" name="amount" min="0" max="100" step="1"></td>
+                </tr>
+                <tr>
+                    <td class="column1"><input type="checkbox"></td>
+                    <td>상품코드</td>
+                    <td>상품명</td>
+                    <td>카테고리</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="column8"><input type="number" name="amount" min="0" max="100" step="1"></td>
+                </tr>
+                <tr>
+                    <td class="column1"><input type="checkbox"></td>
+                    <td>상품코드</td>
+                    <td>상품명</td>
+                    <td>카테고리</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="column8"><input type="number" name="amount" min="0" max="100" step="1"></td>
+                </tr>
+                <tr>
+                    <td class="column1"><input type="checkbox"></td>
+                    <td>상품코드</td>
+                    <td>상품명</td>
+                    <td>카테고리</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="column8"><input type="number" name="amount" min="0" max="100" step="1"></td>
+                </tr>
+                <tr>
+                    <td class="column1"><input type="checkbox"></td>
+                    <td>상품코드</td>
+                    <td>상품명</td>
+                    <td>카테고리</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="column8"><input type="number" name="amount" min="0" max="100" step="1"></td>
+                </tr>
+                <tr>
+                    <td class="column1"><input type="checkbox"></td>
+                    <td>상품코드</td>
+                    <td>상품명</td>
+                    <td>카테고리</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="column8"><input type="number" name="amount" min="0" max="100" step="1"></td>
+                </tr>
+                <tr>
+                    <td class="column1"><input type="checkbox"></td>
+                    <td>상품코드</td>
+                    <td>상품명</td>
+                    <td>카테고리</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="column8"><input type="number" name="amount" min="0" max="100" step="1"></td>
+                </tr>
+                <tr>
+                    <td class="column1"><input type="checkbox"></td>
+                    <td>상품코드</td>
+                    <td>상품명</td>
+                    <td>카테고리</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="column8"><input type="number" name="amount" min="0" max="100" step="1"></td>
+                </tr>
+                <tr>
+                    <td class="column1"><input type="checkbox"></td>
+                    <td>상품코드</td>
+                    <td>상품명</td>
+                    <td>카테고리</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="column8"><input type="number" name="amount" min="0" max="100" step="1"></td>
+                </tr>
+                <tr>
+                    <td class="column1"><input type="checkbox"></td>
+                    <td>상품코드</td>
+                    <td>상품명</td>
+                    <td>카테고리</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="column8"><input type="number" name="amount" min="0" step="1"></td>
+                </tr>
             </table>
+            <div class="section-regSearch">
+                <div class="section-regSearch-btn">
+                    <input class="btn_basic2" type="submit" value="등록">
+                </div>
+
+            </div>
 
             <!-- 페이징 -->
             <div class="paging">
@@ -125,8 +235,6 @@
                 <span>5</span>
                 <span>&gt;</span>
             </div>
-
-
         </div>   
     </section>
 
@@ -134,19 +242,137 @@
     <div data-include-html="./footer.html" class="include"></div>
 
     <script>
-        // 리셋 버튼
-        function resetTable() {
-            var form = document.getElementById('inventory-form');
-            form.reset();
-            var table = document.querySelector('.inven_search_result');
-            var inputFields = table.querySelectorAll('input[type="number"]');
-            inputFields.forEach(function (input) {
-                input.value = input.getAttribute('value');
+
+
+
+    // 리셋 버튼
+    function resetTable() {
+        var form = document.getElementById('inventory-form');
+        var table = document.getElementById('section-regSearchResult-table');
+        form.reset();
+        var table = document.querySelector('.inven_search_result');
+        var inputFields = table.querySelectorAll('input[type="number"]');
+        inputFields.forEach(function (input) {
+            input.value = input.getAttribute('value');
+        });
+    }
+
+
+    /* 일괄버튼 */
+
+    $(document).ready(function() {
+        $('form').on('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+            
+            // Get the values from the input fields
+            const regOption = $('#invenRegOption1').val();
+            const inDate = $('#invenRegInDate').val();
+            const remarks = $('.section-regSearch-input.option').val();
+            const quantity = $('.section-regSearch-input.amount').val();
+            
+            // Get the table rows except for the header row
+            const tableRows = $('.section-regSearchResult-table tbody tr:not(:first)');
+            
+            // Update the corresponding cells in each row with the entered values
+            tableRows.each(function(index) {
+            const row = $(this);
+            const cells = row.find('td');
+            
+            // Update the specific cells with the entered values
+            cells.eq(4).text(regOption);
+            cells.eq(5).text(inDate);
+            cells.eq(6).text(remarks);
+            cells.eq(7).find('input').val(quantity);
             });
-        }
+            
+            // Perform an AJAX request to save the updated values on the server
+            $.ajax({
+                url: 'your-server-url', // Replace with the actual URL to handle the server-side update
+                type: 'POST', // Use the appropriate HTTP method (POST, GET, etc.)
+                data: $('form').serialize(), // Serialize the form data to send to the server
+                success: function(response) {
+                    // Handle the server response if needed
+                    console.log(response);
+                },
+                error: function(error) {
+                    // Handle any errors that occurred during the AJAX request
+                    console.error(error);
+                }
+            });
+        });
+    });
+
+ // 등록 버튼
+
+    $(document).ready(function() {
+        $('.btn_basic2').on('click', function(event) {
+            event.preventDefault();
+            
+            const tableRows = $('.section-regSearchResult-table tbody tr:not(:first)');
+            
+            const rowData = [];
+            
+            tableRows.each(function(index) {
+                const row = $(this);
+                const cells = row.find('td');
+                
+                const productCode = cells.eq(1).text();
+                const productName = cells.eq(2).text();
+                const category = cells.eq(3).text();
+                const registrationClassification = cells.eq(4).text();
+                const receiptDate = cells.eq(5).text();
+                const remarks = cells.eq(6).text();
+                const quantity = cells.eq(7).find('input').val();
+                
+                rowData.push({
+                    productCode: productCode,
+                    productName: productName,
+                    category: category,
+                    registrationClassification: registrationClassification,
+                    receiptDate: receiptDate,
+                    remarks: remarks,
+                    quantity: quantity
+                });
+            });
+        
+            $.ajax({
+                url: 'your-server-url', // Replace with the actual URL to handle the server-side data transmission
+                type: 'POST', 
+                data: JSON.stringify(rowData), // Convert the rowData array to JSON and send it to the server
+                contentType: 'application/json', // Set the content type to JSON
+                
+                success: function(response) {
+                    alert("등록 완료");
+                    location.reload();
+                },
+                error: function(error) {
+                    alert("등록 실패");
+                }
+            });
+        });
+    });
 
 
 
+
+    // 입고 일자 오늘로
+    $(document).ready(function() {
+
+        const currentDate = new Date().toISOString().split('T')[0];
+        
+        $('#invenRegInDate').val(currentDate);
+    });
+
+
+    // 체크박스
+
+    $(document).ready(function() {
+        $('.section-regSearchResult-table th input[type="checkbox"]').on('click', function() {
+            const isChecked = $(this).prop('checked');
+            
+            $('.section-regSearchResult-table td input[type="checkbox"]').prop('checked', isChecked);
+        });
+    });
 
     </script>
 </body>

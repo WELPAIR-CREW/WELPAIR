@@ -34,7 +34,9 @@ input {border: 1px solid black;}
 
 /* contents */
 .section-content {
+    position: relative;
     box-sizing: border-box;
+    padding-bottom: 10px;
     margin-left: 30px;
     width: 1050px;
     height: 656px;
@@ -132,16 +134,14 @@ input {border: 1px solid black;}
     justify-content: space-between;
     
 }
-
-
 .section-regSearch-line2  {
     display: flex;
-    margin-top: 40px;
+    margin-top: 20px;
     align-items: center;
+    text-align: left;
     justify-content: space-between;
     
 }
-
 .section-regSearch-span {
     width: 300px;
     height: 33px;
@@ -150,7 +150,6 @@ input {border: 1px solid black;}
     margin-right: 10px;
     margin-bottom: 10px;
 }
-
 
 .section-regSearch-input {
     box-sizing: border-box;
@@ -161,17 +160,16 @@ input {border: 1px solid black;}
     padding: 0px 16px;
 }
 
-.option{
-    width: 80px;
-
+.option1{
+    width: 130px;
 }
-/* .section-regSearch-btn{
-
-} */
+.option2{
+    width: 100px;
+}
 
 .date{
     box-sizing: border-box;
-    width: 150px;
+    width: 160px;
     height: 33px;
     border-radius: 6px;
     font-size: 16px;
@@ -182,34 +180,6 @@ input {border: 1px solid black;}
     width: 80px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .area2-left{
-    display: flex;
-    grid-column: 1;
-}
-.area2-right{
-    grid-column: 2;
-    display: flex;
-    justify-content: flex-end;
-} */
-
-
-
-
-
 .section-regSearch-date{
     width: 90px;
     height: 30px;
@@ -219,24 +189,50 @@ input {border: 1px solid black;}
 }
 
 
-.section-regSearch-option-span{
-    /* width: 220px; */
-    height: 33px;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 10px;
-    margin-left: 30px;
-}
-
-.section-regSearchResult-table{
-    display: table;
-    margin-top: 30px;
-    margin-left: 40px;
+.section-regSearchResult-table {
+	margin: 30px;
+	position:relative;
+	width: 960px;
+    height: 66px;
+    table-layout: fixed;
+    overflow-y: auto;
+    margin-bottom: 20px;
     border: 1px solid #D9D9D9;
     border-collapse: collapse;
     text-align: center;
-
 }
+
+.section-regSearchResult-table th {
+	background-color: #e2e2e2;
+	height: 33px;
+    width: 20%;
+	border: 1px solid #D9D9D9;
+}
+
+.section-regSearchResult-table th.column1 {
+    width: 40px;
+}
+.section-regSearchResult-table th.column8 {
+    width: 80px;
+}
+.section-regSearchResult-table input[type='number'] {
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    border: 1px none #D9D9D9;
+    vertical-align: middle;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -330,8 +326,8 @@ input {border: 1px solid black;}
 
 
 .section-historySearch-date{
-    width: 100px;
-    height: 30px;
+    width: 0px;
+    height: 33px;
     align-items: center;
     justify-content: space-between;
     margin-left: 10px;
@@ -365,9 +361,17 @@ td {
     margin-left: 10px;
     background-color: #333333;
     color: white;
-    float: right;
 }
 
+.btn_basic2 {
+    width: 80px;
+    height: 33px;
+    border-radius: 6px;
+    margin-left: 10px;
+    background-color: #333333;
+    color: white;
+    float: right;
+}
 
 
 .paging span:not(:first-child) {
@@ -387,10 +391,11 @@ td {
     font-weight: bold;
 }
 
-
 .paging {
     display: flex;
     position: relative;
+    bottom: 30px;
+    width: 100%;
     margin-top: 30px;
     margin-bottom: 30px;
     justify-content: center;
