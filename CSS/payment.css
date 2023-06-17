@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+/* 랑크 흔적 보라색 없애기 */
+a { text-decoration: none; color: black; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:focus { text-decoration: none; }
+a:hover, a:active { text-decoration: none; }
+
+/* 각 구역 */
+.payment_container{
+    margin: auto;
+	width: 1196px;
+
+}
+.order_prd_area {
+    height: 350px;
+}
+.orderer_area {
+
+    height: 185px;
+}
+.recipient_area {
+
+    height: 510px;
+}
+.pay_area {
+
+    height: 460px;
+}
+div[class^="title"] {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+/* 소제목 공통 */
+div[class*=title] {
+    margin-top: 50px;
+    width: 1170px;
+    height: 54px;
+	border-bottom: 4px solid black;
+}
+
+.labelbox{
+    width: 170px;
+    height: 50px;
+}
+
+
+/* 각 구역 컨텐츠박스 */
+div[class$=contentsbox]{
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+/* 입력박스 스타일 */
+input[class*=inputbox]{
+    height: 50px;
+    border-radius: 6px;
+    border: solid 1px #333333;
+}
+
+/* ----------- 공통------------ */
+
+.order_prd_ul {
+    height: 30px;
+    display: flex;
+    list-style-type: none;
+    font-size: 14px;
+}
+
+.order_prd_li_1 {
+    width: 90px;
+}
+.order_prd_li_2 {
+    width: 385px;
+}
+.order_prd_li_3 {
+    width: 175px;
+}
+
+.orderer_area input {
+    width: 400px;
+}
+
+
+
+
+
+
+
