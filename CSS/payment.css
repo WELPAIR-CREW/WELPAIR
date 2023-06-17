@@ -17,15 +17,13 @@ a:hover, a:active { text-decoration: none; }
     height: 350px;
 }
 .orderer_area {
-
     height: 185px;
+    vertical-align: middle;
 }
 .recipient_area {
-
     height: 510px;
 }
 .pay_area {
-
     height: 460px;
 }
 div[class^="title"] {
@@ -41,23 +39,31 @@ div[class*=title] {
 	border-bottom: 4px solid black;
 }
 
+/* 라벨(인포라벨링)박스 */
 .labelbox{
-    width: 170px;
-    height: 50px;
+    width: 170px; 
+    height: 50px; 
+    margin-top: 20px;
+    font-size: 20px;
 }
 
-
 /* 각 구역 컨텐츠박스 */
-div[class$=contentsbox]{
-    font-size: 20px;
+div[class$=contentsbox], .info_table{
+    /* font-size: 20px; */
     margin-top: 20px;
+}
+
+div[class^=labelbox] {
+    margin-bottom: 20px;
 }
 
 /* 입력박스 스타일 */
 input[class*=inputbox]{
+    margin-bottom: 20px;
     height: 50px;
     border-radius: 6px;
-    border: solid 1px #333333;
+    border: solid 1px gray;
+    color: gray;
 }
 
 /* ----------- 공통------------ */

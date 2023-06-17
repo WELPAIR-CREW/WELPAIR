@@ -6,11 +6,13 @@
     <!-- css -->
     <link rel="stylesheet" href="../../CSS/payment.css">
     <link rel="stylesheet" href="../../CSS/header.css">
-    <link rel="stylesheet" href="../../CSS/main.css">
-    <link rel="stylesheet" href="../../CSS/footer.css">
+    <!-- <link rel="stylesheet" href="../../CSS/main.css"> -->
+    <!-- <link rel="stylesheet" href="../../CSS/footer.css"> -->
 
     <!-- script -->
     <script src="../../src/static/include.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
 
     <title>welpair</title>
 </head>
@@ -39,53 +41,71 @@
             </div>
 
         </div>
-
-        <!-- 주문자정보 구역 -->
-        <div class="orderer_area">
-            <!-- 소제목 -->
+        
+        <form action="" method="post">
             
-            <div class="title_orderer">주문자 정보</div>
-            <div class="orderer_info_contentsbox">
-                <table>
+            <!-- 주문자정보 구역 -->
+            <div class="orderer_area">
+                <!-- 소제목 -->
+                <div class="title_orderer">주문자 정보</div>
+                <div class="orderer_info_contentsbox">
+                    <table class="info_table">
+                        <tr>
+                            <td><div class="labelbox">이름</div></td>
+                            <td><input type="text" class="inputbox_name" name="ordererName" value=" 이름을 입력하세요."></td>
+                        </tr>
+                        <tr>
+                            <td><div class="labelbox">휴대폰 번호</div></td>
+                            <td><input type="text" class="inputbox_phone" name="ordererPhone" value=" 휴대폰 번호를 입력하세요.(숫자만 입력)"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- 수령자정보 구역 -->
+            <div class="recipient_area">
+                <!-- 소제목 -->
+                <div class="title_recipient">수령자 정보</div>
+                <table class="info_table">
                     <tr>
-                        <td><div class="labelbox_name">이름</div></td>
-                        <td><input type="text" class="inputbox_name" name="ordererName" value="이름을 입력하세요."></td>
+                        <td><div class="labelbox">이름</div></td>
+                        <td><input type="text" class="inputbox_name" name="recipientName" value=" 이름을 입력하세요."></td>
                     </tr>
                     <tr>
                         <td><div class="labelbox">휴대폰 번호</div></td>
-                        <td><input type="text" class="inputbox" name="ordererPhone" value="휴대폰 번호를 입력하세요.(숫자만 입력)"></td>
+                        <td><input type="text" class="inputbox_phone" name="recipientPhone" value=" 휴대폰 번호를 입력하세요.(숫자만 입력)"></td>
                     </tr>
-
+                    <tr>
+                        <td><div class="labelbox">배송지 선택</div></td>
+                        <td><select name="recipientAddress" class="recipientAddress"></select>
+                            <!-- option value="기본배송지 1~3"></option> 정적코드 추가-->
+    
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><div class="labelbox">상세주소</div></td>
+                        <td><input type="text" class="inputbox_" name="recipientAddress" value=" 휴대폰 번호를 입력하세요.(숫자만 입력)"></td>
+                    </tr>
+                    
                 </table>
-                
-
+    
             </div>
-
-
-        </div>
-
-        <!-- 수령자정보 구역 -->
-        <div class="recipient_area">
-            <!-- 소제목 -->
-
-            <div class="title_recipient">수령자 정보</div>
-
-        </div>
-
-        <!-- 결제수단 구역 -->
-        <div class="pay_area">
-            <!-- 소제목 -->
-
-            <div class="title_pay">결제수단</div>
-
-
-        </div>
+    
+            <!-- 결제수단 구역 -->
+            <div class="pay_area">
+                <!-- 소제목 -->
+    
+                <div class="title_pay">결제수단</div>
+    
+    
+            </div>
+        </form>
     </div>
 
 
 
     <!-- footer -->
-    <div data-include-html="../consumer/footer.html" class="include"></div>
+    <!-- <div data-include-html="../consumer/footer.html" class="include"></div> -->
 </body>
 
 </html>
