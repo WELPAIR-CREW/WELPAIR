@@ -11,7 +11,7 @@ a:hover {
 /* 체크박스 체크시 색상 */
 input[type=checkbox] {
     accent-color: lavender;
-    
+
 }
 
 
@@ -227,3 +227,98 @@ section {
 }
 
 
+/* wishlist */
+#over-wishlist {
+    height: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+    position: absolute;
+    top: 140px;
+    left: 250px;
+    width: 800px;
+
+    margin-left: 2px;
+}
+
+#overline-check {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: -10px;
+}
+
+#left-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    margin-right: 7px;
+    margin-top: -10px;
+}
+
+#left-button>button {
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#wishlist {
+    /* align-self: flex-start; */
+    width: 790px;
+    height: 480px;
+
+    margin-top: 180px;
+    margin-left: 10px;
+}
+
+.wishlist-item {
+    display: flex;
+    border-bottom: 1px solid #d9d9d9;
+
+    height: 80px;
+    font-size: 16px;
+}
+
+.wishlist-item>img {
+    width: 50px;
+    height: 50px;
+}
+
+.left-button2 {
+    margin-left: 460px;
+}
+
+#wishlist> :not(:first-child) {
+    margin-top: 10px;
+}
+
+/* mypoint */
+#pointbox {
+    /* background: pink; */
+    border: 1px solid #d9d9d9;
+    width: 850px;
+    height: 150px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 30px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#pointbox>span {
+    margin-left: 30px;
+    margin-right: 10px;
+    color: #4F378B;
+    font-size: 30px;
+}
+
+#pointicon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
