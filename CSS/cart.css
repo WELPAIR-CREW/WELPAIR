@@ -187,6 +187,7 @@ li[id^=cart_basic_case-] div {
 	width: 103px;
 	height: 96px;
 	border: solid 1px;
+	border-radius: 6px;
 }
 
 .prd_name {
@@ -205,10 +206,15 @@ li[id^=cart_basic_case-] div {
 }
 
 .prd_util_wrap {
-	margin: 0px 20px;
+	margin-left: 37px;
+	/* margin: 0px 20px; */
 }
 
 /* 수량박스 */
+.item_count_box {
+	border-radius: 6px;
+}
+
 input[type='number']::-webkit-inner-spin-button {
 	-webkit-appearance: none;
 	height: 46px;
@@ -332,8 +338,8 @@ input[type='number']::-webkit-inner-spin-button {
 }
 
 .bnt_order>button {
-	width: 80%;
-	height: 100%;
+	width: 130px;
+	height: 80px;
 	font-size: 24px;
 	font-weight: bold;
 	background-color: black;
