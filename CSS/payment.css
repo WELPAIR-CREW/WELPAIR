@@ -181,6 +181,11 @@ input[type=button] {
 
 /* 결제수단 구역 */
 
+.pay_area {
+    font-weight: bold;
+}
+
+
 .pay_contentsbox {
     
     display: flex;
@@ -213,7 +218,10 @@ div[id$=Point], div[id$=Price] {
     text-align: right;
 }
 
+.etc_pay {
+    color: #4F378B;
 
+}
 .payMethod_select {
     display: block;
     position: relative;
@@ -265,6 +273,7 @@ input[type="radio"]:checked + .creditCard_custom {
     vertical-align: middle;
     background-color: rgba(107, 107, 107, 0.2);
     background-position: center;
+    border-radius: 6px;
 
 }
 
@@ -289,6 +298,8 @@ input[type="radio"]:checked + .KakaoPay_custom {
     background-repeat: no-repeat;
     background-color: rgba(107, 107, 107, 0.2);
     background-position: center;
+    border-radius: 6px;
+
 
 }
 
@@ -297,6 +308,7 @@ p {
 
 }
 
+/* 결제하기 버튼 */
 .goto_payment, .payMethod_select {
     display: inline-flex;
 }
@@ -309,5 +321,6 @@ input[type=submit]{
     color: white;
     font-size: 24px;
 	font-weight: bold;
+    border-radius: 6px;
 
 }

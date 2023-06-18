@@ -329,6 +329,9 @@ input[type='number']::-webkit-inner-spin-button {
 	color: gray;
 }
 
+.exptpay_price3, .total_option {
+	color: #4F378B;
+}
 
 /* 버튼박스 */
 .bnt_order {
@@ -341,8 +344,9 @@ input[type='number']::-webkit-inner-spin-button {
 	width: 130px;
 	height: 80px;
 	font-size: 24px;
-	font-weight: bold;
+	/* font-weight: bold; */
 	background-color: black;
 	color: white;
+	border-radius: 6px;
 
 }
