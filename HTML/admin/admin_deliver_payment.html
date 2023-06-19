@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>결제완료</title>
+    <link rel="stylesheet" href="../../CSS/header.css">
+    <link rel="stylesheet" href="../../CSS/footer.css">
+    
+    <script src="../../src/static/include.js"></script>
+</head>
+<body>
+
+    <div data-include-html="./header_admin.html" class="include"></div>
+        <h3>결제완료</h3>
+    <form>
+        <input type="submit" value="전체 선택">
+
+        <select name="delivery">
+            <option value="del1">결제완료</option>
+            <option value="del2">상품준비중</option>
+            <option value="del3">배송중</option>
+            <option value="del4">배송완료</option>
+            <option value="etc" selected>기타</option>
+        </select>
+        <input type="submit" value="변경">
+
+        <input type="submit" value="기간별 조회">
+        <img src="../../img/calendar.png" alt="">
+
+
+        <table border="1px">
+            <tr>
+                <th>
+                    &ensp;ㅁ
+                    &ensp;주문일자&ensp;       
+                    &emsp;주문번호&emsp;
+                    &emsp;&emsp;&emsp;상품명&emsp;&emsp;&emsp;
+                    &ensp;수량&ensp;
+                    &emsp;수취인&emsp;
+                    &ensp;배송지정일&ensp;
+                    &emsp;진행상태&ensp;
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    &ensp;ㅁ
+                    &ensp;주문일자&ensp;       
+                    &emsp;주문번호&emsp;
+                    &emsp;&emsp;&emsp;상품명&emsp;&emsp;&emsp;
+                    &ensp;수량&ensp;
+                    &emsp;수취인&emsp;
+                    &ensp;배송지정일&ensp;
+                    &emsp;진행상태&ensp;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &ensp;ㅁ
+                    &ensp;주문일자&ensp;       
+                    &emsp;주문번호&emsp;
+                    &emsp;&emsp;&emsp;상품명&emsp;&emsp;&emsp;
+                    &ensp;수량&ensp;
+                    &emsp;수취인&emsp;
+                    &ensp;배송지정일&ensp;
+                    &emsp;진행상태&ensp;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &ensp;ㅁ
+                    &ensp;주문일자&ensp;       
+                    &emsp;주문번호&emsp;
+                    &emsp;&emsp;&emsp;상품명&emsp;&emsp;&emsp;
+                    &ensp;수량&ensp;
+                    &emsp;수취인&emsp;
+                    &ensp;배송지정일&ensp;
+                    &emsp;진행상태&ensp;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &ensp;ㅁ
+                    &ensp;주문일자&ensp;       
+                    &emsp;주문번호&emsp;
+                    &emsp;&emsp;&emsp;상품명&emsp;&emsp;&emsp;
+                    &ensp;수량&ensp;
+                    &emsp;수취인&emsp;
+                    &ensp;배송지정일&ensp;
+                    &emsp;진행상태&ensp;
+                </td>
+            </tr>
+         <br><br>
+    
+        </table>
+
+        <br>
+
+     <input type="text" orderNumber="search" size="8" required >
+     <input type="submit" value="주문취소">
+     <input type="submit" value="주문보류">
+    </form>
+    <div data-include-html="./footer.html" class="include"></div>
+</body>
+</html>
