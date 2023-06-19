@@ -38,7 +38,7 @@
                     <img src="#">
                 </div>
                 <label for="upload" class="upload">
-                    &gt; 이미지 업로드 &lt;
+                    &gt; 이미지 업로드 (다중 파일) &lt;
                 </label>
                 <div class="uploadimagelist"></div>
                 <div class="product-image-upload">
@@ -48,7 +48,15 @@
             <article class="product-detail-area2">
                 <div class="product-add-info">
                     상품명 : <input type="text" name="name" class="product-sale-name" placeholder="판매상품명 입력"><br>
-                    상품가격 : <input type="text" name="price" class="product-sale-price" placeholder="판매가격 입력">
+                    상품가격 : <input type="text" name="price" class="product-sale-price" placeholder="판매가격 입력"><br>
+                    상위 카테고리 : 
+                    <select name="parentCategory" id="refCategoryCode">
+
+                    </select><br>
+                    하위 카테고리 : 
+                    <select name="subCategory" id="categoryCode">
+
+                    </select>
                 </div>
             </article>
         </section>

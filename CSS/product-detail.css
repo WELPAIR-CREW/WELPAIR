@@ -268,3 +268,21 @@ label[for='upload'] {
     justify-content: center;
     margin-top: 10px;
 }
+
+.product-add-info input,
+.product-add-info select,
+.product-modify-info input,
+.product-modify-info select,
+.product-info input {
+    border-radius: 6px;
+    box-sizing: border-box;
+    padding-left: 10px;
+    height: 30px;
+}
+
+.product-add-info input,
+.product-add-info select,
+.product-modify-info input,
+.product-modify-info select {
+    margin-top: 10px;
+}
