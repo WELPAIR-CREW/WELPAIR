@@ -1,6 +1,11 @@
 @charset "UTF-8";
+body {
+    width: 1440px;
+    margin: auto;
 
+}
 * {
+    
     font-size: 20px;
 }
 
@@ -43,7 +48,7 @@ div[class*=subtitle] {
 .refund_body input, textarea {
     margin-right: 10px;
     border-radius: 6px;
-
+    resize: none;
 }
 
 
@@ -69,6 +74,7 @@ input[type=text]{
 .orderNo_load, .reason_select > select {
     width: 250px;
     height: 50px;
+    text-align: center;
 }
 .contitle_write {
     width: 900px;

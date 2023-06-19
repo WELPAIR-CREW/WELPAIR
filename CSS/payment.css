@@ -23,6 +23,7 @@ a:hover, a:active { text-decoration: none; }
 
 .pay_area {
     height: 460px;
+    
 }
 
 /* 각 구역 컨텐츠박스 */
@@ -45,6 +46,7 @@ div[class*=title] {
 
 .inputbox, .labelbox {
     margin: 10px 0px;
+    
 }
 
 /* 라벨(인포라벨링)박스 */
@@ -53,6 +55,7 @@ div[class*=title] {
     height: 50px; 
     font-size: 20px;
     margin-top: 20px;
+    
 }
 
 
@@ -64,6 +67,8 @@ input[class^=inputbox], select{
     border-radius: 6px;
     border: solid 1px gray;
     color: gray;
+    padding-left: 10px;
+    
 }
 
 /* input check박스 공통 */
@@ -117,8 +122,6 @@ li[class^=prd_list_] {
 	display: none;
 	width: 0 !important;
 }
-
-
 
 
 .prd_list_body {
@@ -175,8 +178,12 @@ input[type=button] {
     width: 780px;
 }
 
+
 .inputbox_delivery_date {
     font-size: 20px;
+    color: black;
+    text-align: center;
+
 }
 
 /* 결제수단 구역 */
