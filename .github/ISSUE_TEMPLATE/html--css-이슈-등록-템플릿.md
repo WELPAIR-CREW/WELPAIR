@@ -2,7 +2,7 @@
 name: HTML, CSS 이슈 등록 템플릿
 about: 해결해야할 HTML, CSS 기능 이슈를 등록해주세요
 title: ''
-labels: ''
+labels: CSS, HTML
 assignees: ''
 
 ---
@@ -22,6 +22,6 @@ assignees: ''
 
 작성 후 지정
 Assignees-해당 이슈 담당 팀원
-Labels-HTML, CSS
 Project-WELPAIR
+Milestone-HTML, CSS
 선택해주세요
