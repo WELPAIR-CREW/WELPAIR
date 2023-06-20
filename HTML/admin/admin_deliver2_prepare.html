@@ -5,19 +5,32 @@
     <title>상품준비중</title>
     <link rel="stylesheet" href="../../CSS/header.css">
     <link rel="stylesheet" href="../../CSS/footer.css">
+    <link rel="stylesheet" href="../../CSS/member.css">
     
     <script src="../../src/static/include.js"></script>
 </head>
 <body>
 
     <div data-include-html="./header_admin.html" class="include"></div>
-    
+
     <h3>상품준비중</h3>
+
+    <div class="container">
+        
+    <div class="navs">
+
+        <div class="nav-menu">배송 전체 현황</a></div>
+        <div class="nav-menu"><b>상품준비중</b></div>
+        <div class="nav-menu">배송중</a></div>
+        <div class="nav-menu">배송완료</a></div>
+        <div class="nav-menu">배송 전 취소 요청</a></div>
+        <div class="nav-menu">장기미배송</a></div>
+    </div>
+    
     <form>
         <input type="submit" value="전체 선택">
 
         <select name="delivery">
-            <option value="del1">결제완료</option>
             <option value="del2">상품준비중</option>
             <option value="del3">배송중</option>
             <option value="del4">배송완료</option>
@@ -32,7 +45,7 @@
         <table border="1px">
             <tr>
                 <th>
-                    &ensp;ㅁ
+                    <input type="checkbox">
                     &ensp;주문일자&ensp;       
                     &emsp;주문번호&emsp;
                     &emsp;&emsp;&emsp;상품명&emsp;&emsp;&emsp;
@@ -44,7 +57,7 @@
             </tr>
             <tr>
                 <td>
-                    &ensp;ㅁ
+                    <input type="checkbox">
                     &ensp;주문일자&ensp;       
                     &emsp;주문번호&emsp;
                     &emsp;&emsp;&emsp;상품명&emsp;&emsp;&emsp;
@@ -56,7 +69,7 @@
             </tr>
             <tr>
                 <td>
-                    &ensp;ㅁ
+                    <input type="checkbox">
                     &ensp;주문일자&ensp;       
                     &emsp;주문번호&emsp;
                     &emsp;&emsp;&emsp;상품명&emsp;&emsp;&emsp;
@@ -68,7 +81,7 @@
             </tr>
             <tr>
                 <td>
-                    &ensp;ㅁ
+                    <input type="checkbox">
                     &ensp;주문일자&ensp;       
                     &emsp;주문번호&emsp;
                     &emsp;&emsp;&emsp;상품명&emsp;&emsp;&emsp;
@@ -80,7 +93,7 @@
             </tr>
             <tr>
                 <td>
-                    &ensp;ㅁ
+                    <input type="checkbox">
                     &ensp;주문일자&ensp;       
                     &emsp;주문번호&emsp;
                     &emsp;&emsp;&emsp;상품명&emsp;&emsp;&emsp;
@@ -90,6 +103,79 @@
                     &emsp;진행상태&ensp;
                 </td>
             </tr>
+            <tr>
+                <td>
+                    <input type="checkbox">
+                    &ensp;주문일자&ensp;       
+                    &emsp;주문번호&emsp;
+                    &emsp;&emsp;&emsp;상품명&emsp;&emsp;&emsp;
+                    &ensp;수량&ensp;
+                    &emsp;수취인&emsp;
+                    &ensp;배송지정일&ensp;
+                    &emsp;진행상태&ensp;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox">
+                    &ensp;주문일자&ensp;       
+                    &emsp;주문번호&emsp;
+                    &emsp;&emsp;&emsp;상품명&emsp;&emsp;&emsp;
+                    &ensp;수량&ensp;
+                    &emsp;수취인&emsp;
+                    &ensp;배송지정일&ensp;
+                    &emsp;진행상태&ensp;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox">
+                    &ensp;주문일자&ensp;       
+                    &emsp;주문번호&emsp;
+                    &emsp;&emsp;&emsp;상품명&emsp;&emsp;&emsp;
+                    &ensp;수량&ensp;
+                    &emsp;수취인&emsp;
+                    &ensp;배송지정일&ensp;
+                    &emsp;진행상태&ensp;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox">
+                    &ensp;주문일자&ensp;       
+                    &emsp;주문번호&emsp;
+                    &emsp;&emsp;&emsp;상품명&emsp;&emsp;&emsp;
+                    &ensp;수량&ensp;
+                    &emsp;수취인&emsp;
+                    &ensp;배송지정일&ensp;
+                    &emsp;진행상태&ensp;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox">
+                    &ensp;주문일자&ensp;       
+                    &emsp;주문번호&emsp;
+                    &emsp;&emsp;&emsp;상품명&emsp;&emsp;&emsp;
+                    &ensp;수량&ensp;
+                    &emsp;수취인&emsp;
+                    &ensp;배송지정일&ensp;
+                    &emsp;진행상태&ensp;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox">
+                    &ensp;주문일자&ensp;       
+                    &emsp;주문번호&emsp;
+                    &emsp;&emsp;&emsp;상품명&emsp;&emsp;&emsp;
+                    &ensp;수량&ensp;
+                    &emsp;수취인&emsp;
+                    &ensp;배송지정일&ensp;
+                    &emsp;진행상태&ensp;
+                </td>
+            </tr>
+
          <br><br>
     
         </table>
@@ -100,6 +186,8 @@
      <input type="text" orderNumber="search" size="4" required >
      <input type="submit" value="운송장번호 등록">
     </form>
+    </div>
+
     <div data-include-html="./footer.html" class="include"></div>
 </body>
 </html>
