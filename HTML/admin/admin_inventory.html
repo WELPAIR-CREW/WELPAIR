@@ -39,12 +39,10 @@
 
             <div class="section-invenMain">
                 <span class="section-invenMain-list"><strong>총 재고수량</strong></span>
-                <span>10000</span>
-                <span class="section-invenMain-list"><strong>총 가용수량</strong></span>
-                <span>90000</span>
+                <span><p th:text="${ param.stockAmount }"></p></span>
                 <span class="section-invenMain-list"><strong>위험재고 상품수</strong></span>
-                <span>30</span>
-            </div>
+                <span><p th:text="${ param.alertStock }"></p></span>
+              </div>
 
             <!-- 상품코드 검색하여 결과 값 단일행 출력 -->
             <div class="section-invenMain-search">
@@ -58,26 +56,17 @@
             <div>
                 <table class="section-invenMain-search-table">
                     <tr>
-                        <th>상품코드</th>
-                        <th>상품명</th>
-                        <th>카테고리</th>
-                        <th>총 재고수량</th>
+                      <th>상품코드</th>
+                      <th>상품명</th>
+                      <th>카테고리</th>
+                      <th>총 재고수량</th>
                     </tr>
-                    <tr>
-                        <td>상품코드</td>
-                        <td>상품명</td>
-                        <td>카테고리</td>
-                        <td>총 재고수량</td>
-                    </tr>
-
-
                     <tr th:each="inven: ${ invenList }">
-                        <td th:text="${ inven.code}"></td>
-                        <td th:text="${ inven.name}"></td>
-                        <td th:text="${ inven.categoryCode}"></td>
-                        <td th:text="${ inven.amount}"></td>
+                      <td th:text="${ inven.code }"></td>
+                      <td th:text="${ inven.name }"></td>
+                      <td th:text="${ inven.categoryCode }"></td>
+                      <td th:text="${ inven.amount }"></td>
                     </tr>
-                </table>
             </div>
         </div>
     </section>
