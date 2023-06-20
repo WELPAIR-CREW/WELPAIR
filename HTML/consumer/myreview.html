@@ -19,7 +19,87 @@
     <section>
         <div class="section-title">내가쓴글</div>
 
-        
+        <div id="over-wishlist">
+            <span>
+                <span id="overline-check">
+                    <input type="checkbox" id="select-all2">
+                    <label>전체선택</label>
+                </span>
+                <span id="left-button">
+                    <button>선택담기</button>
+                    <label>&nbsp|&nbsp</label>
+                    <button>선택삭제</button>
+                </span>
+            </span>
+        </div>
+
+        <div id="wishlist">
+            <div class="wishlist-item">
+                <input type="checkbox">
+                <img src="../../img/thumbnailbox.png" alt="썸네일">
+                <span>
+                    <div>상품명상품명상품명상품명1</div>
+                    <div>옵션명옵션명옵션명1</div>
+                    <div>99,000원</div>
+                </span>
+                <span class="left-button2">
+                    <button>담기</button>
+                    <button>×</button>
+                </span>
+            </div>
+            <div class="wishlist-item">
+                <input type="checkbox">
+                <img src="../../img/thumbnailbox.png" alt="썸네일">
+                <span>
+                    <div>상품명상품명상품명상품명1</div>
+                    <div>옵션명옵션명옵션명1</div>
+                    <div>99,000원</div>
+                </span>
+                <span class="left-button2">
+                    <button>담기</button>
+                    <button>×</button>
+                </span>
+            </div>
+            <div class="wishlist-item">
+                <input type="checkbox">
+                <img src="../../img/thumbnailbox.png" alt="썸네일">
+                <span>
+                    <div>상품명상품명상품명상품명1</div>
+                    <div>옵션명옵션명옵션명1</div>
+                    <div>99,000원</div>
+                </span>
+                <span class="left-button2">
+                    <button>담기</button>
+                    <button>×</button>
+                </span>
+            </div>
+            <div class="wishlist-item">
+                <input type="checkbox">
+                <img src="../../img/thumbnailbox.png" alt="썸네일">
+                <span>
+                    <div>상품명상품명상품명상품명1</div>
+                    <div>옵션명옵션명옵션명1</div>
+                    <div>99,000원</div>
+                </span>
+                <span class="left-button2">
+                    <button>담기</button>
+                    <button>×</button>
+                </span>
+            </div>
+            <div class="wishlist-item">
+                <input type="checkbox">
+                <img src="../../img/thumbnailbox.png" alt="썸네일">
+                <span>
+                    <div>상품명상품명상품명상품명1</div>
+                    <div>옵션명옵션명옵션명1</div>
+                    <div>99,000원</div>
+                </span>
+                <span class="left-button2">
+                    <button>담기</button>
+                    <button>×</button>
+                </span>
+            </div>
+        </div>
 
         <div class="paging">
             <span>&lt;</span>
@@ -41,7 +121,18 @@
 
 
     <script>
-        
+        document.addEventListener('DOMContentLoaded', function () {
+            let selectAllCheckbox = document.getElementById('select-all2');
+            // let everyCheckbox = document.querySelectorAll('tbody td.checkbox-cell input[type="checkbox"]');
+
+            selectAllCheckbox.addEventListener('click', function () {
+                let isChecked = selectAllCheckbox.checked;
+
+                everyCheckbox.forEach(function (checkbox) {
+                    checkbox.checked = isChecked;
+                });
+            });
+        });
 
     </script>
 </body>
