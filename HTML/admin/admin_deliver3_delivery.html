@@ -2,10 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>고객별 주문내역</title>
-   <br>
-   <br>
-
+    <title>배송중</title>
     <link rel="stylesheet" href="../../CSS/header.css">
     <link rel="stylesheet" href="../../CSS/footer.css">
     <link rel="stylesheet" href="../../CSS/member.css">
@@ -15,171 +12,182 @@
 <body>
 
     <div data-include-html="./header_admin.html" class="include"></div>
-    
-    
-    
-    <h3>고객별 주문내역 조회</h3>
-    <!-- 구분선 어떻게... -->
+
+    <h3>배송중</h3>
 
     <div class="container">
-        <div>
 
-        <!---->
-        <div class="navs">
+    <div class="navs">
 
-            <div class="nav-menu"><b>고객별 주문내역</b></a></div>
-            <div class="nav-menu">주문관리</div>
-        </div>
-        <!---->
-
-    <div>
+        <div class="nav-menu">배송 전체 현황</a></div>
+        <div class="nav-menu">상품준비중</div>
+        <div class="nav-menu"><b>배송중</b></a></div>
+        <div class="nav-menu">배송완료</a></div>
+        <div class="nav-menu">배송 전 취소 요청</a></div>
+        <div class="nav-menu">장기미배송</a></div>
+    </div>
    
+    <form>
+        <input type="submit" value="전체 선택">
+
+        <select name="delivery">
+            <option value="del2">상품준비중</option>
+            <option value="del3">배송중</option>
+            <option value="del4">배송완료</option>
+            <option value="etc" selected>기타</option>
+        </select>
+        <input type="submit" value="변경">
+
         <input type="submit" value="기간별 조회">
-       <!-- <img src="../../img/calendar.png" alt=""> -->
-        <!-- 달력 크기 조절해야함 -->
+        <img src="../../img/calendar.png" alt="">
 
-        <input type="text" orderNumber="search" size="8" required >
-        <input type="submit" value="검색">
-
-        <input type="text" itemName="search" size="8" required >
-        <input type="submit" value="검색">
-
-        <input type="text" name="search" size="8" required >
-        <input type="submit" value="검색">
-
-
-        <!-- orderNumber, id가 주문번호와 아이디 검색하는게 맞는지 물어보기 -->
 
         <table border="1px">
             <tr>
                 <th>
+                    <input type="checkbox">
                     &ensp;주문일자&ensp;       
                     &emsp;주문번호&emsp;
                     &emsp;&emsp;&emsp;상품명&emsp;&emsp;&emsp;
                     &ensp;수량&ensp;
-                    &emsp;주문자&emsp;
-                    &ensp;결제방법&ensp;
-                    &emsp;결제금액&ensp;
+                    &emsp;수취인&emsp;
+                    &ensp;배송지정일&ensp;
+                    &emsp;진행상태&ensp;
                 </th>
             </tr>
             <tr>
                 <td>
+                    <input type="checkbox">
                     &ensp;주문일자&ensp;       
                     &emsp;주문번호&emsp;
                     &emsp;&emsp;&emsp;상품명&emsp;&emsp;&emsp;
                     &ensp;수량&ensp;
-                    &emsp;주문자&emsp;
-                    &ensp;결제방법&ensp;
-                    &emsp;결제금액&ensp;
+                    &emsp;수취인&emsp;
+                    &ensp;배송지정일&ensp;
+                    &emsp;진행상태&ensp;
                 </td>
             </tr>
             <tr>
                 <td>
+                    <input type="checkbox">
                     &ensp;주문일자&ensp;       
                     &emsp;주문번호&emsp;
                     &emsp;&emsp;&emsp;상품명&emsp;&emsp;&emsp;
                     &ensp;수량&ensp;
-                    &emsp;주문자&emsp;
-                    &ensp;결제방법&ensp;
-                    &emsp;결제금액&ensp;
+                    &emsp;수취인&emsp;
+                    &ensp;배송지정일&ensp;
+                    &emsp;진행상태&ensp;
                 </td>
             </tr>
             <tr>
                 <td>
+                    <input type="checkbox">
                     &ensp;주문일자&ensp;       
                     &emsp;주문번호&emsp;
                     &emsp;&emsp;&emsp;상품명&emsp;&emsp;&emsp;
                     &ensp;수량&ensp;
-                    &emsp;주문자&emsp;
-                    &ensp;결제방법&ensp;
-                    &emsp;결제금액&ensp;
+                    &emsp;수취인&emsp;
+                    &ensp;배송지정일&ensp;
+                    &emsp;진행상태&ensp;
                 </td>
             </tr>
             <tr>
                 <td>
+                    <input type="checkbox">
                     &ensp;주문일자&ensp;       
                     &emsp;주문번호&emsp;
                     &emsp;&emsp;&emsp;상품명&emsp;&emsp;&emsp;
                     &ensp;수량&ensp;
-                    &emsp;주문자&emsp;
-                    &ensp;결제방법&ensp;
-                    &emsp;결제금액&ensp;
+                    &emsp;수취인&emsp;
+                    &ensp;배송지정일&ensp;
+                    &emsp;진행상태&ensp;
                 </td>
             </tr>
             <tr>
                 <td>
+                    <input type="checkbox">
                     &ensp;주문일자&ensp;       
                     &emsp;주문번호&emsp;
                     &emsp;&emsp;&emsp;상품명&emsp;&emsp;&emsp;
                     &ensp;수량&ensp;
-                    &emsp;주문자&emsp;
-                    &ensp;결제방법&ensp;
-                    &emsp;결제금액&ensp;
+                    &emsp;수취인&emsp;
+                    &ensp;배송지정일&ensp;
+                    &emsp;진행상태&ensp;
                 </td>
             </tr>
             <tr>
                 <td>
+                    <input type="checkbox">
                     &ensp;주문일자&ensp;       
                     &emsp;주문번호&emsp;
                     &emsp;&emsp;&emsp;상품명&emsp;&emsp;&emsp;
                     &ensp;수량&ensp;
-                    &emsp;주문자&emsp;
-                    &ensp;결제방법&ensp;
-                    &emsp;결제금액&ensp;
+                    &emsp;수취인&emsp;
+                    &ensp;배송지정일&ensp;
+                    &emsp;진행상태&ensp;
                 </td>
             </tr>
             <tr>
                 <td>
+                    <input type="checkbox">
                     &ensp;주문일자&ensp;       
                     &emsp;주문번호&emsp;
                     &emsp;&emsp;&emsp;상품명&emsp;&emsp;&emsp;
                     &ensp;수량&ensp;
-                    &emsp;주문자&emsp;
-                    &ensp;결제방법&ensp;
-                    &emsp;결제금액&ensp;
+                    &emsp;수취인&emsp;
+                    &ensp;배송지정일&ensp;
+                    &emsp;진행상태&ensp;
                 </td>
             </tr>
             <tr>
                 <td>
+                    <input type="checkbox">
                     &ensp;주문일자&ensp;       
                     &emsp;주문번호&emsp;
                     &emsp;&emsp;&emsp;상품명&emsp;&emsp;&emsp;
                     &ensp;수량&ensp;
-                    &emsp;주문자&emsp;
-                    &ensp;결제방법&ensp;
-                    &emsp;결제금액&ensp;
+                    &emsp;수취인&emsp;
+                    &ensp;배송지정일&ensp;
+                    &emsp;진행상태&ensp;
                 </td>
             </tr>
             <tr>
                 <td>
+                    <input type="checkbox">
                     &ensp;주문일자&ensp;       
                     &emsp;주문번호&emsp;
                     &emsp;&emsp;&emsp;상품명&emsp;&emsp;&emsp;
                     &ensp;수량&ensp;
-                    &emsp;주문자&emsp;
-                    &ensp;결제방법&ensp;
-                    &emsp;결제금액&ensp;
+                    &emsp;수취인&emsp;
+                    &ensp;배송지정일&ensp;
+                    &emsp;진행상태&ensp;
                 </td>
             </tr>
             <tr>
                 <td>
+                    <input type="checkbox">
                     &ensp;주문일자&ensp;       
                     &emsp;주문번호&emsp;
                     &emsp;&emsp;&emsp;상품명&emsp;&emsp;&emsp;
                     &ensp;수량&ensp;
-                    &emsp;주문자&emsp;
-                    &ensp;결제방법&ensp;
-                    &emsp;결제금액&ensp;
+                    &emsp;수취인&emsp;
+                    &ensp;배송지정일&ensp;
+                    &emsp;진행상태&ensp;
                 </td>
             </tr>
-            
-            
 
+         <br><br>
+    
         </table>
 
-</d
-        <div data-include-html="./footer.html" class="include"></div>
+        <br>
+
+     <input type="text" orderNumber="search" size="12" required >
+     <input type="text" orderNumber="search" size="4" required >
+     <input type="submit" value="운송장번호 수정">
+    </form>
     </div>
-        
+
+    <div data-include-html="./footer.html" class="include"></div>
 </body>
 </html>
