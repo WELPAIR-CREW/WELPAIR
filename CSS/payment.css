@@ -1,0 +1,333 @@
+@charset "UTF-8";
+
+* {
+    vertical-align: middle;
+}
+
+/* 랑크 흔적 보라색 없애기 */
+a { text-decoration: none; color: black; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:focus { text-decoration: none; }
+a:hover, a:active { text-decoration: none; }
+
+/* 각 구역 */
+.payment_container{
+    margin: auto;
+	width: 1196px;
+}
+.order_prd_area {
+    height: 350px;
+}
+
+
+.pay_area {
+    height: 460px;
+    
+}
+
+/* 각 구역 컨텐츠박스 */
+div[class$=contentsbox], .info_table{
+    margin: 20px 0px;
+}
+
+div[class^="title"] {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+/* 소제목 공통 */
+div[class*=title] {
+    margin-top: 30px;
+    width: 1170px;
+    height: 54px;
+	border-bottom: 4px solid black;
+}
+
+.inputbox, .labelbox {
+    margin: 10px 0px;
+    
+}
+
+/* 라벨(인포라벨링)박스 */
+.labelbox, div[class*=paybox] {
+    width: 170px; 
+    height: 50px; 
+    font-size: 20px;
+    margin-top: 20px;
+    
+}
+
+
+
+
+/* 입력박스 스타일 */
+input[class^=inputbox], select{
+    height: 50px;
+    border-radius: 6px;
+    border: solid 1px gray;
+    color: gray;
+    padding-left: 10px;
+    
+}
+
+/* input check박스 공통 */
+input[type=checkbox] {
+	width: 23px;
+	height: 23px;
+}
+
+/* ----------- 공통------------ */
+
+/* 주문상품 */
+
+.order_prd_ul {
+    height: 30px;
+    /* display: flex; */
+    list-style-type: none;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+li[class^=prd_list_] {
+    display: flex;
+}
+
+.prd_list_head {
+    height: 30px;
+}
+.list_head_1, .list_body_1 {
+    width: 70px;
+}
+.list_head_2, .list_body_2 {
+    width: 400px;
+    margin-right: 30px;
+}
+.list_head_3, .list_body_3 {
+    width: 100px;
+}
+.list_head_4, .list_head_5, .list_head_6, .list_body_4, .list_body_5, .list_body_6 {
+    width: 180px;
+}
+
+.prd_list_box {
+	overflow: scroll;
+	/* IE scroll 숨김 */
+	max-height: 250px;
+}
+
+/* 내부스크롤바 안보이게 하기 */
+.prd_list_box::-webkit-scrollbar {
+	display: none;
+	width: 0 !important;
+}
+
+
+.prd_list_body {
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.list_body_2 a {
+    display: flex;
+    text-align: left;
+
+}
+.thumb_box {
+    display: flex;
+    
+}
+.thumb_img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    border: 1px solid; 
+    border-radius: 6px;
+    background-size: contain;
+    background-image: url('../img/sample1.png');
+    background-position: center;
+}
+
+.list_body_3 > input {
+    width: 70px;
+    text-align: center;
+    background: none;
+    border: none;
+}
+
+
+/* 주문자 정보 */
+input[type=button] {
+    height: 50px;
+    width: 150px;
+    border: solid 1px gray;
+    border-radius: 6px;
+    font-size: 20px;
+}
+
+.inputbox_name, .inputbox_phone, .inputbox_addBasic {
+    width: 400px;
+}
+
+#recipientAddress, .inputbox_addZipcode, .inputbox_delivery_date  {
+    width: 200px;
+}
+
+.inputbox_addDetail, .inputbox_delivery_text {
+    width: 780px;
+}
+
+
+.inputbox_delivery_date {
+    font-size: 20px;
+    color: black;
+    text-align: center;
+
+}
+
+/* 결제수단 구역 */
+
+.pay_area {
+    font-weight: bold;
+}
+
+
+.pay_contentsbox {
+    
+    display: flex;
+    font: bold;
+    font-size: 20px;
+}
+
+.pay_contentsbox  > div {
+    height: 70px;
+}
+
+
+div[class*=rest] {
+    display: inline-block;
+    width: 170px;
+    height: 70px;
+}
+
+
+div[id$=Point], div[id$=Price] {
+    text-align: right;
+}
+
+.usePointBox {
+    height: 50px;
+    width: 200px;
+    border: solid 1px gray;
+    border-radius: 6px;
+    font-size: 20px;
+    text-align: right;
+}
+
+.etc_pay {
+    color: #4F378B;
+
+}
+.payMethod_select {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.payMethod_select input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.payMethod_select > div {
+    margin: 30px 30px 0px;
+    display: inline-block; 
+    text-align: center;
+    align-items: center;
+
+}
+
+
+
+span[class=creditCard_custom]{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-image: url('../img/creditCard.png'); /* 선택하지 않았을 때의 이미지 */
+    cursor: pointer;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    border: 3px solid  transparent;
+    background-position: center;
+
+}
+
+input[type="radio"]:checked + .creditCard_custom {
+    background-image: url('../img/creditCard.png'); /* 선택했을 때의 이미지 */
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    background-color: rgba(107, 107, 107, 0.2);
+    background-position: center;
+    border-radius: 6px;
+
+}
+
+
+span[class=KakaoPay_custom]{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-image: url('../img/kakaopay_medium.png'); /* 선택하지 않았을 때의 이미지 */
+    background-size: 100%;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    border: 3px solid transparent;
+    background-position: center;
+
+    
+
+}
+
+input[type="radio"]:checked + .KakaoPay_custom {
+    background-image: url('../img/kakaopay_medium.png'); /* 선택했을 때의 이미지 */
+    background-repeat: no-repeat;
+    background-color: rgba(107, 107, 107, 0.2);
+    background-position: center;
+    border-radius: 6px;
+
+
+}
+
+p {
+    cursor: pointer;
+
+}
+
+/* 결제하기 버튼 */
+.goto_payment, .payMethod_select {
+    display: inline-flex;
+}
+
+input[type=submit]{
+    margin-left: 50px;
+	width: 130px;
+	height: 80px;
+	background-color: black;
+    color: white;
+    font-size: 24px;
+	font-weight: bold;
+    border-radius: 6px;
+
+}

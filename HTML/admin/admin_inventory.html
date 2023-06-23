@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>재고 관리</title>
+    <link rel="stylesheet" href="/CSS/header.css">
+    <link rel="stylesheet" href="/CSS/main.css">
+    <link rel="stylesheet" href="/CSS/footer.css">
+    <link rel="stylesheet" href="/CSS/inventory.css">
+    <script src="/src/static/include.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+    <div data-include-html="./header_admin.html" class="include"></div>
+
+    <!-- 왼쪽 메뉴 베너 -->
+    <section>
+        <div class="section-nav">
+            <div class="section-nav-category">
+                <a href="/HTML/admin/admin_inventory.html"><b>재고관리</b></a>
+            </div>
+            <div class="section-nav-category">
+                <a href="/HTML/admin/admin_inventory_register.html">입출고등록</a>
+            </div>
+            <div class="section-nav-category">
+                <a href="/HTML/admin/admin_inventory_search.html">입출고내역</a>
+            </div>
+        </div>
+
+        <!-- 컨텐츠 영역 시작 -->
+        <div class="section-content">
+            <div class="section-title">재고현황</div>
+
+            <!-- DB수식 넣기 -->
+
+            <div class="section-invenMain">
+                <span class="section-invenMain-list"><strong>총 재고수량</strong></span>
+                <span>10000</span>
+                <span class="section-invenMain-list"><strong>총 가용수량</strong></span>
+                <span>90000</span>
+                <span class="section-invenMain-list"><strong>위험재고 상품수</strong></span>
+                <span>30</span>
+            </div>
+
+            <!-- 상품코드 검색하여 결과 값 단일행 출력 -->
+            <div class="section-invenMain-search">
+                <span class="section-invenMain-search-span">상품코드
+                    <input type="text" class="section-historySearch-input product-code" placeholder="상품코드입력">
+                </span>
+                <div class="section-invenMain-search-btn">
+                    <button class="btn_basic" onclick="searchInven()">검색</button>
+                </div>
+            </div>
+            <div>
+                <table class="section-invenMain-search-table">
+                    <tr>
+                        <th>상품코드</th>
+                        <th>상품명</th>
+                        <th>카테고리</th>
+                        <th>총 재고수량</th>
+                    </tr>
+                    <tr>
+                        <td>상품코드</td>
+                        <td>상품명</td>
+                        <td>카테고리</td>
+                        <td>총 재고수량</td>
+                    </tr>
+
+
+                    <tr th:each="inven: ${ invenList }">
+                        <td th:text="${ inven.code}"></td>
+                        <td th:text="${ inven.name}"></td>
+                        <td th:text="${ inven.categoryCode}"></td>
+                        <td th:text="${ inven.amount}"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <div data-include-html="./footer.html" class="include"></div>
+    <script>
+
+// 상품코드 검색하여 결과 값(1개) 출력
+function searchInven() {
+  var searchQuery = document.getElementById('searchQuery').value;
+  var serverProductCode = "ABC123";
+  document.getElementById('productCodeInput').value = serverProductCode;
+}
+
+function searchInvenResult() {
+  var productCode = document.getElementById('productCodeInput').value;
+  alert("Product Code: " + productCode);
+}
+
+
+
+
+// 검색 결과 테이블 스크립트 - 수업 코드 복사
+
+// const successMessage = "[[${successMessage}]]";
+//   if(successMessage){
+//     alert(successMessage);
+//   }
+//   const failMessage = "[[${failMessage}]]";
+//   if(failMessage){
+//     alert(failMessage);
+//   }
+
+    </script>
+</body>
+</html>
