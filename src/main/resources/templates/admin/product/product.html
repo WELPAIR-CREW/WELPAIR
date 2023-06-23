@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상품 관리</title>
+    <link rel="stylesheet" href="../common/css/header.css">
+    <link rel="stylesheet" href="../common/css/main.css">
+    <link rel="stylesheet" href="../common/css/footer.css">
+    <script src="../common/js/static/include.js"></script>
+</head>
+
+<body>
+    <div data-include-html="/admin/header_admin" class="include"></div>
+    <section>
+        <div class="section-nav">
+            <div class="section-nav-category"><b>상품관리</b></div>
+            <div class="section-nav-category">상품등록</div>
+            <div class="section-nav-category">리뷰관리</div>
+            <div class="section-nav-category">문의관리</div>
+        </div>
+        <div class="section-content">
+            <div class="section-title">상품관리</div>
+            <div class="section-selectbox">
+                <div class="section-selectbox area1">
+                    <span class="section-selectbox-span">상품코드
+                        <input type="text" class="section-selectbox-input product-code" placeholder="상품코드입력">
+                    </span>
+                    <span class="section-selectbox-span">상품명
+                        <input type="text" class="section-selectbox-input name" placeholder="상품명입력">
+                    </span>
+                    <button class="button first-button">상품검색</button>
+                </div>
+                <div class="section-selectbox area2">
+                    <span class="section-selectbox-span">대분류
+                        <select name="large" id="select-large" class="section-selectbox-select">
+                        </select>
+                    </span>
+
+                    <span class="section-selectbox-span">중분류
+                        <select name="medium" id="select-medium" class="section-selectbox-select">
+                        </select>
+                    </span>
+
+                    <span class="section-selectbox-span">소분류
+                        <select name="small" id="select-small" class="section-selectbox-select">
+
+                        </select>
+                    </span>
+                    <button class="button first-button">상품삭제</button>
+                </div>
+            </div>
+            <table class="section-product-table">
+                <colgroup>
+                    <col style="width: 50px;">
+                    <col style="width: 170px;">
+                    <col style="width: 170px;">
+                    <col style="width: 170px;">
+                    <col style="width: 170px;">
+                    <col style="width: 170px;">
+                </colgroup>
+                <tr>
+                    <th><input type="checkbox"></th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>5</th>
+                </tr>
+                <tbody>
+                </tbody>
+            </table>
+            <div class="paging">
+                <span>&lt;</span>
+                <span style="color: #4D4D4D;">1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+                <span>&gt;</span>
+            </div>
+        </div>
+    </section>
+    <div data-include-html="/admin/footer" class="include"></div>
+    <script>
+        let url = "/product/productlist";
+        let options = {
+            method : 'post',
+            headers : {
+                'Content-Type' : 'application/json',
+            },
+        }
+        fetch(url, options)
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                }
+            })
+            .then(data => {
+                for (let index in data) {
+                    if (index >= 10) return;
+
+                    const tr = document.createElement("tr");
+                    const td1 = document.createElement("td");
+                    const input = document.createElement("input");
+                    input.type = 'checkbox';
+                    td1.append(input);
+                    tr.append(td1);
+
+                    const td2 = document.createElement("td");
+                    td2.textContent = data[index].code;
+                    tr.append(td2);
+
+                    const td3 = document.createElement("td");
+                    td3.textContent = data[index].name;
+                    tr.append(td3);
+
+                    const td4 = document.createElement("td");
+                    td4.textContent = data[index].status;
+                    tr.append(td4);
+
+                    const td5 = document.createElement("td");
+                    td5.textContent = data[index].amount;
+                    tr.append(td5);
+
+                    const td6 = document.createElement("td");
+                    td6.textContent = data[index].price;
+                    tr.append(td6);
+
+                    document.querySelector(".section-product-table tbody").append(tr);
+                }
+
+            })
+            .catch(error => {
+                console.log(error);
+            })
+    </script>
+</body>
+
+</html>
