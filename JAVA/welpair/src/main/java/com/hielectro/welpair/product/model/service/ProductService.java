@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.hielectro.welpair.product.model.dao.ProductMapper;
-import com.hielectro.welpair.product.model.dto.ProductDTO;
+import com.hielectro.welpair.product.model.dto.SellProductDTO;
 
 @Service
 public class ProductService {
@@ -15,7 +15,7 @@ public class ProductService {
         this.productMapper = productMapper;
     }
 
-    public List<ProductDTO> findAllProduct() {
-        return productMapper.findAllProduct();
+    public List<SellProductDTO> findAllProduct() {
+        return productMapper.findAllSellProduct();
     }
 }

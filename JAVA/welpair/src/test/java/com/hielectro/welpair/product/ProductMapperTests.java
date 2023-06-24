@@ -27,7 +27,7 @@ public class ProductMapperTests {
     @Test
     @DisplayName("모든 상품 출력 테스트")
     public void test() {
-        assertNotNull(productMapper.findAllProduct());
-        System.out.println(productMapper.findAllProduct());
+        assertNotNull(productMapper.findAllSellProduct());
+        System.out.println(productMapper.findAllSellProduct());
     }
 }

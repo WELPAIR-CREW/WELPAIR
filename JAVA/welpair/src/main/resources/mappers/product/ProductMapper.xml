@@ -3,18 +3,31 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hielectro.welpair.product.model.dao.ProductMapper">
-    <resultMap id="ProductResultMap" type="com.hielectro.welpair.product.model.dto.ProductDTO">
-        <id property="code" column="PRODUCT_CODE"/>
-        <result property="name" column="PRODUCT_NAME"/>
-        <result property="status" column="PRODUCT_STATUS"/>
-        <result property="amount" column="PRODUCT_AMOUNT"/>
-        <result property="price" column="PRODUCT_PRICE"/>
-        <result property="option" column="PRODUCT_OPTION"/>
-        <result property="nation" column="PRODUCT_NATION"/>
-        <result property="categoryCode" column="CATEGORY_CODE"/>
+    <resultMap id="SellProductResultMap" type="com.hielectro.welpair.product.model.dto.SellProductDTO">
+        <id property="id" column="SELL_PRODUCT_ID"/>
+        <result property="code" column="PRODUCT_CODE"/>
+        <result property="discount" column="DISCOUNT"/>
+        <result property="isSell" column="IS_SELL"/>
+
+        <collection property="sellItemPageList" resultMap="SellItemPageDTO"/>
     </resultMap>
 
-    <select id="findAllProduct" resultMap="ProductResultMap">
-        SELECT * FROM T_PRODUCT
+    <resultMap id="SellItemPageDTO" type="com.hielectro.welpair.product.model.dto.SellItemPageDTO">
+        <id property="no" column="SELL_PAGE_NO"/>
+        <id property="id" column="SELL_PRODUCT_ID"/>
+
+        <collection property="sellPageList" resultMap="SellPageDTO"/>
+    </resultMap>
+
+    <resultMap id="SellPageDTO" type="com.hielectro.welpair.product.model.dto.SellPageDTO">
+        <id property="no" column="SELL_PAGE_NO"/>
+        <result property="title" column="SELL_PAGE_TITLE"/>
+    </resultMap>
+
+    <select id="findAllSellProduct" resultMap="SellProductResultMap">
+        SELECT *
+          FROM T_SELL_PRODUCT
+          LEFT JOIN T_SELL_ITEM_PAGE USING (SELL_PRODUCT_ID)
+          LEFT JOIN T_SELL_PAGE USING (SELL_PAGE_NO)
     </select>
 </mapper>
