@@ -21,10 +21,10 @@ public class ProductController {
         return "admin/product/" + url;
     }
 
-    @PostMapping(value = "productlist", produces = "application/json;charset=utf-8")
+    @GetMapping(value = "sellproductlist/{pageNo}", produces = "application/json;charset=utf-8")
     @ResponseBody
-    public List<SellProductDTO> getProductList() {
-        List<SellProductDTO> sellProductList = productService.findAllProduct();
+    public List<SellProductDTO> getProductList(@PathVariable int pageNo) {
+        List<SellProductDTO> sellProductList = productService.findSellProductByPageNo(pageNo);
         System.out.println(sellProductList);
         return sellProductList;
     }

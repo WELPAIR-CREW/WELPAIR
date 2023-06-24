@@ -7,5 +7,5 @@ import java.util.List;
 
 @Mapper
 public interface ProductMapper {
-    List<SellProductDTO> findAllSellProduct();
+    List<SellProductDTO> findSellProductByPageNo(int pageNo);
 }

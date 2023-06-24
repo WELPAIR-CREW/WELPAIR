@@ -16,7 +16,7 @@
         <id property="no" column="SELL_PAGE_NO"/>
         <id property="id" column="SELL_PRODUCT_ID"/>
 
-        <collection property="sellPageList" resultMap="SellPageDTO"/>
+        <association property="sellPage" resultMap="SellPageDTO"/>
     </resultMap>
 
     <resultMap id="SellPageDTO" type="com.hielectro.welpair.product.model.dto.SellPageDTO">
@@ -24,10 +24,23 @@
         <result property="title" column="SELL_PAGE_TITLE"/>
     </resultMap>
 
-    <select id="findAllSellProduct" resultMap="SellProductResultMap">
-        SELECT *
-          FROM T_SELL_PRODUCT
-          LEFT JOIN T_SELL_ITEM_PAGE USING (SELL_PRODUCT_ID)
-          LEFT JOIN T_SELL_PAGE USING (SELL_PAGE_NO)
+    <select id="findSellProductByPageNo" resultMap="SellProductResultMap">
+        SELECT
+            SELL_PRODUCT_ID
+             ,  PRODUCT_CODE
+             ,  DISCOUNT
+             ,  IS_SELL
+        FROM (
+                 SELECT ROWNUM AS RN
+                      ,  SELL_PRODUCT_ID
+                      ,  PRODUCT_CODE
+                      ,  DISCOUNT
+                      ,  IS_SELL
+                 FROM T_SELL_PRODUCT
+                          LEFT JOIN T_SELL_ITEM_PAGE USING (SELL_PRODUCT_ID)
+                          LEFT JOIN T_SELL_PAGE USING (SELL_PAGE_NO)
+             )
+         WHERE RN > ( ${ pageNo } - 1 * 10)
+           AND RN &lt;= ( ${ pageNo } * 10)
     </select>
 </mapper>

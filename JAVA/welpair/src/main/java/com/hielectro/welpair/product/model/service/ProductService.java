@@ -15,7 +15,7 @@ public class ProductService {
         this.productMapper = productMapper;
     }
 
-    public List<SellProductDTO> findAllProduct() {
-        return productMapper.findAllSellProduct();
+    public List<SellProductDTO> findSellProductByPageNo(int pageNo) {
+        return productMapper.findSellProductByPageNo(pageNo);
     }
 }

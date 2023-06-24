@@ -13,5 +13,5 @@ public class SellItemPageDTO {
     private String no;  // Page Number
     private String id;  // Sell Product ID
 
-    private List<SellPageDTO> sellPageList;
+    private SellPageDTO sellPage;
 }
