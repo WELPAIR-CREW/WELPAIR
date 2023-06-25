@@ -3,7 +3,7 @@ package com.hielectro.welpair.order.controller;
 import com.hielectro.welpair.member.model.dto.MemberDTO;
 import com.hielectro.welpair.order.model.dto.CartSellProductDTO;
 import com.hielectro.welpair.order.model.dto.SellProductDTO;
-import com.hielectro.welpair.order.model.service.OrderService;
+import com.hielectro.welpair.order.model.service.OrderServiceImpl;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,11 +14,11 @@ import javax.servlet.http.HttpSession;
 @Controller
 @RequestMapping({"/order"})
 public class OrderController {
-    private final OrderService orderService;
+    private final OrderServiceImpl orderServiceImpl;
     private final MessageSource messageSource;
 
-    public OrderController(OrderService orderService, MessageSource messageSource) {
-        this.orderService = orderService;
+    public OrderController(OrderServiceImpl orderServiceImpl, MessageSource messageSource) {
+        this.orderServiceImpl = orderServiceImpl;
         this.messageSource = messageSource;
     }
 
@@ -39,7 +39,7 @@ public class OrderController {
 
         // 그 전에 판매상품 ID를 통해 실제 존재하는 상품이며, 수량이 정상적인 수량인지 체크한다.
         SellProductDTO sellProduct =
-                orderService.checkoutSellProductId(cartSellProduct.getSellProductId());
+                orderServiceImpl.checkoutSellProductId(cartSellProduct.getSellProductId());
 
         // 회원정보도 조회한다.
 //        MemberDTO member = orderService.checkoutMemberById(empNo);
@@ -54,17 +54,17 @@ public class OrderController {
         if(cartSellProduct.getCartAmount() > 0 && sellProduct != null ) {
 
             // 회원번호를 통해 장바구니 테이블 pk를 생성한다.
-            int result1 = orderService.addcart(member.getEmpNo());
+            int result1 = orderServiceImpl.addcart(member.getEmpNo());
 
             // 생성된 장바구니 PK를 불러온다.
-            String cartNo = orderService.selectCartNo();
+            String cartNo = orderServiceImpl.selectCartNo();
 
             // 불러온 PK를 카트별판매상품 테이블에 담는다.(배송비 빼고 다 담김)
             cartSellProduct.setCartNo(cartNo);
             System.out.println("선택상품 : " +cartSellProduct);
 
             // 카트별판매상품 테이블에 데이터를 담는다.
-            int result = orderService.addCartSellProduct(cartSellProduct);
+            int result = orderServiceImpl.addCartSellProduct(cartSellProduct);
 
             if (result > 0) {
                 //장바구니 담기 성공시
