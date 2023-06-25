@@ -18,4 +18,8 @@ public class ProductService {
     public List<SellProductDTO> findSellProductByPageNo(int pageNo) {
         return productMapper.findSellProductByPageNo(pageNo);
     }
+
+    public int sellProductCount() {
+        return productMapper.sellProductCount();
+    }
 }

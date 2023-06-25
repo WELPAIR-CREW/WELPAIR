@@ -28,4 +28,12 @@ public class ProductController {
         System.out.println(sellProductList);
         return sellProductList;
     }
+
+    @PostMapping("sellproductcount")
+    @ResponseBody
+    public int getSellProductCount() {
+        int result = productService.sellProductCount();
+        System.out.println(result);
+        return result;
+    }
 }

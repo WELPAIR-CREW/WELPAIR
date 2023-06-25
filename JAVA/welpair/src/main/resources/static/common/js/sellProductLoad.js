@@ -1,4 +1,6 @@
+let pageNo;
 document.addEventListener("DOMContentLoaded", function() {
+    sellProductCount();
     sellProductLoad(1);
 });
 
@@ -31,6 +33,15 @@ function createTableCell(text) {
     const td = document.createElement("td");
     td.textContent = text;
     return td;
+}
+
+function sellProductCount() {
+    let url = "/product/sellproductcount"
+    let method = 'post'
+
+    call(url, method, null)
+        .then(data => pageNo = data)
+        .catch(error => console.log(error))
 }
 
 function sellProductLoad(pageNo) {
