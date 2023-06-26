@@ -1,8 +1,8 @@
 package com.hielectro.welpair.inventory.model.service;
 
-import com.hielectro.wellpair.semitest.model.dao.InventoryDAO;
-import com.hielectro.wellpair.semitest.model.dto.ProductDTO;
-import com.hielectro.wellpair.semitest.model.dto.StockDTO;
+import com.hielectro.welpair.inventory.model.dao.InventoryDAO;
+import com.hielectro.welpair.inventory.model.dto.ProductDTO;
+import com.hielectro.welpair.inventory.model.dto.StockDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

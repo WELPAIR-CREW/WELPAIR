@@ -1,12 +1,14 @@
 package com.hielectro.welpair.inventory.model.dao;
 
-import com.hielectro.wellpair.semitest.model.dto.ProductDTO;
-import com.hielectro.wellpair.semitest.model.dto.StockDTO;
+
+import java.util.List;
+
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
+import com.hielectro.welpair.inventory.model.dto.ProductDTO;
+import com.hielectro.welpair.inventory.model.dto.StockDTO;
 @Repository
 @Mapper
 public interface InventoryDAO {

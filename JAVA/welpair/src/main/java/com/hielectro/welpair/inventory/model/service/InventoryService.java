@@ -1,7 +1,7 @@
 package com.hielectro.welpair.inventory.model.service;
 
-import com.hielectro.wellpair.semitest.model.dto.ProductDTO;
-import com.hielectro.wellpair.semitest.model.dto.StockDTO;
+import com.hielectro.welpair.inventory.model.dto.ProductDTO;
+import com.hielectro.welpair.inventory.model.dto.StockDTO;
 
 import java.util.List;
 
