@@ -17,5 +17,5 @@ public interface OrderMapper {
 
     public int addCartSellProduct(CartSellProductDTO cartSellProduct);
 
-    int addCart(String empNo);
+    int addcart(String empNo);
 }

@@ -27,7 +27,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public int addcart(String empNo) {
-        return orderMapper.addCart(empNo);
+        return orderMapper.addcart(empNo);
     }
 
     @Override
