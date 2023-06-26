@@ -29,10 +29,10 @@ public class ProductController {
         return sellProductList;
     }
 
-    @PostMapping("sellproductcount")
+    @PostMapping("totalcount")
     @ResponseBody
     public int getSellProductCount() {
-        int result = productService.sellProductCount();
+        int result = productService.sellProductTotalCount();
         System.out.println(result);
         return result;
     }

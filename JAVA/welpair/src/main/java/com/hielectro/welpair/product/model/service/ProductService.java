@@ -19,7 +19,7 @@ public class ProductService {
         return productMapper.findSellProductByPageNo(pageNo);
     }
 
-    public int sellProductCount() {
-        return productMapper.sellProductCount();
+    public int sellProductTotalCount() {
+        return productMapper.sellProductTotalCount();
     }
 }
