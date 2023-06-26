@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+ul li {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.category_img{
+    width: auto;
+    height: 260px;
+    background-color: #F8F7F7;
+}
+.nav{
+    width: 240px;
+    height: 500px;
+    margin: 50px 50px;
+    background-color: #F8F7F7;
+    border-radius: 6px;
+    float: left;
+}
+
+#categoryNav{
+    margin: 26px;
+    padding-top: 20px;
+    text-align: right;
+}
+
+#categoryNav > li{
+
+    padding-top: 16px ;
+}
+
+
+.notice{
+    width: 940px;
+    height: 600px;
+    margin: 50px 0 200px 0;
+    float: left;
+}
+
+.notice_text{
+    width: auto;
+    height: 36px;
+    border-bottom: 2px solid #333 ;
+    padding: 8px;
+}
+
+
+.notice-list > div.top {
+    border-bottom: 1px solid #333;
+}
+
+.notice-list .top .notice-title {
+    text-align: center;
+}
+.notice-list > div {
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.notice-list > div:last-child{
+    border-bottom: 2px solid #333;
+}
+
+
+.notice-list > div > div {
+    display: inline-block;
+    text-align: center;
+    padding: 15px 0;
+    
+}
+
+.notice-list .notice-num{
+    width: 15%;
+}
+
+.notice-list .notice-title{
+    width: 65%;
+    text-align: left;
+}
+
+.notice-list .notice-date{
+    width: 15%;
+}
+
+.notice-page{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0;
+
+
+}
+
+.notice-page a{
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #d9d9d9;
+    border-left: 0;
+    vertical-align: middle;
+    padding-top: 2px;
+    box-sizing: border-box;
+
+}
+
+
+.notice-page a{
+    font-size: 1rem;
+}
+
+.on{
+    border: 1px solid #333;
+    background-color: #333;
+    color: white;
+}
+
+.notice-page a:first-child{
+    border-left: 1px solid #d9d9d9;
+}
+
+

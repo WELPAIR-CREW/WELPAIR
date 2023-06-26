@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/findid.css">
+    <link rel="stylesheet" href="../CSS/fontstyle.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <script src="http://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <title>Regist</title>
+</head>
+
+<header>
+    <img src="../../img/title.png" class="title">
+    <div class="icons">
+        <div class="search-bar">
+
+            <input type="text" class="search-box" placeholder="검색어">
+            <img src="../../img/search-icon.png" alt="search">
+        </div>
+        <div class="my-info">
+            <a href="#">MY</a>
+        </div> 
+
+        <div class="cart">
+            <img src="../../img/cart.png" alt="cart">
+        </div>
+    </div>
+</header>
+<nav>
+    <div class="header-category">
+        <div>
+            <span>주문 관리</span>
+            <span>TOP</span>
+            <span>DRESS</span>
+            <span>BOTTOM</span>
+            <span>SHOES</span>
+            <span>BAG</span>
+            <span>CAT</span>
+            <span>CATE</span>
+        </div>
+    </div>
+</nav>
+<body>
+
+    <div class="content">
+        <h1>아이디찾기</h1>
+        <div class="input_name" >
+            <input type="text" placeholder="이름" onfocus="dd">
+        </div>
+        <div class="input_mail">
+            <input type="text" placeholder="이메일">
+            <button class="authenNo">인증번호받기</button>
+        </div>
+        <div class="input_No" >
+            <input type="text" placeholder="인증번호입력">
+        </div>
+        <div class="bnt_regist">
+            <button>다음</button>
+        </div>
+
+    </div>
+
+</body>
+
+<footer>
+    <img src="../../img/title.png" class="footer-image">
+    <span id="company">
+        (주)웰페어
+    </span><br>
+    <span id="address">
+        대표이사 : 김페어 / 서울시 종로구 대학로 11 웰페어 본사 14층
+    </span>
+</footer>
+
+<script>
+    $('.authenNo').click(function(){
+        alert('인증번호발송합니다.');
+    });
+    $('.bnt_regist').click(function(){
+        alert('메일로 아이디 발송합니다.');
+    });
+</script>
+
+</html>

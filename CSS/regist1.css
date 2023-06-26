@@ -1,0 +1,118 @@
+.header_wrap{
+    height: 160px;
+    border-bottom: 2px solid #333;
+
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 1440px;
+    margin-top: 30px;
+}
+
+
+
+
+
+.input_search > input{
+    width: 200px;
+    height: 32px;
+    border: 2px solid #333;
+    border-radius: 20px;
+}
+.input_search > ::placeholder{
+    color: #d9d9d9;
+    padding-left: 12px;
+}
+.input_search > a {
+    margin-left: 12px;
+}
+
+.header_category{
+    width: 1440px;
+    height: 60px;
+    margin: 0 auto;
+    margin-top: 52px;
+}
+ul{
+    width: auto;
+    height: 40px;
+    list-style-type: none;
+    margin: auto;
+}
+li{
+    float: left;
+    margin-top: 10px;
+    margin-right: 60px;
+    padding-left: 60px;
+}
+
+
+/* 컨텐츠 영역 */
+
+.regist_form{
+    text-align: center;
+    margin-top: 120px;
+
+}
+
+
+.form > input{
+    width: 460px;
+    height: 50px;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    margin-bottom: 6px;
+}
+
+/* 이용약관 */
+.check_auth{
+    width: 460px;
+    margin: 40px auto 0 auto;
+
+}
+
+.article {
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    margin-top: 16px;
+    height: 300px;
+    overflow: auto;
+}
+
+#p1 {
+    text-align: left;
+    padding: 10px 0;
+}
+
+.next_bnt{
+    width: 460px;
+    height: 50px;
+    border-radius: 6px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+
+    margin-top: 16px;
+
+    margin-bottom: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

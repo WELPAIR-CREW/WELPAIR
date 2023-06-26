@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+ul li {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.notice-page{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0;
+
+
+}
+
+.notice-page a{
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #d9d9d9;
+    border-left: 0;
+    vertical-align: middle;
+    padding-top: 2px;
+    box-sizing: border-box;
+
+}
+
+
+.notice-page a{
+    font-size: 1rem;
+}
+
+.go{
+    border: 1px solid #333;
+    background-color: #333;
+    color: white;
+}
+
+.notice-page a:first-child{
+    border-left: 1px solid #d9d9d9;
+}

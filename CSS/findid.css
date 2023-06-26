@@ -1,0 +1,140 @@
+.header_wrap {
+    width: auto;
+    height: 100px;
+    border-bottom: 1px solid #333;
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    text-align: center;
+}
+
+.logo{
+    position: absolute;    
+}
+
+.header_wrap > input{
+    width: 200px;
+    height: 36px;
+    border: 1px solid #333;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-left: 900px;
+}
+.search_btn_header{
+    margin-top: 34px;
+    margin-left: 20px;
+}
+
+::placeholder{
+    color: #d9d9d9;
+    padding-left: 10px;
+}
+
+.my_info{
+    margin-left: 50px;
+}
+
+
+/*  컨텐츠 영역 */
+button{
+    cursor: pointer;
+}
+
+.content{
+    margin-top: 120px;
+
+}
+
+.input_name{
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+
+
+.input_No{
+    display: flex;
+    justify-content: center;
+}
+.bnt_regist{
+    display: flex;
+    justify-content: center;
+}
+
+.input_name > input {
+    width: 460px;
+    height: 50px;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+}
+.input_name > ::placeholder{
+    color: #d9d9d9;
+}
+.input_name > onfocus {
+    
+}
+
+.input_mail{
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.input_mail > input{
+    width: 310px;   
+    height: 50px;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    padding: 0PX;
+}
+.input_mail > button {
+    width: 134px;
+    height: 50px;
+    border-style: none;
+    border-radius: 6px;
+    background-color: #333;
+    color: white;
+    padding: 0px;
+    margin-left: 16px;
+}
+
+
+.input_No{
+    margin-top: 16px;
+}
+.input_No > input {
+    width: 460px;
+    height: 50px;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    
+}
+
+.bnt_regist > button{
+    width: 460px;
+    height: 50px;
+    margin-top: 16px;
+    background-color: #333;
+    color: white;
+    border-radius: 6px;
+    border-style: none;
+}
+
+.bnt_regist{
+    margin-bottom: 200px;
+}
+
+input:focus{
+    outline: none;
+    border: 1px solid #777777;
+
+}
+
+button:active{
+    background-color: #d9d9d9;
+    color: #333333;
+    border: none;
+}

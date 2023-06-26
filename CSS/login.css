@@ -1,0 +1,79 @@
+
+.login_logo {
+
+    /* width: 1280px; */
+    height: 30px;
+    padding-top: 130px;
+    display: flex ;
+    justify-content: center;
+    
+}
+
+.text_login{
+    display: flex;
+    justify-content: center;
+    padding-top: 90px;
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    padding-top: 16px;
+    
+}
+
+.int_id{
+    padding-top: 36px;
+}
+
+.int{
+    width: 460px;
+    height: 50px;
+    border: solid 1px #d9d9d9 ;
+    /* border-color: #d9d9d9; */
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.int:focus{
+    outline: none;
+    border: 1px solid #777777;
+    
+}
+.int:focus::after{
+    margin-left: 12px;
+}
+
+
+
+::placeholder{
+    padding-left: 20px;
+    font-size: 12px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    padding-top: 16px;
+    padding-bottom: 200px;
+    
+}
+.bntlogin{
+    width: 460px;
+    height: 50px;
+    background-color: #333333;
+    color: #ffffff;
+    border-radius: 6px;
+    cursor: pointer;
+
+}
+
+.bntlogin:active{
+    background-color: #d9d9d9;
+    color: #333333;
+    border: none;
+}
+
+
+
+
