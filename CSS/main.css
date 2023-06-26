@@ -40,6 +40,10 @@ input {
     padding: 30px 40px;
 }
 
+.product-detail-area2 h2 {
+    font-size: 16px;
+}
+
 .thumbnail-img {
     display: flex;
     align-items: center;
@@ -212,10 +216,12 @@ td {
 }
 
 .category-list {
+    position: relative;
     display: flex;
     width: 1020px;
     height: 40px;
-    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 18px;
     align-items: center;
     justify-content: end;
