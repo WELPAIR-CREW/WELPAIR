@@ -1,3 +1,4 @@
 {
-    "liveServer.settings.port": 82
+    "liveServer.settings.port": 81,
+    "java.compile.nullAnalysis.mode": "automatic"
 }

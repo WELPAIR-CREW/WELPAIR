@@ -21,7 +21,7 @@ li {
 
 
 li[id^=cart_basic] {
-	margin-bottom: 100px;
+	margin-bottom: 10px;
 }
 
 /* input check박스 공통 */
@@ -126,11 +126,20 @@ input[type=checkbox]{
 		vertical-align: middle; 
 	}
 
+<<<<<<< HEAD
 	/* cart info 박스  */
 	.cart_info_box {
 		width: 1150px;
 		height: 70px;
 	}
+=======
+/* cart info 박스  */
+.cart_info_box {
+	width: 1150px;
+	height: 70px;
+	margin-top: 50px;
+}
+>>>>>>> main
 
 	/* 썸네일+상품이름+수량 info 구역 */
 	.cart_order_prd {
@@ -151,6 +160,7 @@ input[type=checkbox]{
 		text-decoration-line: none;
 	}
 
+<<<<<<< HEAD
 	/* 썸네일이미지박스 */
 	.cart_thumb_box {
 		width: 103px;
@@ -162,6 +172,15 @@ input[type=checkbox]{
 		height: 46px;
 		margin-left: 5px;
 	}
+=======
+/* 썸네일이미지박스 */
+.cart_thumb_box {
+	width: 103px;
+	height: 96px;
+	border: solid 1px;
+	border-radius: 6px;
+}
+>>>>>>> main
 
 	/* 수량변경 구역 */
 	.prd_util {
@@ -175,6 +194,7 @@ input[type=checkbox]{
 		margin: 0px 20px;
 	}
 
+<<<<<<< HEAD
 	/* 수량박스 */
 	input[type='number']::-webkit-inner-spin-button {
 		-webkit-appearance: none;
@@ -212,6 +232,69 @@ input[type=checkbox]{
 		margin-right: 20px;
 		justify-content: space-around;	font-weight: bold;
 	}
+=======
+/* 수량변경 구역 */
+.prd_util {
+	width: 174px;
+	height: 46px;
+	text-align-last: center;
+	align-content: center;
+	text-align: center;
+}
+
+.prd_util_wrap {
+	margin-left: 37px;
+	/* margin: 0px 20px; */
+}
+
+/* 수량박스 */
+.item_count_box {
+	border-radius: 6px;
+}
+
+input[type='number']::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	height: 46px;
+}
+
+/* 수량변경 버튼 */
+.prd_util div>button {
+	width: 26px;
+	margin-left: 5px;
+	border: none;
+}
+
+.price_area {
+	text-align: right;
+}
+
+/* 상품 단품 금액 */
+.cart_order_price {
+	width: 154px;
+	height: 46px;
+	margin: 0PX 20px 0px 10px;
+	justify-content: space-around;
+}
+
+/* 배송비 */
+.cart_order_delivery {
+	width: 154px;
+	height: 46px;
+	margin-right: 20px;
+	color: gray;
+	justify-content: space-around;
+
+}
+
+/* 상품 total 금액 */
+.cart_order_total_price {
+	width: 154px;
+	height: 46px;
+	margin-right: 20px;
+	justify-content: space-around;
+	font-weight: bold;
+}
+>>>>>>> main
 
 /* 예상결제정보 구역 */
 #exptpay_container {
@@ -307,5 +390,28 @@ input[type=checkbox]{
 
 
 
+.exptpay_price3, .total_option {
+	color: #4F378B;
+}
 
+<<<<<<< HEAD
 	
+=======
+/* 버튼박스 */
+.bnt_order {
+	width: 20%;
+	height: 80px;
+	margin-top: 30px;
+}
+
+.bnt_order>button {
+	width: 130px;
+	height: 80px;
+	font-size: 24px;
+	/* font-weight: bold; */
+	background-color: black;
+	color: white;
+	border-radius: 6px;
+
+}
+>>>>>>> main
