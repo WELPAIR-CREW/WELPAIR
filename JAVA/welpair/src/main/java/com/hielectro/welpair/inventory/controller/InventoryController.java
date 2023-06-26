@@ -1,7 +1,7 @@
 package com.hielectro.welpair.inventory.controller;
 
-import com.hielectro.wellpair.semitest.model.dto.ProductDTO;
-import com.hielectro.wellpair.semitest.model.service.InventoryService;
+import com.hielectro.welpair.inventory.model.dto.ProductDTO;
+import com.hielectro.welpair.inventory.model.service.InventoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 
 @Controller
-@RequestMapping("/HTML")
+@RequestMapping("/inventory")
 public class InventoryController {
     private final InventoryService inventoryService;
 
@@ -41,7 +41,7 @@ public class InventoryController {
         System.out.println("totalInvenAmount = " + totalInvenAmount);
         System.out.println("alertStock = " + alertStock);
 
-        return "HTML/admin/admin_inventory";
+        return "admin/inventory/admin_inventory";
     }
 
 
@@ -69,7 +69,7 @@ public class InventoryController {
         List<ProductDTO> productList = inventoryService.searchProductByCode(searchCode);
         System.out.println("==================== 1-2 =============");
         model.addAttribute("productList", productList);
-        return "HTML/admin/admin_inventory";
+        return "admin/inventory/admin_inventory";
     }
 
 
@@ -92,6 +92,6 @@ public class InventoryController {
         model.addAttribute("stockList", stockList);
 
         System.out.println("stockList = " + stockList);
-        return "HTML/admin/admin_inventory_regist";
+        return "admin/inventory/admin_inventory_regist";
     }
 }
