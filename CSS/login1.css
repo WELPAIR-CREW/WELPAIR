@@ -80,7 +80,7 @@ input:focus{
 
 .btn-go{
     margin-top: 16px;
-    margin-bottom: 200px;
+    margin-bottom: 24px;
 }
 
 .btn-login{
@@ -99,7 +99,20 @@ input:focus{
     border: none;
 }
 
+.btn-regist{
+    text-align: center;
+}
+.btn-regist > span {
+    font-weight: 500;
+    font-size: 16px;
+    font-family: '맑은고딕';
+    color: #777777;
+    cursor: pointer;
+}
 
+.find-info{
+    margin-left: 28px;
+}
 
 
 
